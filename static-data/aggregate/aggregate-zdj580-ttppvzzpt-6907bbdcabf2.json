@@ -1,0 +1,62 @@
+{
+  "data": {
+    "playerName": "zdj580",
+    "matchupFilter": "TTPPvZZPT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 190,
+    "avgEapm": 114,
+    "avgEapmRatio": 0.6,
+    "avgOpeningCommands": 50,
+    "avgProductionCount": 29,
+    "avgOrderCount": 10,
+    "topStyleTags": [
+      {
+        "tag": "偏运营衔接",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_f7398707172575d7_p07",
+        "replayId": "rpl_f7398707172575d7",
+        "playedAt": "2026-09-08T14:16:14Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TTPPvZZPT",
+        "result": "unknown",
+        "apm": 190,
+        "eapm": 114,
+        "eapmRatio": 0.6,
+        "totalCommands": 50,
+        "openingCommandCount": 50,
+        "productionCount": 29,
+        "orderCount": 10
+      }
+    ]
+  }
+}

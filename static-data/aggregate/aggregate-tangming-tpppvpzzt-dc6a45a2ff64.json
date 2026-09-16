@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "tangming",
+    "matchupFilter": "TPPPvPZZT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 99,
+    "avgEapm": 69,
+    "avgEapmRatio": 0.696969696969697,
+    "avgOpeningCommands": 90,
+    "avgProductionCount": 6,
+    "avgOrderCount": 50,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_395a5319c586d319_p06",
+        "replayId": "rpl_395a5319c586d319",
+        "playedAt": "2026-08-13T13:59:32Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TPPPvPZZT",
+        "result": "unknown",
+        "apm": 99,
+        "eapm": 69,
+        "eapmRatio": 0.696969696969697,
+        "totalCommands": 90,
+        "openingCommandCount": 90,
+        "productionCount": 6,
+        "orderCount": 50
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "LoveMango`",
+    "matchupFilter": "TZTvTPZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 271,
+    "avgEapm": 206,
+    "avgEapmRatio": 0.7601476014760148,
+    "avgOpeningCommands": 955,
+    "avgProductionCount": 303,
+    "avgOrderCount": 1377,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_a21d93ec59640a29_p02",
+        "replayId": "rpl_a21d93ec59640a29",
+        "playedAt": "2024-10-30T11:43:40Z",
+        "mapName": "\u0003(XB2)\u0006 Big Game Hunters",
+        "matchup": "TZTvTPZ",
+        "result": "loss",
+        "apm": 271,
+        "eapm": 206,
+        "eapmRatio": 0.7601476014760148,
+        "totalCommands": 4457,
+        "openingCommandCount": 955,
+        "productionCount": 303,
+        "orderCount": 1377
+      }
+    ]
+  }
+}

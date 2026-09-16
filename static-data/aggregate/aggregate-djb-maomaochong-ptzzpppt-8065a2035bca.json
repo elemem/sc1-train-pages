@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "DJB=MaoMaoChong",
+    "matchupFilter": "PTZZPPPT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 205,
+    "avgEapm": 131,
+    "avgEapmRatio": 0.6390243902439025,
+    "avgOpeningCommands": 25,
+    "avgProductionCount": 1,
+    "avgOrderCount": 5,
+    "topStyleTags": [
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_b365cf7d2589dc6b_p03",
+        "replayId": "rpl_b365cf7d2589dc6b",
+        "playedAt": "2026-07-31T14:12:52Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PTZZPPPT",
+        "result": "unknown",
+        "apm": 205,
+        "eapm": 131,
+        "eapmRatio": 0.6390243902439025,
+        "totalCommands": 25,
+        "openingCommandCount": 25,
+        "productionCount": 1,
+        "orderCount": 5
+      }
+    ]
+  }
+}

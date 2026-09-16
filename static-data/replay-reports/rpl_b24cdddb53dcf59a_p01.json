@@ -1,0 +1,74 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_b24cdddb53dcf59a_p01",
+    "replayId": "rpl_b24cdddb53dcf59a",
+    "playerName": "=DJB=CHoU''BaO",
+    "playerSlot": 1,
+    "playerID": 2,
+    "teamNo": 1,
+    "race": "Zerg",
+    "result": "loss",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PZPTvPPPZ",
+    "playedAt": "2026-07-31T14:30:10Z",
+    "durationSeconds": 32,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "框选驱动",
+      "偏正面操作",
+      "指令转化较稳"
+    ],
+    "strengths": [
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 2 秒，且本局记录到 1 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "detail": "记录到的开局生产动作只有 1 条，生产衔接还不够稳定。",
+        "priority": 85
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "detail": "围绕开局前 3 分钟建立固定流程，优先盯住补农民、补兵和关键科技不断线。",
+        "priority": 85
+      }
+    ],
+    "metrics": {
+      "apm": 163,
+      "eapm": 144,
+      "eapmRatio": 0.8834355828220859,
+      "totalCommands": 35,
+      "uniqueCommandTypes": 8,
+      "firstActionSec": 0.294,
+      "lastActionSec": 12.894,
+      "openingCommandCount": 35,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 12,
+      "hotkeyCount": 7,
+      "productionCount": 1,
+      "orderCount": 14,
+      "chatCount": 0,
+      "leaveGameCount": 1,
+      "firstScoutProxySec": 1.512,
+      "scoutProxyOrderCount": 12,
+      "scoutProxyUniqueCells": 2,
+      "scoutRefreshCount": 1,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Right Click\",\"Count\":12},{\"CommandType\":\"Select\",\"Count\":8},{\"CommandType\":\"Hotkey\",\"Count\":7},{\"CommandType\":\"Select Remove\",\"Count\":3},{\"CommandType\":\"Targeted Order\",\"Count\":2},{\"CommandType\":\"Leave Game\",\"Count\":1}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.462,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"}]"
+    }
+  }
+}

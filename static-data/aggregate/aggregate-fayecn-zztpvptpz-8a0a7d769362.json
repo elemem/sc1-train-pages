@@ -1,0 +1,78 @@
+{
+  "data": {
+    "playerName": "fayecn",
+    "matchupFilter": "ZZTPvPTPZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 17,
+    "avgEapm": 17,
+    "avgEapmRatio": 1,
+    "avgOpeningCommands": 3,
+    "avgProductionCount": 0,
+    "avgOrderCount": 0,
+    "topStyleTags": [
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      },
+      {
+        "key": "slow_opening_start",
+        "title": "开局第一拍偏慢",
+        "count": 1
+      },
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      },
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "count": 1
+      },
+      {
+        "key": "tighten_first_cycle",
+        "title": "先练开局第一拍",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_1fcbad196f93e5c5_p07",
+        "replayId": "rpl_1fcbad196f93e5c5",
+        "playedAt": "2026-08-27T15:32:31Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZZTPvPTPZ",
+        "result": "loss",
+        "apm": 17,
+        "eapm": 17,
+        "eapmRatio": 1,
+        "totalCommands": 3,
+        "openingCommandCount": 3,
+        "productionCount": 0,
+        "orderCount": 0
+      }
+    ]
+  }
+}

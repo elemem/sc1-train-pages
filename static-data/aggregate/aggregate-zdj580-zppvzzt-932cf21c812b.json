@@ -1,0 +1,66 @@
+{
+  "data": {
+    "playerName": "zdj580",
+    "matchupFilter": "ZPPvZZT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 125,
+    "avgEapm": 118,
+    "avgEapmRatio": 0.944,
+    "avgOpeningCommands": 310,
+    "avgProductionCount": 156,
+    "avgOrderCount": 567,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_b9203db5ed574bc7_p05",
+        "replayId": "rpl_b9203db5ed574bc7",
+        "playedAt": "2026-07-30T15:18:09Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPPvZZT",
+        "result": "win",
+        "apm": 125,
+        "eapm": 118,
+        "eapmRatio": 0.944,
+        "totalCommands": 1147,
+        "openingCommandCount": 310,
+        "productionCount": 156,
+        "orderCount": 567
+      }
+    ]
+  }
+}

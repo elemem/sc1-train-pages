@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "XiaoMark",
+    "matchupFilter": "PPTvZZZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 255,
+    "avgEapm": 214,
+    "avgEapmRatio": 0.8392156862745098,
+    "avgOpeningCommands": 815,
+    "avgProductionCount": 509,
+    "avgOrderCount": 1615,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_52da5b31398de3de_p02",
+        "replayId": "rpl_52da5b31398de3de",
+        "playedAt": "2024-10-16T19:32:53Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "PPTvZZZ",
+        "result": "loss",
+        "apm": 255,
+        "eapm": 214,
+        "eapmRatio": 0.8392156862745098,
+        "totalCommands": 3918,
+        "openingCommandCount": 815,
+        "productionCount": 509,
+        "orderCount": 1615
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "Suzhouren",
+    "matchupFilter": "PPPPvPZTT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 180,
+    "avgEapm": 161,
+    "avgEapmRatio": 0.8944444444444445,
+    "avgOpeningCommands": 610,
+    "avgProductionCount": 95,
+    "avgOrderCount": 631,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_b99e9400bd241098_p03",
+        "replayId": "rpl_b99e9400bd241098",
+        "playedAt": "2026-08-20T14:32:10Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PPPPvPZTT",
+        "result": "loss",
+        "apm": 180,
+        "eapm": 161,
+        "eapmRatio": 0.8944444444444445,
+        "totalCommands": 1143,
+        "openingCommandCount": 610,
+        "productionCount": 95,
+        "orderCount": 631
+      }
+    ]
+  }
+}

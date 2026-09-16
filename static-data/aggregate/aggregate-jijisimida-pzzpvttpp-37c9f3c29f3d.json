@@ -1,0 +1,62 @@
+{
+  "data": {
+    "playerName": "jijisimida",
+    "matchupFilter": "PZZPvTTPP",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 260,
+    "avgEapm": 166,
+    "avgEapmRatio": 0.6384615384615384,
+    "avgOpeningCommands": 64,
+    "avgProductionCount": 10,
+    "avgOrderCount": 32,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_d7928f1191975b2a_p00",
+        "replayId": "rpl_d7928f1191975b2a",
+        "playedAt": "2026-08-25T13:48:57Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZZPvTTPP",
+        "result": "loss",
+        "apm": 260,
+        "eapm": 166,
+        "eapmRatio": 0.6384615384615384,
+        "totalCommands": 64,
+        "openingCommandCount": 64,
+        "productionCount": 10,
+        "orderCount": 32
+      }
+    ]
+  }
+}

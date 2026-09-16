@@ -1,0 +1,215 @@
+{
+  "data": {
+    "playerName": "CHZDevil",
+    "matchupFilter": "",
+    "sampleReplayCount": 10,
+    "winCount": 6,
+    "lossCount": 3,
+    "unknownCount": 1,
+    "winRate": 0.6666666666666666,
+    "avgApm": 238.7,
+    "avgEapm": 179.8,
+    "avgEapmRatio": 0.7473013888713804,
+    "avgOpeningCommands": 694.7,
+    "avgProductionCount": 191,
+    "avgOrderCount": 1093.6,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 10
+      },
+      {
+        "tag": "开局活跃",
+        "count": 9
+      },
+      {
+        "tag": "热键驱动",
+        "count": 9
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 6
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      },
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      },
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_9e20ad9bdca784f8_p00",
+        "replayId": "rpl_9e20ad9bdca784f8",
+        "playedAt": "2026-08-14T15:29:08Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPZTvPTZT",
+        "result": "win",
+        "apm": 191,
+        "eapm": 144,
+        "eapmRatio": 0.7539267015706806,
+        "totalCommands": 1776,
+        "openingCommandCount": 310,
+        "productionCount": 60,
+        "orderCount": 750
+      },
+      {
+        "replayPlayerId": "rpl_2b549dc5a492fd66_p00",
+        "replayId": "rpl_2b549dc5a492fd66",
+        "playedAt": "2026-07-31T16:47:20Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPTTvZTPZ",
+        "result": "win",
+        "apm": 281,
+        "eapm": 205,
+        "eapmRatio": 0.7295373665480427,
+        "totalCommands": 5674,
+        "openingCommandCount": 586,
+        "productionCount": 299,
+        "orderCount": 2042
+      },
+      {
+        "replayPlayerId": "rpl_4e1d86c489bf39bc_p05",
+        "replayId": "rpl_4e1d86c489bf39bc",
+        "playedAt": "2026-07-29T13:56:15Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZTTZPPT",
+        "result": "unknown",
+        "apm": 279,
+        "eapm": 261,
+        "eapmRatio": 0.9354838709677419,
+        "totalCommands": 16,
+        "openingCommandCount": 16,
+        "productionCount": 1,
+        "orderCount": 6
+      },
+      {
+        "replayPlayerId": "rpl_5f515f8100bf0239_p02",
+        "replayId": "rpl_5f515f8100bf0239",
+        "playedAt": "2026-07-29T13:36:49Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPTTvPTZP",
+        "result": "win",
+        "apm": 256,
+        "eapm": 202,
+        "eapmRatio": 0.7890625,
+        "totalCommands": 4574,
+        "openingCommandCount": 812,
+        "productionCount": 386,
+        "orderCount": 1749
+      },
+      {
+        "replayPlayerId": "rpl_b1a2cd36b14ffc1c_p04",
+        "replayId": "rpl_b1a2cd36b14ffc1c",
+        "playedAt": "2026-07-28T14:37:08Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TPPTvPZZT",
+        "result": "win",
+        "apm": 256,
+        "eapm": 178,
+        "eapmRatio": 0.6953125,
+        "totalCommands": 1088,
+        "openingCommandCount": 808,
+        "productionCount": 76,
+        "orderCount": 436
+      },
+      {
+        "replayPlayerId": "rpl_5f74e1ce4d99789f_p04",
+        "replayId": "rpl_5f74e1ce4d99789f",
+        "playedAt": "2025-09-22T13:11:39Z",
+        "mapName": "王牌猎人⑤Big Game Hu",
+        "matchup": "ZTPZvPPZP",
+        "result": "win",
+        "apm": 151,
+        "eapm": 101,
+        "eapmRatio": 0.6688741721854304,
+        "totalCommands": 2630,
+        "openingCommandCount": 796,
+        "productionCount": 212,
+        "orderCount": 913
+      },
+      {
+        "replayPlayerId": "rpl_ff86fbcb437c1dc3_p00",
+        "replayId": "rpl_ff86fbcb437c1dc3",
+        "playedAt": "2024-11-20T17:20:04Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZTZvPPT",
+        "result": "loss",
+        "apm": 227,
+        "eapm": 140,
+        "eapmRatio": 0.6167400881057269,
+        "totalCommands": 2733,
+        "openingCommandCount": 743,
+        "productionCount": 107,
+        "orderCount": 824
+      },
+      {
+        "replayPlayerId": "rpl_bfa02e656969dc24_p01",
+        "replayId": "rpl_bfa02e656969dc24",
+        "playedAt": "2024-10-13T14:01:06Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "PPZvZZT",
+        "result": "loss",
+        "apm": 242,
+        "eapm": 191,
+        "eapmRatio": 0.7892561983471075,
+        "totalCommands": 3207,
+        "openingCommandCount": 879,
+        "productionCount": 250,
+        "orderCount": 1527
+      },
+      {
+        "replayPlayerId": "rpl_98cd6d50b7310a87_p03",
+        "replayId": "rpl_98cd6d50b7310a87",
+        "playedAt": "2024-10-13T13:45:02Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZPTvTZP",
+        "result": "win",
+        "apm": 243,
+        "eapm": 191,
+        "eapmRatio": 0.7860082304526749,
+        "totalCommands": 3711,
+        "openingCommandCount": 964,
+        "productionCount": 263,
+        "orderCount": 1422
+      },
+      {
+        "replayPlayerId": "rpl_d77d9048d5109624_p02",
+        "replayId": "rpl_d77d9048d5109624",
+        "playedAt": "2024-10-13T13:31:21Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZZPvPTT",
+        "result": "loss",
+        "apm": 261,
+        "eapm": 185,
+        "eapmRatio": 0.7088122605363985,
+        "totalCommands": 3258,
+        "openingCommandCount": 1033,
+        "productionCount": 256,
+        "orderCount": 1267
+      }
+    ]
+  }
+}

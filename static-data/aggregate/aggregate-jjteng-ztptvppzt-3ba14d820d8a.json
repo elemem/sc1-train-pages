@@ -1,0 +1,72 @@
+{
+  "data": {
+    "playerName": "jjteng!",
+    "matchupFilter": "ZTPTvPPZT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 155,
+    "avgEapm": 113,
+    "avgEapmRatio": 0.7290322580645161,
+    "avgOpeningCommands": 463,
+    "avgProductionCount": 84,
+    "avgOrderCount": 230,
+    "topStyleTags": [
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_7d61cd65eb946b2a_p03",
+        "replayId": "rpl_7d61cd65eb946b2a",
+        "playedAt": "2025-09-25T13:06:33Z",
+        "mapName": "王牌猎人⑤Big Game Hu",
+        "matchup": "ZTPTvPPZT",
+        "result": "win",
+        "apm": 155,
+        "eapm": 113,
+        "eapmRatio": 0.7290322580645161,
+        "totalCommands": 874,
+        "openingCommandCount": 463,
+        "productionCount": 84,
+        "orderCount": 230
+      }
+    ]
+  }
+}

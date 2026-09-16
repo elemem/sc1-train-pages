@@ -1,0 +1,86 @@
+{
+  "data": {
+    "playerName": "Suzhouren",
+    "matchupFilter": "PPTPvZZPZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 62,
+    "avgEapm": 55,
+    "avgEapmRatio": 0.8870967741935484,
+    "avgOpeningCommands": 592,
+    "avgProductionCount": 36,
+    "avgOrderCount": 641,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_ebbc2f4ea8b3a87f_p00",
+        "replayId": "rpl_ebbc2f4ea8b3a87f",
+        "playedAt": "2026-07-23T13:47:07Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PPTPvZZPZ",
+        "result": "unknown",
+        "apm": 62,
+        "eapm": 55,
+        "eapmRatio": 0.8870967741935484,
+        "totalCommands": 1435,
+        "openingCommandCount": 592,
+        "productionCount": 36,
+        "orderCount": 641
+      }
+    ]
+  }
+}

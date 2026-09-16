@@ -1,0 +1,91 @@
+{
+  "data": {
+    "playerName": "Pzch",
+    "matchupFilter": "",
+    "sampleReplayCount": 2,
+    "winCount": 0,
+    "lossCount": 2,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 157,
+    "avgEapm": 120.5,
+    "avgEapmRatio": 0.763028638028638,
+    "avgOpeningCommands": 664,
+    "avgProductionCount": 438.5,
+    "avgOrderCount": 664,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 2
+      },
+      {
+        "tag": "开局活跃",
+        "count": 2
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 2
+      },
+      {
+        "tag": "框选驱动",
+        "count": 2
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 2
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 2
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 2
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 2
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_36112ab57eb51ebc_p04",
+        "replayId": "rpl_36112ab57eb51ebc",
+        "playedAt": "2025-09-25T13:43:16Z",
+        "mapName": "王牌猎人⑤Big Game Hu",
+        "matchup": "ZPPPvTPTZ",
+        "result": "loss",
+        "apm": 182,
+        "eapm": 144,
+        "eapmRatio": 0.7912087912087912,
+        "totalCommands": 1485,
+        "openingCommandCount": 689,
+        "productionCount": 261,
+        "orderCount": 692
+      },
+      {
+        "replayPlayerId": "rpl_fdf2f8b291f49689_p05",
+        "replayId": "rpl_fdf2f8b291f49689",
+        "playedAt": "2025-09-25T13:28:06Z",
+        "mapName": "王牌猎人⑤Big Game Hu",
+        "matchup": "ZZPPvTTTP",
+        "result": "loss",
+        "apm": 132,
+        "eapm": 97,
+        "eapmRatio": 0.7348484848484849,
+        "totalCommands": 1862,
+        "openingCommandCount": 639,
+        "productionCount": 616,
+        "orderCount": 636
+      }
+    ]
+  }
+}

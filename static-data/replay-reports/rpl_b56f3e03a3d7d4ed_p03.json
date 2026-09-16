@@ -1,0 +1,67 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_b56f3e03a3d7d4ed_p03",
+    "replayId": "rpl_b56f3e03a3d7d4ed",
+    "playerName": "tobypan",
+    "playerSlot": 3,
+    "playerID": 0,
+    "teamNo": 4,
+    "race": "Terran",
+    "result": "unknown",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PvZvTvTvTvPvPvZ",
+    "playedAt": "2026-07-25T04:33:51Z",
+    "durationSeconds": 136,
+    "summaryLine": "这局整体节奏较稳，当前更适合在已有优势上继续打磨执行细节。",
+    "styleTags": [
+      "框选驱动",
+      "偏运营衔接",
+      "指令转化较稳",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 85 秒，且本局记录到 1 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      }
+    ],
+    "weaknesses": null,
+    "nextSteps": null,
+    "metrics": {
+      "apm": 100,
+      "eapm": 74,
+      "eapmRatio": 0.74,
+      "totalCommands": 224,
+      "uniqueCommandTypes": 4,
+      "firstActionSec": 0.336,
+      "lastActionSec": 134.904,
+      "openingCommandCount": 224,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 81,
+      "hotkeyCount": 0,
+      "productionCount": 87,
+      "orderCount": 56,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 85.008,
+      "scoutProxyOrderCount": 23,
+      "scoutProxyUniqueCells": 2,
+      "scoutRefreshCount": 1,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Train\",\"Count\":83},{\"CommandType\":\"Select\",\"Count\":81},{\"CommandType\":\"Right Click\",\"Count\":56},{\"CommandType\":\"Build\",\"Count\":4}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.546,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":9.996,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":10.122,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":10.29,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":10.584,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":10.71,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":10.836,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":11.004,\"CommandType\":\"Train\",\"Payload\":\"SCV\"}]"
+    }
+  }
+}

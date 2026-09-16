@@ -1,0 +1,68 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_28fb18389312251a_p06",
+    "replayId": "rpl_28fb18389312251a",
+    "playerName": "XxYang",
+    "playerSlot": 6,
+    "playerID": 3,
+    "teamNo": 2,
+    "race": "Protoss",
+    "result": "unknown",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PPZZvPTPT",
+    "playedAt": "2026-08-25T15:34:56Z",
+    "durationSeconds": 26,
+    "summaryLine": "这局暴露出几个比较集中的短板，优先按建议逐项修正会更有效。",
+    "styleTags": [
+      "框选驱动",
+      "偏正面操作",
+      "指令转化较稳",
+      "开局活跃"
+    ],
+    "strengths": null,
+    "weaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "detail": "整局没有明显的远距探路代理信号，当前信息获取更像是跟着默认流程走，主动补信息偏少。",
+        "priority": 58
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "detail": "先固定第一波探路和中期补信息的时间点，让侦察从“想到才做”变成固定流程。",
+        "priority": 58
+      }
+    ],
+    "metrics": {
+      "apm": 218,
+      "eapm": 202,
+      "eapmRatio": 0.926605504587156,
+      "totalCommands": 95,
+      "uniqueCommandTypes": 4,
+      "firstActionSec": 0.294,
+      "lastActionSec": 26.166,
+      "openingCommandCount": 95,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 30,
+      "hotkeyCount": 0,
+      "productionCount": 6,
+      "orderCount": 59,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 0,
+      "scoutProxyOrderCount": 0,
+      "scoutProxyUniqueCells": 0,
+      "scoutRefreshCount": 0,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Right Click\",\"Count\":59},{\"CommandType\":\"Select\",\"Count\":29},{\"CommandType\":\"Train\",\"Count\":6},{\"CommandType\":\"Select Remove\",\"Count\":1}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.462,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":15.498,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":15.666,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":16.002,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":16.17,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":23.646,\"CommandType\":\"Train\",\"Payload\":\"Probe\"}]"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "data": {
+    "playerName": "fayecn",
+    "matchupFilter": "TZTPvPPZZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 162,
+    "avgEapm": 110,
+    "avgEapmRatio": 0.6790123456790124,
+    "avgOpeningCommands": 106,
+    "avgProductionCount": 55,
+    "avgOrderCount": 21,
+    "topStyleTags": [
+      {
+        "tag": "偏运营衔接",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_4b4971de9d2dc7f7_p03",
+        "replayId": "rpl_4b4971de9d2dc7f7",
+        "playedAt": "2026-07-26T07:40:49Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TZTPvPPZZ",
+        "result": "unknown",
+        "apm": 162,
+        "eapm": 110,
+        "eapmRatio": 0.6790123456790124,
+        "totalCommands": 106,
+        "openingCommandCount": 106,
+        "productionCount": 55,
+        "orderCount": 21
+      }
+    ]
+  }
+}

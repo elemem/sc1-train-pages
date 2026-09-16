@@ -1,0 +1,66 @@
+{
+  "data": {
+    "playerName": "DJB=MaoMaoChong",
+    "matchupFilter": "ZZPvZTP",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 131,
+    "avgEapm": 112,
+    "avgEapmRatio": 0.8549618320610687,
+    "avgOpeningCommands": 301,
+    "avgProductionCount": 60,
+    "avgOrderCount": 603,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_101e99150cde04a1_p00",
+        "replayId": "rpl_101e99150cde04a1",
+        "playedAt": "2026-07-25T07:48:06Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZZPvZTP",
+        "result": "loss",
+        "apm": 131,
+        "eapm": 112,
+        "eapmRatio": 0.8549618320610687,
+        "totalCommands": 1262,
+        "openingCommandCount": 301,
+        "productionCount": 60,
+        "orderCount": 603
+      }
+    ]
+  }
+}

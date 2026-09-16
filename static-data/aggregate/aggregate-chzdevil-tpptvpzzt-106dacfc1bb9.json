@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "CHZDevil",
+    "matchupFilter": "TPPTvPZZT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 256,
+    "avgEapm": 178,
+    "avgEapmRatio": 0.6953125,
+    "avgOpeningCommands": 808,
+    "avgProductionCount": 76,
+    "avgOrderCount": 436,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_b1a2cd36b14ffc1c_p04",
+        "replayId": "rpl_b1a2cd36b14ffc1c",
+        "playedAt": "2026-07-28T14:37:08Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TPPTvPZZT",
+        "result": "win",
+        "apm": 256,
+        "eapm": 178,
+        "eapmRatio": 0.6953125,
+        "totalCommands": 1088,
+        "openingCommandCount": 808,
+        "productionCount": 76,
+        "orderCount": 436
+      }
+    ]
+  }
+}

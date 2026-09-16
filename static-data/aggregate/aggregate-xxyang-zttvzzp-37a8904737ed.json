@@ -1,0 +1,76 @@
+{
+  "data": {
+    "playerName": "XxYang",
+    "matchupFilter": "ZTTvZZP",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 197,
+    "avgEapm": 170,
+    "avgEapmRatio": 0.8629441624365483,
+    "avgOpeningCommands": 530,
+    "avgProductionCount": 190,
+    "avgOrderCount": 813,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_9801ee7ef8b413ce_p05",
+        "replayId": "rpl_9801ee7ef8b413ce",
+        "playedAt": "2026-07-26T05:32:01Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZTTvZZP",
+        "result": "loss",
+        "apm": 197,
+        "eapm": 170,
+        "eapmRatio": 0.8629441624365483,
+        "totalCommands": 1364,
+        "openingCommandCount": 530,
+        "productionCount": 190,
+        "orderCount": 813
+      }
+    ]
+  }
+}

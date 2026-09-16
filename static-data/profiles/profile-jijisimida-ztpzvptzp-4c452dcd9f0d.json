@@ -1,0 +1,106 @@
+{
+  "data": {
+    "playerName": "jijisimida",
+    "matchupFilter": "ZTPZvPTZP",
+    "profiles": [
+      {
+        "scope": "overall",
+        "scopeValue": null,
+        "sampleCount": 1,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 49,
+            "tier": "E",
+            "sampleCount": 1,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 35,
+            "tier": "F",
+            "sampleCount": 1,
+            "summary": "运营连续性处于可用区间，生产和衔接还可以再压紧。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 78,
+            "tier": "B",
+            "sampleCount": 1,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 40,
+            "tier": "F",
+            "sampleCount": 1,
+            "summary": "当前更依赖框选而不是稳定编队，操作组织还偏散。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 80,
+            "tier": "B",
+            "sampleCount": 1,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 14,
+            "tier": "F",
+            "sampleCount": 1,
+            "summary": "接战窗口里框选占比偏高，说明真打起来时部队组织还容易回退到临时框选。 样本仍少，当前更适合作为趋势提示。"
+          }
+        ]
+      },
+      {
+        "scope": "race",
+        "scopeValue": "Protoss",
+        "sampleCount": 1,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 49,
+            "tier": "E",
+            "sampleCount": 1,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 35,
+            "tier": "F",
+            "sampleCount": 1,
+            "summary": "运营连续性处于可用区间，生产和衔接还可以再压紧。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 78,
+            "tier": "B",
+            "sampleCount": 1,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 40,
+            "tier": "F",
+            "sampleCount": 1,
+            "summary": "当前更依赖框选而不是稳定编队，操作组织还偏散。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 80,
+            "tier": "B",
+            "sampleCount": 1,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 14,
+            "tier": "F",
+            "sampleCount": 1,
+            "summary": "接战窗口里框选占比偏高，说明真打起来时部队组织还容易回退到临时框选。 样本仍少，当前更适合作为趋势提示。"
+          }
+        ]
+      }
+    ]
+  }
+}

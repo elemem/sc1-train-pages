@@ -1,0 +1,77 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_0955d6baea8b027b_p04",
+    "replayId": "rpl_0955d6baea8b027b",
+    "playerName": "XiaoHuDie",
+    "playerSlot": 4,
+    "playerID": 2,
+    "teamNo": 2,
+    "race": "Terran",
+    "result": "win",
+    "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+    "matchup": "PZPvZTP",
+    "playedAt": "2025-08-25T15:44:37Z",
+    "durationSeconds": 762,
+    "summaryLine": "这局整体节奏较稳，当前更适合在已有优势上继续打磨执行细节。",
+    "styleTags": [
+      "热键驱动",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "hotkey_usage",
+        "title": "热键使用积极",
+        "detail": "热键操作 2232 次，已不低于框选/选择类操作，操作组织相对稳定。",
+        "priority": 70
+      },
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 53 秒，且本局记录到 8 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      },
+      {
+        "key": "combat_control_proxy",
+        "title": "接战热键驱动较稳",
+        "detail": "在 117 个接战代理窗口里，热键占控制操作的 76%，接战组织相对稳定。",
+        "priority": 60
+      }
+    ],
+    "weaknesses": null,
+    "nextSteps": null,
+    "metrics": {
+      "apm": 348,
+      "eapm": 248,
+      "eapmRatio": 0.7126436781609196,
+      "totalCommands": 4349,
+      "uniqueCommandTypes": 22,
+      "firstActionSec": 0.168,
+      "lastActionSec": 750.498,
+      "openingCommandCount": 1097,
+      "midGameCommandCount": 2434,
+      "lateGameCommandCount": 818,
+      "selectionCount": 706,
+      "hotkeyCount": 2232,
+      "productionCount": 225,
+      "orderCount": 1136,
+      "chatCount": 0,
+      "leaveGameCount": 1,
+      "firstScoutProxySec": 53.382,
+      "scoutProxyOrderCount": 378,
+      "scoutProxyUniqueCells": 27,
+      "scoutRefreshCount": 8,
+      "engagementWindowCount": 117,
+      "engagementOrderCount": 1023,
+      "engagementHotkeyCount": 1698,
+      "engagementSelectionCount": 532,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Hotkey\",\"Count\":2232},{\"CommandType\":\"Right Click\",\"Count\":807},{\"CommandType\":\"Select\",\"Count\":646},{\"CommandType\":\"Targeted Order\",\"Count\":315},{\"CommandType\":\"Train\",\"Count\":184},{\"CommandType\":\"Select Add\",\"Count\":54}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.798,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":17.01,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":17.178,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":17.262,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":17.43,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":17.598,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":17.682,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":24.276,\"CommandType\":\"Train\",\"Payload\":\"SCV\"}]"
+    }
+  }
+}

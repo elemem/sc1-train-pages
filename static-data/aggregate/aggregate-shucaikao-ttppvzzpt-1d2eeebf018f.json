@@ -1,0 +1,68 @@
+{
+  "data": {
+    "playerName": "shucaikao",
+    "matchupFilter": "TTPPvZZPT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 163,
+    "avgEapm": 84,
+    "avgEapmRatio": 0.5153374233128835,
+    "avgOpeningCommands": 43,
+    "avgProductionCount": 2,
+    "avgOrderCount": 8,
+    "topStyleTags": [
+      {
+        "tag": "操作冗余偏多",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      },
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      },
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_f7398707172575d7_p03",
+        "replayId": "rpl_f7398707172575d7",
+        "playedAt": "2026-09-08T14:16:14Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TTPPvZZPT",
+        "result": "unknown",
+        "apm": 163,
+        "eapm": 84,
+        "eapmRatio": 0.5153374233128835,
+        "totalCommands": 43,
+        "openingCommandCount": 43,
+        "productionCount": 2,
+        "orderCount": 8
+      }
+    ]
+  }
+}

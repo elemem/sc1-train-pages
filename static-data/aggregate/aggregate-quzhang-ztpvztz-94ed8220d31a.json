@@ -1,0 +1,66 @@
+{
+  "data": {
+    "playerName": "QuZhang",
+    "matchupFilter": "ZTPvZTZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 174,
+    "avgEapm": 149,
+    "avgEapmRatio": 0.8563218390804598,
+    "avgOpeningCommands": 513,
+    "avgProductionCount": 80,
+    "avgOrderCount": 948,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_f1223a10930b424d_p00",
+        "replayId": "rpl_f1223a10930b424d",
+        "playedAt": "2024-10-10T12:47:08Z",
+        "mapName": "\u0003(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZTPvZTZ",
+        "result": "loss",
+        "apm": 174,
+        "eapm": 149,
+        "eapmRatio": 0.8563218390804598,
+        "totalCommands": 1871,
+        "openingCommandCount": 513,
+        "productionCount": 80,
+        "orderCount": 948
+      }
+    ]
+  }
+}

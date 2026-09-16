@@ -1,0 +1,66 @@
+{
+  "data": {
+    "playerName": "AoYou_DaHuDie",
+    "matchupFilter": "PZPvTZT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 267,
+    "avgEapm": 160,
+    "avgEapmRatio": 0.599250936329588,
+    "avgOpeningCommands": 895,
+    "avgProductionCount": 236,
+    "avgOrderCount": 1008,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "操作冗余偏多",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "low_effective_ratio",
+        "title": "无效操作偏多",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "reduce_redundant_input",
+        "title": "减少重复无效操作",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_0f0beb434d135a97_p05",
+        "replayId": "rpl_0f0beb434d135a97",
+        "playedAt": "2024-09-30T16:56:23Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "PZPvTZT",
+        "result": "loss",
+        "apm": 267,
+        "eapm": 160,
+        "eapmRatio": 0.599250936329588,
+        "totalCommands": 3579,
+        "openingCommandCount": 895,
+        "productionCount": 236,
+        "orderCount": 1008
+      }
+    ]
+  }
+}

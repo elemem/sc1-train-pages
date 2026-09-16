@@ -1,0 +1,74 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_d7928f1191975b2a_p00",
+    "replayId": "rpl_d7928f1191975b2a",
+    "playerName": "jijisimida",
+    "playerSlot": 0,
+    "playerID": 6,
+    "teamNo": 1,
+    "race": "Protoss",
+    "result": "loss",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PZZPvTTPP",
+    "playedAt": "2026-08-25T13:48:57Z",
+    "durationSeconds": 15,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "框选驱动",
+      "偏正面操作",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "detail": "整局没有明显的远距探路代理信号，当前信息获取更像是跟着默认流程走，主动补信息偏少。",
+        "priority": 58
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "detail": "先固定第一波探路和中期补信息的时间点，让侦察从“想到才做”变成固定流程。",
+        "priority": 58
+      }
+    ],
+    "metrics": {
+      "apm": 260,
+      "eapm": 166,
+      "eapmRatio": 0.6384615384615384,
+      "totalCommands": 64,
+      "uniqueCommandTypes": 6,
+      "firstActionSec": 0.126,
+      "lastActionSec": 14.784,
+      "openingCommandCount": 64,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 21,
+      "hotkeyCount": 0,
+      "productionCount": 10,
+      "orderCount": 32,
+      "chatCount": 0,
+      "leaveGameCount": 1,
+      "firstScoutProxySec": 0,
+      "scoutProxyOrderCount": 0,
+      "scoutProxyUniqueCells": 0,
+      "scoutRefreshCount": 0,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Targeted Order\",\"Count\":22},{\"CommandType\":\"Select\",\"Count\":20},{\"CommandType\":\"Right Click\",\"Count\":10},{\"CommandType\":\"Train\",\"Count\":10},{\"CommandType\":\"Leave Game\",\"Count\":1},{\"CommandType\":\"Select Remove\",\"Count\":1}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.336,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":11.844,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":14.07,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":14.112,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":14.196,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":14.28,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":14.364,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":14.406,\"CommandType\":\"Train\",\"Payload\":\"Probe\"}]"
+    }
+  }
+}

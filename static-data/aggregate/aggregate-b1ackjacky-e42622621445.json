@@ -1,0 +1,126 @@
+{
+  "data": {
+    "playerName": "B1ackJACKY",
+    "matchupFilter": "",
+    "sampleReplayCount": 3,
+    "winCount": 2,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 1,
+    "avgApm": 135.33333333333334,
+    "avgEapm": 89.33333333333333,
+    "avgEapmRatio": 0.7674734718933615,
+    "avgOpeningCommands": 449.6666666666667,
+    "avgProductionCount": 116.33333333333333,
+    "avgOrderCount": 374.6666666666667,
+    "topStyleTags": [
+      {
+        "tag": "热键驱动",
+        "count": 3
+      },
+      {
+        "tag": "开局活跃",
+        "count": 2
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "操作冗余偏多",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 2
+      },
+      {
+        "key": "slow_opening_start",
+        "title": "开局第一拍偏慢",
+        "count": 2
+      },
+      {
+        "key": "low_effective_ratio",
+        "title": "无效操作偏多",
+        "count": 1
+      },
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 2
+      },
+      {
+        "key": "tighten_first_cycle",
+        "title": "先练开局第一拍",
+        "count": 2
+      },
+      {
+        "key": "reduce_redundant_input",
+        "title": "减少重复无效操作",
+        "count": 1
+      },
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_6a1fb62a578af4a5_p03",
+        "replayId": "rpl_6a1fb62a578af4a5",
+        "playedAt": "2026-08-07T17:44:34Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PTZTvZZPZ",
+        "result": "win",
+        "apm": 181,
+        "eapm": 128,
+        "eapmRatio": 0.7071823204419889,
+        "totalCommands": 3085,
+        "openingCommandCount": 574,
+        "productionCount": 291,
+        "orderCount": 624
+      },
+      {
+        "replayPlayerId": "rpl_875033a70e380a4c_p02",
+        "replayId": "rpl_875033a70e380a4c",
+        "playedAt": "2026-07-25T07:35:41Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TPZvZPZ",
+        "result": "win",
+        "apm": 210,
+        "eapm": 125,
+        "eapmRatio": 0.5952380952380952,
+        "totalCommands": 1890,
+        "openingCommandCount": 774,
+        "productionCount": 58,
+        "orderCount": 500
+      },
+      {
+        "replayPlayerId": "rpl_5dd3d7e5ea846ccf_p01",
+        "replayId": "rpl_5dd3d7e5ea846ccf",
+        "playedAt": "2026-07-25T07:34:46Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZTPZZ",
+        "result": "unknown",
+        "apm": 15,
+        "eapm": 15,
+        "eapmRatio": 1,
+        "totalCommands": 1,
+        "openingCommandCount": 1,
+        "productionCount": 0,
+        "orderCount": 0
+      }
+    ]
+  }
+}

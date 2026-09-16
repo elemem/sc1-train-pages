@@ -1,0 +1,99 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_df6a13d46aacb61d_p02",
+    "replayId": "rpl_df6a13d46aacb61d",
+    "playerName": "fayecn",
+    "playerSlot": 2,
+    "playerID": 5,
+    "teamNo": 1,
+    "race": "Terran",
+    "result": "loss",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "ZZTvTPZ",
+    "playedAt": "2026-08-15T06:19:46Z",
+    "durationSeconds": 624,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "热键驱动",
+      "偏正面操作",
+      "指令转化较稳",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "effective_ops",
+        "title": "有效操作转化较稳",
+        "detail": "当前 EAPM/APM 比值为 0.79，说明大部分操作能稳定转化为有效指令。",
+        "priority": 90
+      },
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "hotkey_usage",
+        "title": "热键使用积极",
+        "detail": "热键操作 410 次，已不低于框选/选择类操作，操作组织相对稳定。",
+        "priority": 70
+      },
+      {
+        "key": "combat_control_proxy",
+        "title": "接战热键驱动较稳",
+        "detail": "在 65 个接战代理窗口里，热键占控制操作的 57%，接战组织相对稳定。",
+        "priority": 60
+      },
+      {
+        "key": "order_density",
+        "title": "执行指令密度较高",
+        "detail": "移动、攻击、右键等执行类指令占比 43%，说明对局中有较多有效落点和执行动作。",
+        "priority": 60
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "detail": "首次远距探路出现在 221 秒，当前信息获取更像是跟着默认流程走，主动补信息偏少。",
+        "priority": 58
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "detail": "先固定第一波探路和中期补信息的时间点，让侦察从“想到才做”变成固定流程。",
+        "priority": 58
+      }
+    ],
+    "metrics": {
+      "apm": 162,
+      "eapm": 128,
+      "eapmRatio": 0.7901234567901234,
+      "totalCommands": 1683,
+      "uniqueCommandTypes": 19,
+      "firstActionSec": 0.756,
+      "lastActionSec": 624.582,
+      "openingCommandCount": 330,
+      "midGameCommandCount": 1265,
+      "lateGameCommandCount": 88,
+      "selectionCount": 310,
+      "hotkeyCount": 410,
+      "productionCount": 216,
+      "orderCount": 720,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 221.298,
+      "scoutProxyOrderCount": 111,
+      "scoutProxyUniqueCells": 17,
+      "scoutRefreshCount": 4,
+      "engagementWindowCount": 65,
+      "engagementOrderCount": 458,
+      "engagementHotkeyCount": 258,
+      "engagementSelectionCount": 191,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Right Click\",\"Count\":490},{\"CommandType\":\"Hotkey\",\"Count\":410},{\"CommandType\":\"Select\",\"Count\":281},{\"CommandType\":\"Targeted Order\",\"Count\":224},{\"CommandType\":\"Train\",\"Count\":183},{\"CommandType\":\"Select Add\",\"Count\":26}]",
+      "openingActionsJSON": "[{\"TimeSec\":1.596,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":5.838,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":6.09,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":6.258,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":6.426,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":7.392,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":7.56,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":13.104,\"CommandType\":\"Train\",\"Payload\":\"SCV\"}]"
+    }
+  }
+}

@@ -1,0 +1,204 @@
+{
+  "data": {
+    "playerName": "LLSC-kongbai",
+    "matchupFilter": "",
+    "profiles": [
+      {
+        "scope": "overall",
+        "scopeValue": null,
+        "sampleCount": 8,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 73,
+            "tier": "C",
+            "sampleCount": 8,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 78,
+            "tier": "B",
+            "sampleCount": 8,
+            "summary": "运营连续性较稳，生产衔接通常能保持在线。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 89,
+            "tier": "A",
+            "sampleCount": 8,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 66,
+            "tier": "C",
+            "sampleCount": 8,
+            "summary": "操作组织基本可用，但编队、切屏和有效操作转化还有提升空间。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 87,
+            "tier": "A",
+            "sampleCount": 8,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 65,
+            "tier": "C",
+            "sampleCount": 8,
+            "summary": "接战窗口里的热键驱动和执行密度都比较稳，战斗控制已有明显正向信号。"
+          }
+        ]
+      },
+      {
+        "scope": "race",
+        "scopeValue": "Zerg",
+        "sampleCount": 4,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 43,
+            "tier": "F",
+            "sampleCount": 4,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 42,
+            "tier": "F",
+            "sampleCount": 4,
+            "summary": "运营连续性处于可用区间，生产和衔接还可以再压紧。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 86,
+            "tier": "A",
+            "sampleCount": 4,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 67,
+            "tier": "C",
+            "sampleCount": 4,
+            "summary": "操作组织基本可用，但编队、切屏和有效操作转化还有提升空间。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 85,
+            "tier": "A",
+            "sampleCount": 4,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 62,
+            "tier": "D",
+            "sampleCount": 4,
+            "summary": "接战窗口里的热键驱动和执行密度都比较稳，战斗控制已有明显正向信号。"
+          }
+        ]
+      },
+      {
+        "scope": "race",
+        "scopeValue": "Terran",
+        "sampleCount": 1,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 74,
+            "tier": "C",
+            "sampleCount": 1,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 80,
+            "tier": "B",
+            "sampleCount": 1,
+            "summary": "运营连续性较稳，生产衔接通常能保持在线。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 58,
+            "tier": "D",
+            "sampleCount": 1,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 78,
+            "tier": "B",
+            "sampleCount": 1,
+            "summary": "操作组织较稳，热键、切屏和有效指令转化都比较在线。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 80,
+            "tier": "B",
+            "sampleCount": 1,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。 样本仍少，当前更适合作为趋势提示。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 79,
+            "tier": "B",
+            "sampleCount": 1,
+            "summary": "接战窗口里的热键驱动和执行密度都比较稳，战斗控制已有明显正向信号。 样本仍少，当前更适合作为趋势提示。"
+          }
+        ]
+      },
+      {
+        "scope": "race",
+        "scopeValue": "Protoss",
+        "sampleCount": 3,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 82,
+            "tier": "B",
+            "sampleCount": 3,
+            "summary": "开局稳定性较好，前几分钟主线通常能连续推进。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 85,
+            "tier": "A",
+            "sampleCount": 3,
+            "summary": "运营连续性较稳，生产衔接通常能保持在线。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 78,
+            "tier": "B",
+            "sampleCount": 3,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 60,
+            "tier": "D",
+            "sampleCount": 3,
+            "summary": "操作组织基本可用，但编队、切屏和有效操作转化还有提升空间。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 84,
+            "tier": "B",
+            "sampleCount": 3,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 59,
+            "tier": "D",
+            "sampleCount": 3,
+            "summary": "战斗控制轴已经接入接战窗口代理，可观察接战时的热键驱动、框选依赖和执行密度。"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "data": {
+    "playerName": "shucaikao",
+    "matchupFilter": "PPPZvZPTZ",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 258,
+    "avgEapm": 132,
+    "avgEapmRatio": 0.5116279069767442,
+    "avgOpeningCommands": 839,
+    "avgProductionCount": 62,
+    "avgOrderCount": 233,
+    "topStyleTags": [
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "操作冗余偏多",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "low_effective_ratio",
+        "title": "无效操作偏多",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "reduce_redundant_input",
+        "title": "减少重复无效操作",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_5efb592c75a3864c_p02",
+        "replayId": "rpl_5efb592c75a3864c",
+        "playedAt": "2026-08-17T15:54:42Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PPPZvZPTZ",
+        "result": "win",
+        "apm": 258,
+        "eapm": 132,
+        "eapmRatio": 0.5116279069767442,
+        "totalCommands": 998,
+        "openingCommandCount": 839,
+        "productionCount": 62,
+        "orderCount": 233
+      }
+    ]
+  }
+}

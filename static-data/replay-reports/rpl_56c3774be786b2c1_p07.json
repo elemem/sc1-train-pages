@@ -1,0 +1,86 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_56c3774be786b2c1_p07",
+    "replayId": "rpl_56c3774be786b2c1",
+    "playerName": "Zdjfensi",
+    "playerSlot": 7,
+    "playerID": 3,
+    "teamNo": 2,
+    "race": "Protoss",
+    "result": "win",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "TPZTvZZPP",
+    "playedAt": "2026-08-27T16:10:20Z",
+    "durationSeconds": 1135,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "偏正面操作",
+      "指令转化较稳",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "effective_ops",
+        "title": "有效操作转化较稳",
+        "detail": "当前 EAPM/APM 比值为 0.89，说明大部分操作能稳定转化为有效指令。",
+        "priority": 90
+      },
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "order_density",
+        "title": "执行指令密度较高",
+        "detail": "移动、攻击、右键等执行类指令占比 50%，说明对局中有较多有效落点和执行动作。",
+        "priority": 60
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "detail": "首次远距探路出现在 191 秒，当前信息获取更像是跟着默认流程走，主动补信息偏少。",
+        "priority": 58
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "detail": "先固定第一波探路和中期补信息的时间点，让侦察从“想到才做”变成固定流程。",
+        "priority": 58
+      }
+    ],
+    "metrics": {
+      "apm": 193,
+      "eapm": 172,
+      "eapmRatio": 0.8911917098445595,
+      "totalCommands": 3641,
+      "uniqueCommandTypes": 15,
+      "firstActionSec": 0.126,
+      "lastActionSec": 1134.84,
+      "openingCommandCount": 402,
+      "midGameCommandCount": 1547,
+      "lateGameCommandCount": 1692,
+      "selectionCount": 746,
+      "hotkeyCount": 633,
+      "productionCount": 427,
+      "orderCount": 1828,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 190.512,
+      "scoutProxyOrderCount": 487,
+      "scoutProxyUniqueCells": 11,
+      "scoutRefreshCount": 5,
+      "engagementWindowCount": 146,
+      "engagementOrderCount": 1389,
+      "engagementHotkeyCount": 467,
+      "engagementSelectionCount": 516,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Right Click\",\"Count\":1471},{\"CommandType\":\"Select\",\"Count\":667},{\"CommandType\":\"Hotkey\",\"Count\":633},{\"CommandType\":\"Targeted Order\",\"Count\":350},{\"CommandType\":\"Train\",\"Count\":286},{\"CommandType\":\"Build\",\"Count\":72}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.126,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":13.86,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":13.986,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":14.112,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":23.982,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":32.886,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":46.536,\"CommandType\":\"Build\",\"Payload\":\"(x=112, y=112), Pylon\"},{\"TimeSec\":52.878,\"CommandType\":\"Train\",\"Payload\":\"Probe\"}]"
+    }
+  }
+}

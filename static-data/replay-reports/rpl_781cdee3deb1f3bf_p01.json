@@ -1,0 +1,84 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_781cdee3deb1f3bf_p01",
+    "replayId": "rpl_781cdee3deb1f3bf",
+    "playerName": "DJPLQ",
+    "playerSlot": 1,
+    "playerID": 7,
+    "teamNo": 1,
+    "race": "Terran",
+    "result": "loss",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PTZZvPTPZ",
+    "playedAt": "2026-08-05T13:39:33Z",
+    "durationSeconds": 396,
+    "summaryLine": "这局整体节奏较稳，当前更适合在已有优势上继续打磨执行细节。",
+    "styleTags": [
+      "偏正面操作",
+      "指令转化较稳",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "effective_ops",
+        "title": "有效操作转化较稳",
+        "detail": "当前 EAPM/APM 比值为 0.91，说明大部分操作能稳定转化为有效指令。",
+        "priority": 90
+      },
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 116 秒，且本局记录到 6 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      },
+      {
+        "key": "combat_control_proxy",
+        "title": "接战热键驱动较稳",
+        "detail": "在 37 个接战代理窗口里，热键占控制操作的 52%，接战组织相对稳定。",
+        "priority": 60
+      },
+      {
+        "key": "order_density",
+        "title": "执行指令密度较高",
+        "detail": "移动、攻击、右键等执行类指令占比 52%，说明对局中有较多有效落点和执行动作。",
+        "priority": 60
+      }
+    ],
+    "weaknesses": null,
+    "nextSteps": null,
+    "metrics": {
+      "apm": 162,
+      "eapm": 148,
+      "eapmRatio": 0.9135802469135802,
+      "totalCommands": 1045,
+      "uniqueCommandTypes": 16,
+      "firstActionSec": 0.126,
+      "lastActionSec": 386.526,
+      "openingCommandCount": 436,
+      "midGameCommandCount": 609,
+      "lateGameCommandCount": 0,
+      "selectionCount": 223,
+      "hotkeyCount": 180,
+      "productionCount": 79,
+      "orderCount": 548,
+      "chatCount": 0,
+      "leaveGameCount": 1,
+      "firstScoutProxySec": 116.004,
+      "scoutProxyOrderCount": 281,
+      "scoutProxyUniqueCells": 17,
+      "scoutRefreshCount": 6,
+      "engagementWindowCount": 37,
+      "engagementOrderCount": 313,
+      "engagementHotkeyCount": 136,
+      "engagementSelectionCount": 125,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Right Click\",\"Count\":486},{\"CommandType\":\"Select\",\"Count\":206},{\"CommandType\":\"Hotkey\",\"Count\":180},{\"CommandType\":\"Train\",\"Count\":62},{\"CommandType\":\"Targeted Order\",\"Count\":59},{\"CommandType\":\"Build\",\"Count\":16}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.126,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":16.338,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":24.99,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":34.398,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":53.046,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":57.456,\"CommandType\":\"Build\",\"Payload\":\"(x=81, y=10), Supply Depot\"},{\"TimeSec\":63.672,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":79.044,\"CommandType\":\"Train\",\"Payload\":\"SCV\"}]"
+    }
+  }
+}

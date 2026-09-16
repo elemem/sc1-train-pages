@@ -1,0 +1,76 @@
+{
+  "data": {
+    "playerName": "tangming",
+    "matchupFilter": "ZZZTvTTPP",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 144,
+    "avgEapm": 131,
+    "avgEapmRatio": 0.9097222222222222,
+    "avgOpeningCommands": 389,
+    "avgProductionCount": 393,
+    "avgOrderCount": 1698,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_a407d163af7f468e_p03",
+        "replayId": "rpl_a407d163af7f468e",
+        "playedAt": "2026-07-31T16:01:41Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZZZTvTTPP",
+        "result": "win",
+        "apm": 144,
+        "eapm": 131,
+        "eapmRatio": 0.9097222222222222,
+        "totalCommands": 3234,
+        "openingCommandCount": 389,
+        "productionCount": 393,
+        "orderCount": 1698
+      }
+    ]
+  }
+}

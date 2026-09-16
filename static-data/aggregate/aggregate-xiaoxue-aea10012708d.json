@@ -1,0 +1,84 @@
+{
+  "data": {
+    "playerName": "xiaoxue~",
+    "matchupFilter": "",
+    "sampleReplayCount": 3,
+    "winCount": 2,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0.6666666666666666,
+    "avgApm": 264,
+    "avgEapm": 194.66666666666666,
+    "avgEapmRatio": 0.7359403026454651,
+    "avgOpeningCommands": 744.3333333333334,
+    "avgProductionCount": 251,
+    "avgOrderCount": 1074,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 3
+      },
+      {
+        "tag": "开局活跃",
+        "count": 3
+      },
+      {
+        "tag": "热键驱动",
+        "count": 3
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 2
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_504ac7aad1dab8e3_p03",
+        "replayId": "rpl_504ac7aad1dab8e3",
+        "playedAt": "2026-08-15T12:50:36Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PTPTvPZPZ",
+        "result": "loss",
+        "apm": 293,
+        "eapm": 218,
+        "eapmRatio": 0.7440273037542662,
+        "totalCommands": 4379,
+        "openingCommandCount": 735,
+        "productionCount": 310,
+        "orderCount": 1374
+      },
+      {
+        "replayPlayerId": "rpl_91e173903f3cbf95_p07",
+        "replayId": "rpl_91e173903f3cbf95",
+        "playedAt": "2026-08-10T07:09:57Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PPZTvTZPZ",
+        "result": "win",
+        "apm": 233,
+        "eapm": 165,
+        "eapmRatio": 0.7081545064377682,
+        "totalCommands": 1631,
+        "openingCommandCount": 675,
+        "productionCount": 61,
+        "orderCount": 528
+      },
+      {
+        "replayPlayerId": "rpl_60a665a274bb9c55_p00",
+        "replayId": "rpl_60a665a274bb9c55",
+        "playedAt": "2026-08-09T12:01:53Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZPTvPZPZ",
+        "result": "win",
+        "apm": 266,
+        "eapm": 201,
+        "eapmRatio": 0.7556390977443609,
+        "totalCommands": 4073,
+        "openingCommandCount": 823,
+        "productionCount": 382,
+        "orderCount": 1320
+      }
+    ]
+  }
+}

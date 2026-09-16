@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "FengG_G",
+    "matchupFilter": "ZTTvPZP",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 200,
+    "avgEapm": 161,
+    "avgEapmRatio": 0.805,
+    "avgOpeningCommands": 612,
+    "avgProductionCount": 190,
+    "avgOrderCount": 524,
+    "topStyleTags": [
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_f23eaae41384f497_p01",
+        "replayId": "rpl_f23eaae41384f497",
+        "playedAt": "2025-07-24T06:55:15Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZTTvPZP",
+        "result": "loss",
+        "apm": 200,
+        "eapm": 161,
+        "eapmRatio": 0.805,
+        "totalCommands": 2008,
+        "openingCommandCount": 612,
+        "productionCount": 190,
+        "orderCount": 524
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "data": {
+    "playerName": "zdj580",
+    "matchupFilter": "TZPPvZZPT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 140,
+    "avgEapm": 128,
+    "avgEapmRatio": 0.9142857142857143,
+    "avgOpeningCommands": 405,
+    "avgProductionCount": 198,
+    "avgOrderCount": 514,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_8d9f66e6fc085f34_p07",
+        "replayId": "rpl_8d9f66e6fc085f34",
+        "playedAt": "2026-08-06T15:01:42Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TZPPvZZPT",
+        "result": "win",
+        "apm": 140,
+        "eapm": 128,
+        "eapmRatio": 0.9142857142857143,
+        "totalCommands": 1000,
+        "openingCommandCount": 405,
+        "productionCount": 198,
+        "orderCount": 514
+      }
+    ]
+  }
+}

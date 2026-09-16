@@ -1,0 +1,76 @@
+{
+  "data": {
+    "playerName": "XMY_MIT9030YBB",
+    "matchupFilter": "PZTvTZP",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 114,
+    "avgEapm": 91,
+    "avgEapmRatio": 0.7982456140350878,
+    "avgOpeningCommands": 559,
+    "avgProductionCount": 310,
+    "avgOrderCount": 1105,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_649d162847c4fd79_p02",
+        "replayId": "rpl_649d162847c4fd79",
+        "playedAt": "2026-07-24T13:55:11Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZTvTZP",
+        "result": "loss",
+        "apm": 114,
+        "eapm": 91,
+        "eapmRatio": 0.7982456140350878,
+        "totalCommands": 2273,
+        "openingCommandCount": 559,
+        "productionCount": 310,
+        "orderCount": 1105
+      }
+    ]
+  }
+}

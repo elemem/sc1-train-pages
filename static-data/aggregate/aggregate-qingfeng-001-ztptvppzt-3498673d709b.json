@@ -1,0 +1,76 @@
+{
+  "data": {
+    "playerName": "qingfeng-001",
+    "matchupFilter": "ZTPTvPPZT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 100,
+    "avgEapm": 98,
+    "avgEapmRatio": 0.98,
+    "avgOpeningCommands": 238,
+    "avgProductionCount": 56,
+    "avgOrderCount": 350,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_7d61cd65eb946b2a_p04",
+        "replayId": "rpl_7d61cd65eb946b2a",
+        "playedAt": "2025-09-25T13:06:33Z",
+        "mapName": "王牌猎人⑤Big Game Hu",
+        "matchup": "ZTPTvPPZT",
+        "result": "loss",
+        "apm": 100,
+        "eapm": 98,
+        "eapmRatio": 0.98,
+        "totalCommands": 555,
+        "openingCommandCount": 238,
+        "productionCount": 56,
+        "orderCount": 350
+      }
+    ]
+  }
+}

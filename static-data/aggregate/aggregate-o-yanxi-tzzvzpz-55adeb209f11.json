@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "o-yanxi",
+    "matchupFilter": "TZZvZPZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 152,
+    "avgEapm": 139,
+    "avgEapmRatio": 0.9144736842105263,
+    "avgOpeningCommands": 388,
+    "avgProductionCount": 21,
+    "avgOrderCount": 256,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_d3d92a0d616c85bd_p02",
+        "replayId": "rpl_d3d92a0d616c85bd",
+        "playedAt": "2026-08-05T14:08:33Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TZZvZPZ",
+        "result": "loss",
+        "apm": 152,
+        "eapm": 139,
+        "eapmRatio": 0.9144736842105263,
+        "totalCommands": 588,
+        "openingCommandCount": 388,
+        "productionCount": 21,
+        "orderCount": 256
+      }
+    ]
+  }
+}

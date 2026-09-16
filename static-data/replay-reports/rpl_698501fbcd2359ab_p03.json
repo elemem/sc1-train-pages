@@ -1,0 +1,74 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_698501fbcd2359ab_p03",
+    "replayId": "rpl_698501fbcd2359ab",
+    "playerName": "XMY_MIT9030YBB",
+    "playerSlot": 3,
+    "playerID": 1,
+    "teamNo": 1,
+    "race": "Zerg",
+    "result": "loss",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PZZZvPTTT",
+    "playedAt": "2026-08-08T14:30:59Z",
+    "durationSeconds": 42,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "框选驱动",
+      "偏正面操作",
+      "指令转化较稳"
+    ],
+    "strengths": [
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 6 秒，且本局记录到 1 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "detail": "记录到的开局生产动作只有 5 条，生产衔接还不够稳定。",
+        "priority": 85
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "detail": "围绕开局前 3 分钟建立固定流程，优先盯住补农民、补兵和关键科技不断线。",
+        "priority": 85
+      }
+    ],
+    "metrics": {
+      "apm": 74,
+      "eapm": 66,
+      "eapmRatio": 0.8918918918918919,
+      "totalCommands": 51,
+      "uniqueCommandTypes": 6,
+      "firstActionSec": 0.126,
+      "lastActionSec": 41.202,
+      "openingCommandCount": 51,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 24,
+      "hotkeyCount": 0,
+      "productionCount": 5,
+      "orderCount": 22,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 5.544,
+      "scoutProxyOrderCount": 4,
+      "scoutProxyUniqueCells": 3,
+      "scoutRefreshCount": 1,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Select\",\"Count\":22},{\"CommandType\":\"Right Click\",\"Count\":16},{\"CommandType\":\"Targeted Order\",\"Count\":6},{\"CommandType\":\"Unit Morph\",\"Count\":5},{\"CommandType\":\"Select Add\",\"Count\":1},{\"CommandType\":\"Select Remove\",\"Count\":1}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.21,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":16.548,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":25.368,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":34.146,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":40.824,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"}]"
+    }
+  }
+}

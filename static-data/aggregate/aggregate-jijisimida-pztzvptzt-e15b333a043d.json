@@ -1,0 +1,72 @@
+{
+  "data": {
+    "playerName": "jijisimida",
+    "matchupFilter": "PZTZvPTZT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 152,
+    "avgEapm": 106,
+    "avgEapmRatio": 0.6973684210526315,
+    "avgOpeningCommands": 475,
+    "avgProductionCount": 23,
+    "avgOrderCount": 230,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_94c114faf5c86528_p01",
+        "replayId": "rpl_94c114faf5c86528",
+        "playedAt": "2026-07-29T15:41:17Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZTZvPTZT",
+        "result": "win",
+        "apm": 152,
+        "eapm": 106,
+        "eapmRatio": 0.6973684210526315,
+        "totalCommands": 594,
+        "openingCommandCount": 475,
+        "productionCount": 23,
+        "orderCount": 230
+      }
+    ]
+  }
+}

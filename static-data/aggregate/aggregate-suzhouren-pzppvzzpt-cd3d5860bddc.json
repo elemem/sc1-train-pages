@@ -1,0 +1,76 @@
+{
+  "data": {
+    "playerName": "Suzhouren",
+    "matchupFilter": "PZPPvZZPT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 164,
+    "avgEapm": 149,
+    "avgEapmRatio": 0.9085365853658537,
+    "avgOpeningCommands": 517,
+    "avgProductionCount": 151,
+    "avgOrderCount": 867,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_23d7400f86ad6fc4_p02",
+        "replayId": "rpl_23d7400f86ad6fc4",
+        "playedAt": "2026-08-25T13:17:31Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZPPvZZPT",
+        "result": "win",
+        "apm": 164,
+        "eapm": 149,
+        "eapmRatio": 0.9085365853658537,
+        "totalCommands": 1495,
+        "openingCommandCount": 517,
+        "productionCount": 151,
+        "orderCount": 867
+      }
+    ]
+  }
+}

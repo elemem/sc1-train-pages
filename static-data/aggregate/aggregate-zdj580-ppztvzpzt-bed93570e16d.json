@@ -1,0 +1,86 @@
+{
+  "data": {
+    "playerName": "zdj580",
+    "matchupFilter": "PPZTvZPZT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 133,
+    "avgEapm": 122,
+    "avgEapmRatio": 0.9172932330827067,
+    "avgOpeningCommands": 376,
+    "avgProductionCount": 246,
+    "avgOrderCount": 756,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_2a9a78c0223bc48f_p07",
+        "replayId": "rpl_2a9a78c0223bc48f",
+        "playedAt": "2026-08-13T14:57:59Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PPZTvZPZT",
+        "result": "win",
+        "apm": 133,
+        "eapm": 122,
+        "eapmRatio": 0.9172932330827067,
+        "totalCommands": 1468,
+        "openingCommandCount": 376,
+        "productionCount": 246,
+        "orderCount": 756
+      }
+    ]
+  }
+}

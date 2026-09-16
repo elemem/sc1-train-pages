@@ -1,0 +1,61 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_395a5319c586d319_p05",
+    "replayId": "rpl_395a5319c586d319",
+    "playerName": "TW_daolang",
+    "playerSlot": 5,
+    "playerID": 7,
+    "teamNo": 2,
+    "race": "Zerg",
+    "result": "unknown",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "TPPPvPZZT",
+    "playedAt": "2026-08-13T13:59:32Z",
+    "durationSeconds": 54,
+    "summaryLine": "这局整体节奏较稳，当前更适合在已有优势上继续打磨执行细节。",
+    "styleTags": [
+      "热键驱动",
+      "偏正面操作",
+      "指令转化较稳",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 1 秒，且本局记录到 2 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      }
+    ],
+    "weaknesses": null,
+    "nextSteps": null,
+    "metrics": {
+      "apm": 203,
+      "eapm": 165,
+      "eapmRatio": 0.812807881773399,
+      "totalCommands": 185,
+      "uniqueCommandTypes": 6,
+      "firstActionSec": 0.21,
+      "lastActionSec": 54.684,
+      "openingCommandCount": 185,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 31,
+      "hotkeyCount": 61,
+      "productionCount": 7,
+      "orderCount": 86,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 0.63,
+      "scoutProxyOrderCount": 85,
+      "scoutProxyUniqueCells": 6,
+      "scoutRefreshCount": 2,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Right Click\",\"Count\":86},{\"CommandType\":\"Hotkey\",\"Count\":61},{\"CommandType\":\"Select\",\"Count\":29},{\"CommandType\":\"Unit Morph\",\"Count\":7},{\"CommandType\":\"Select Add\",\"Count\":1},{\"CommandType\":\"Select Remove\",\"Count\":1}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.252,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":17.556,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":17.64,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":25.872,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":34.944,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":35.028,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":42.42,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"}]"
+    }
+  }
+}

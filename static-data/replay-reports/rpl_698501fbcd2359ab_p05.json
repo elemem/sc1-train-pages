@@ -1,0 +1,75 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_698501fbcd2359ab_p05",
+    "replayId": "rpl_698501fbcd2359ab",
+    "playerName": "_3zhisongshu",
+    "playerSlot": 5,
+    "playerID": 6,
+    "teamNo": 2,
+    "race": "Terran",
+    "result": "win",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PZZZvPTTT",
+    "playedAt": "2026-08-08T14:30:59Z",
+    "durationSeconds": 42,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "热键驱动",
+      "偏运营衔接",
+      "指令转化较稳",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "detail": "整局没有明显的远距探路代理信号，当前信息获取更像是跟着默认流程走，主动补信息偏少。",
+        "priority": 58
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "detail": "先固定第一波探路和中期补信息的时间点，让侦察从“想到才做”变成固定流程。",
+        "priority": 58
+      }
+    ],
+    "metrics": {
+      "apm": 168,
+      "eapm": 129,
+      "eapmRatio": 0.7678571428571429,
+      "totalCommands": 119,
+      "uniqueCommandTypes": 5,
+      "firstActionSec": 0.084,
+      "lastActionSec": 42.42,
+      "openingCommandCount": 119,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 9,
+      "hotkeyCount": 55,
+      "productionCount": 22,
+      "orderCount": 33,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 0,
+      "scoutProxyOrderCount": 0,
+      "scoutProxyUniqueCells": 0,
+      "scoutRefreshCount": 0,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Hotkey\",\"Count\":55},{\"CommandType\":\"Right Click\",\"Count\":29},{\"CommandType\":\"Train\",\"Count\":22},{\"CommandType\":\"Select\",\"Count\":9},{\"CommandType\":\"Targeted Order\",\"Count\":4}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.126,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":0.252,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":12.222,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":12.432,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":12.558,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":12.726,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":12.894,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":17.094,\"CommandType\":\"Train\",\"Payload\":\"SCV\"}]"
+    }
+  }
+}

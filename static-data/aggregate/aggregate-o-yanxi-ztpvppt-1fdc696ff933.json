@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "o-yanxi",
+    "matchupFilter": "ZTPvPPT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 184,
+    "avgEapm": 172,
+    "avgEapmRatio": 0.9347826086956522,
+    "avgOpeningCommands": 582,
+    "avgProductionCount": 346,
+    "avgOrderCount": 1468,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_69bdbcb4ed8f8dc6_p02",
+        "replayId": "rpl_69bdbcb4ed8f8dc6",
+        "playedAt": "2026-08-09T12:53:12Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZTPvPPT",
+        "result": "win",
+        "apm": 184,
+        "eapm": 172,
+        "eapmRatio": 0.9347826086956522,
+        "totalCommands": 3042,
+        "openingCommandCount": 582,
+        "productionCount": 346,
+        "orderCount": 1468
+      }
+    ]
+  }
+}

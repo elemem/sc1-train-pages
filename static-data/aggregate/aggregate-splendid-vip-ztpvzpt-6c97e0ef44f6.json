@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "Splendid__vip",
+    "matchupFilter": "ZTPvZPT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 232,
+    "avgEapm": 183,
+    "avgEapmRatio": 0.7887931034482759,
+    "avgOpeningCommands": 831,
+    "avgProductionCount": 375,
+    "avgOrderCount": 1149,
+    "topStyleTags": [
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_917b150cde195698_p01",
+        "replayId": "rpl_917b150cde195698",
+        "playedAt": "2025-08-30T05:53:33Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZTPvZPT",
+        "result": "win",
+        "apm": 232,
+        "eapm": 183,
+        "eapmRatio": 0.7887931034482759,
+        "totalCommands": 4166,
+        "openingCommandCount": 831,
+        "productionCount": 375,
+        "orderCount": 1149
+      }
+    ]
+  }
+}

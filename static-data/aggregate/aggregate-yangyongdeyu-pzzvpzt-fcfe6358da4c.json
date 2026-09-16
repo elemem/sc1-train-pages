@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "YangYongDeYu",
+    "matchupFilter": "PZZvPZT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 138,
+    "avgEapm": 121,
+    "avgEapmRatio": 0.8768115942028986,
+    "avgOpeningCommands": 339,
+    "avgProductionCount": 46,
+    "avgOrderCount": 667,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_69d4a0715838c15d_p01",
+        "replayId": "rpl_69d4a0715838c15d",
+        "playedAt": "2026-08-10T06:28:42Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZZvPZT",
+        "result": "loss",
+        "apm": 138,
+        "eapm": 121,
+        "eapmRatio": 0.8768115942028986,
+        "totalCommands": 1198,
+        "openingCommandCount": 339,
+        "productionCount": 46,
+        "orderCount": 667
+      }
+    ]
+  }
+}

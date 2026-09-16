@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "niaowang",
+    "matchupFilter": "ZTPvTTP",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 194,
+    "avgEapm": 144,
+    "avgEapmRatio": 0.7422680412371134,
+    "avgOpeningCommands": 670,
+    "avgProductionCount": 180,
+    "avgOrderCount": 660,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_40994032c1b1a0cb_p02",
+        "replayId": "rpl_40994032c1b1a0cb",
+        "playedAt": "2025-07-09T15:15:23Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZTPvTTP",
+        "result": "win",
+        "apm": 194,
+        "eapm": 144,
+        "eapmRatio": 0.7422680412371134,
+        "totalCommands": 2055,
+        "openingCommandCount": 670,
+        "productionCount": 180,
+        "orderCount": 660
+      }
+    ]
+  }
+}

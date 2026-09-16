@@ -1,0 +1,66 @@
+{
+  "data": {
+    "playerName": "FS-fangsong",
+    "matchupFilter": "ZTZPPT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 208,
+    "avgEapm": 175,
+    "avgEapmRatio": 0.8413461538461539,
+    "avgOpeningCommands": 550,
+    "avgProductionCount": 97,
+    "avgOrderCount": 1122,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_2711ff31bcc0da1c_p00",
+        "replayId": "rpl_2711ff31bcc0da1c",
+        "playedAt": "2026-08-20T15:23:40Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZTZPPT",
+        "result": "unknown",
+        "apm": 208,
+        "eapm": 175,
+        "eapmRatio": 0.8413461538461539,
+        "totalCommands": 2243,
+        "openingCommandCount": 550,
+        "productionCount": 97,
+        "orderCount": 1122
+      }
+    ]
+  }
+}

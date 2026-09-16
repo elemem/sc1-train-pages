@@ -1,0 +1,76 @@
+{
+  "data": {
+    "playerName": "YangYongDeYu",
+    "matchupFilter": "ZZTZvPPPP",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 145,
+    "avgEapm": 115,
+    "avgEapmRatio": 0.7931034482758621,
+    "avgOpeningCommands": 357,
+    "avgProductionCount": 90,
+    "avgOrderCount": 561,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 1
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_ee6e966b84d8f724_p03",
+        "replayId": "rpl_ee6e966b84d8f724",
+        "playedAt": "2026-08-21T15:59:41Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZZTZvPPPP",
+        "result": "loss",
+        "apm": 145,
+        "eapm": 115,
+        "eapmRatio": 0.7931034482758621,
+        "totalCommands": 1163,
+        "openingCommandCount": 357,
+        "productionCount": 90,
+        "orderCount": 561
+      }
+    ]
+  }
+}

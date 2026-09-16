@@ -1,0 +1,78 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_42ed77e1f63f4eaf_p00",
+    "replayId": "rpl_42ed77e1f63f4eaf",
+    "playerName": "=DJB=CHoU''BaO",
+    "playerSlot": 0,
+    "playerID": 1,
+    "teamNo": 1,
+    "race": "Protoss",
+    "result": "loss",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PTZvPZP",
+    "playedAt": "2026-08-08T15:11:23Z",
+    "durationSeconds": 510,
+    "summaryLine": "这局整体节奏较稳，当前更适合在已有优势上继续打磨执行细节。",
+    "styleTags": [
+      "偏正面操作",
+      "指令转化较稳",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "effective_ops",
+        "title": "有效操作转化较稳",
+        "detail": "当前 EAPM/APM 比值为 0.85，说明大部分操作能稳定转化为有效指令。",
+        "priority": 90
+      },
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 51 秒，且本局记录到 6 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      },
+      {
+        "key": "order_density",
+        "title": "执行指令密度较高",
+        "detail": "移动、攻击、右键等执行类指令占比 47%，说明对局中有较多有效落点和执行动作。",
+        "priority": 60
+      }
+    ],
+    "weaknesses": null,
+    "nextSteps": null,
+    "metrics": {
+      "apm": 167,
+      "eapm": 142,
+      "eapmRatio": 0.8502994011976048,
+      "totalCommands": 1399,
+      "uniqueCommandTypes": 14,
+      "firstActionSec": 0.126,
+      "lastActionSec": 503.37,
+      "openingCommandCount": 578,
+      "midGameCommandCount": 821,
+      "lateGameCommandCount": 0,
+      "selectionCount": 244,
+      "hotkeyCount": 224,
+      "productionCount": 267,
+      "orderCount": 656,
+      "chatCount": 0,
+      "leaveGameCount": 1,
+      "firstScoutProxySec": 50.61,
+      "scoutProxyOrderCount": 169,
+      "scoutProxyUniqueCells": 14,
+      "scoutRefreshCount": 6,
+      "engagementWindowCount": 36,
+      "engagementOrderCount": 286,
+      "engagementHotkeyCount": 81,
+      "engagementSelectionCount": 114,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Right Click\",\"Count\":490},{\"CommandType\":\"Train\",\"Count\":238},{\"CommandType\":\"Select\",\"Count\":233},{\"CommandType\":\"Hotkey\",\"Count\":224},{\"CommandType\":\"Targeted Order\",\"Count\":156},{\"CommandType\":\"Build\",\"Count\":27}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.126,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":9.534,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":9.702,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":9.87,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":9.996,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":10.122,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":10.29,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":10.416,\"CommandType\":\"Train\",\"Payload\":\"Probe\"}]"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "Nowayout_",
+    "matchupFilter": "ZZZvPPT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 310,
+    "avgEapm": 230,
+    "avgEapmRatio": 0.7419354838709677,
+    "avgOpeningCommands": 980,
+    "avgProductionCount": 383,
+    "avgOrderCount": 1338,
+    "topStyleTags": [
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_4e5ea43aaf0a9ddc_p05",
+        "replayId": "rpl_4e5ea43aaf0a9ddc",
+        "playedAt": "2025-07-19T13:41:31Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZZZvPPT",
+        "result": "win",
+        "apm": 310,
+        "eapm": 230,
+        "eapmRatio": 0.7419354838709677,
+        "totalCommands": 4953,
+        "openingCommandCount": 980,
+        "productionCount": 383,
+        "orderCount": 1338
+      }
+    ]
+  }
+}

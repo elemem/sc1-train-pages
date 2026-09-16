@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "daoshi~nihaosao",
+    "matchupFilter": "PZZZvPPZT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 162,
+    "avgEapm": 134,
+    "avgEapmRatio": 0.8271604938271605,
+    "avgOpeningCommands": 505,
+    "avgProductionCount": 187,
+    "avgOrderCount": 476,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_9f1964dd77c651cf_p00",
+        "replayId": "rpl_9f1964dd77c651cf",
+        "playedAt": "2026-08-21T15:16:23Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZZZvPPZT",
+        "result": "loss",
+        "apm": 162,
+        "eapm": 134,
+        "eapmRatio": 0.8271604938271605,
+        "totalCommands": 1089,
+        "openingCommandCount": 505,
+        "productionCount": 187,
+        "orderCount": 476
+      }
+    ]
+  }
+}

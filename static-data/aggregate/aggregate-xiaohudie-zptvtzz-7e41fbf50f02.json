@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "XiaoHuDie",
+    "matchupFilter": "ZPTvTZZ",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 331,
+    "avgEapm": 267,
+    "avgEapmRatio": 0.8066465256797583,
+    "avgOpeningCommands": 813,
+    "avgProductionCount": 145,
+    "avgOrderCount": 1783,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_4d227220fd1db711_p04",
+        "replayId": "rpl_4d227220fd1db711",
+        "playedAt": "2025-08-14T18:00:50Z",
+        "mapName": "\u0007(XB2)\u0006 Big Game Hunters",
+        "matchup": "ZPTvTZZ",
+        "result": "win",
+        "apm": 331,
+        "eapm": 267,
+        "eapmRatio": 0.8066465256797583,
+        "totalCommands": 5206,
+        "openingCommandCount": 813,
+        "productionCount": 145,
+        "orderCount": 1783
+      }
+    ]
+  }
+}

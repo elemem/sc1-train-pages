@@ -1,0 +1,73 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_698501fbcd2359ab_p02",
+    "replayId": "rpl_698501fbcd2359ab",
+    "playerName": "DLC_YiZh1Hu",
+    "playerSlot": 2,
+    "playerID": 5,
+    "teamNo": 1,
+    "race": "Zerg",
+    "result": "loss",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PZZZvPTTT",
+    "playedAt": "2026-08-08T14:30:59Z",
+    "durationSeconds": 42,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "热键驱动",
+      "指令转化较稳"
+    ],
+    "strengths": [
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 5 秒，且本局记录到 1 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "detail": "记录到的开局生产动作只有 4 条，生产衔接还不够稳定。",
+        "priority": 85
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "detail": "围绕开局前 3 分钟建立固定流程，优先盯住补农民、补兵和关键科技不断线。",
+        "priority": 85
+      }
+    ],
+    "metrics": {
+      "apm": 120,
+      "eapm": 100,
+      "eapmRatio": 0.8333333333333334,
+      "totalCommands": 82,
+      "uniqueCommandTypes": 4,
+      "firstActionSec": 0.126,
+      "lastActionSec": 40.95,
+      "openingCommandCount": 82,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 21,
+      "hotkeyCount": 35,
+      "productionCount": 4,
+      "orderCount": 22,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 5.04,
+      "scoutProxyOrderCount": 1,
+      "scoutProxyUniqueCells": 1,
+      "scoutRefreshCount": 1,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Hotkey\",\"Count\":35},{\"CommandType\":\"Right Click\",\"Count\":22},{\"CommandType\":\"Select\",\"Count\":21},{\"CommandType\":\"Unit Morph\",\"Count\":4}]",
+      "openingActionsJSON": "[{\"TimeSec\":1.008,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":16.38,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":24.99,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":34.944,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"}]"
+    }
+  }
+}

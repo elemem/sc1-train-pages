@@ -1,0 +1,79 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_925de334fec85559_p02",
+    "replayId": "rpl_925de334fec85559",
+    "playerName": "shucaikao",
+    "playerSlot": 2,
+    "playerID": 2,
+    "teamNo": 1,
+    "race": "Protoss",
+    "result": "unknown",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "ZTPZTZTP",
+    "playedAt": "2026-07-25T15:42:59Z",
+    "durationSeconds": 9,
+    "summaryLine": "这局暴露出几个比较集中的短板，优先按建议逐项修正会更有效。",
+    "styleTags": [
+      "框选驱动",
+      "偏正面操作",
+      "指令转化较稳"
+    ],
+    "strengths": null,
+    "weaknesses": [
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "detail": "记录到的开局生产动作只有 1 条，生产衔接还不够稳定。",
+        "priority": 85
+      },
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "detail": "整局没有明显的远距探路代理信号，当前信息获取更像是跟着默认流程走，主动补信息偏少。",
+        "priority": 58
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "detail": "围绕开局前 3 分钟建立固定流程，优先盯住补农民、补兵和关键科技不断线。",
+        "priority": 85
+      },
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "detail": "先固定第一波探路和中期补信息的时间点，让侦察从“想到才做”变成固定流程。",
+        "priority": 58
+      }
+    ],
+    "metrics": {
+      "apm": 172,
+      "eapm": 172,
+      "eapmRatio": 1,
+      "totalCommands": 14,
+      "uniqueCommandTypes": 6,
+      "firstActionSec": 0.126,
+      "lastActionSec": 4.872,
+      "openingCommandCount": 14,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 5,
+      "hotkeyCount": 0,
+      "productionCount": 1,
+      "orderCount": 5,
+      "chatCount": 0,
+      "leaveGameCount": 1,
+      "firstScoutProxySec": 0,
+      "scoutProxyOrderCount": 0,
+      "scoutProxyUniqueCells": 0,
+      "scoutRefreshCount": 0,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Right Click\",\"Count\":5},{\"CommandType\":\"Select\",\"Count\":5},{\"CommandType\":\"Alliance\",\"Count\":1},{\"CommandType\":\"Leave Game\",\"Count\":1},{\"CommandType\":\"Train\",\"Count\":1},{\"CommandType\":\"Vision\",\"Count\":1}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.462,\"CommandType\":\"Train\",\"Payload\":\"Probe\"}]"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "_3zhisongshu",
+    "matchupFilter": "PPPZvZPTZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 227,
+    "avgEapm": 191,
+    "avgEapmRatio": 0.8414096916299559,
+    "avgOpeningCommands": 683,
+    "avgProductionCount": 21,
+    "avgOrderCount": 325,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_5efb592c75a3864c_p04",
+        "replayId": "rpl_5efb592c75a3864c",
+        "playedAt": "2026-08-17T15:54:42Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PPPZvZPTZ",
+        "result": "loss",
+        "apm": 227,
+        "eapm": 191,
+        "eapmRatio": 0.8414096916299559,
+        "totalCommands": 880,
+        "openingCommandCount": 683,
+        "productionCount": 21,
+        "orderCount": 325
+      }
+    ]
+  }
+}

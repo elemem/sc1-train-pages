@@ -1,0 +1,111 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_ac11a23600d3228f_p02",
+    "replayId": "rpl_ac11a23600d3228f",
+    "playerName": "XMY_MIT9030YBB",
+    "playerSlot": 2,
+    "playerID": 6,
+    "teamNo": 1,
+    "race": "Terran",
+    "result": "win",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "ZZTPvPZPT",
+    "playedAt": "2026-07-24T13:03:54Z",
+    "durationSeconds": 249,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "框选驱动",
+      "偏正面操作",
+      "操作冗余偏多",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 55 秒，且本局记录到 4 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      },
+      {
+        "key": "order_density",
+        "title": "执行指令密度较高",
+        "detail": "移动、攻击、右键等执行类指令占比 62%，说明对局中有较多有效落点和执行动作。",
+        "priority": 60
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "low_effective_ratio",
+        "title": "无效操作偏多",
+        "detail": "当前 EAPM/APM 比值仅为 0.57，说明重复点点点或无效切屏偏多。",
+        "priority": 100
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "detail": "选择类操作 137 次，明显高于热键操作 0 次，说明部队组织还偏依赖框选。",
+        "priority": 70
+      },
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "detail": "接战代理窗口中框选/选择占控制操作的 100%，真打起来时仍容易回到临时框选。",
+        "priority": 55
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "reduce_redundant_input",
+        "title": "减少重复无效操作",
+        "detail": "先练少而准的操作节奏，尽量让每次编队、选中和移动都有明确目的。",
+        "priority": 100
+      },
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "detail": "把主力、后续补兵和关键建筑的编队固定下来，优先用热键而不是反复框选。",
+        "priority": 70
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "detail": "把主力、侧翼和关键施法单位的编队进一步固定，接战前优先通过热键组织而不是临时框选。",
+        "priority": 55
+      }
+    ],
+    "metrics": {
+      "apm": 133,
+      "eapm": 76,
+      "eapmRatio": 0.5714285714285714,
+      "totalCommands": 553,
+      "uniqueCommandTypes": 11,
+      "firstActionSec": 0.084,
+      "lastActionSec": 248.85,
+      "openingCommandCount": 442,
+      "midGameCommandCount": 111,
+      "lateGameCommandCount": 0,
+      "selectionCount": 137,
+      "hotkeyCount": 0,
+      "productionCount": 64,
+      "orderCount": 344,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 54.81,
+      "scoutProxyOrderCount": 32,
+      "scoutProxyUniqueCells": 7,
+      "scoutRefreshCount": 4,
+      "engagementWindowCount": 7,
+      "engagementOrderCount": 40,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 23,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Targeted Order\",\"Count\":276},{\"CommandType\":\"Select\",\"Count\":136},{\"CommandType\":\"Right Click\",\"Count\":68},{\"CommandType\":\"Train\",\"Count\":52},{\"CommandType\":\"Build\",\"Count\":9},{\"CommandType\":\"Tech\",\"Count\":4}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.462,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":0.714,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":15.33,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":15.498,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":15.666,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":15.96,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":16.128,\"CommandType\":\"Train\",\"Payload\":\"SCV\"},{\"TimeSec\":16.296,\"CommandType\":\"Train\",\"Payload\":\"SCV\"}]"
+    }
+  }
+}

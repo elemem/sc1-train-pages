@@ -1,0 +1,69 @@
+{
+  "data": {
+    "playerName": "_3zhisongshu",
+    "matchupFilter": "ZPZPvPTPZ",
+    "sampleReplayCount": 2,
+    "winCount": 1,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0.5,
+    "avgApm": 262.5,
+    "avgEapm": 210.5,
+    "avgEapmRatio": 0.8018177594517684,
+    "avgOpeningCommands": 833.5,
+    "avgProductionCount": 244.5,
+    "avgOrderCount": 865,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 2
+      },
+      {
+        "tag": "开局活跃",
+        "count": 2
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 2
+      },
+      {
+        "tag": "热键驱动",
+        "count": 2
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_abcefd33f9eafe81_p02",
+        "replayId": "rpl_abcefd33f9eafe81",
+        "playedAt": "2026-08-04T15:38:14Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPZPvPTPZ",
+        "result": "loss",
+        "apm": 268,
+        "eapm": 216,
+        "eapmRatio": 0.8059701492537313,
+        "totalCommands": 1547,
+        "openingCommandCount": 833,
+        "productionCount": 40,
+        "orderCount": 600
+      },
+      {
+        "replayPlayerId": "rpl_3bbd3ec9a073a7d9_p05",
+        "replayId": "rpl_3bbd3ec9a073a7d9",
+        "playedAt": "2026-08-03T14:16:58Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPZPvPTPZ",
+        "result": "win",
+        "apm": 257,
+        "eapm": 205,
+        "eapmRatio": 0.7976653696498055,
+        "totalCommands": 3535,
+        "openingCommandCount": 834,
+        "productionCount": 449,
+        "orderCount": 1130
+      }
+    ]
+  }
+}

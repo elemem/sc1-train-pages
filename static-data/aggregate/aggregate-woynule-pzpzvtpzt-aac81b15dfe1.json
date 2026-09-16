@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "woynule",
+    "matchupFilter": "PZPZvTPZT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 166,
+    "avgEapm": 141,
+    "avgEapmRatio": 0.8493975903614458,
+    "avgOpeningCommands": 533,
+    "avgProductionCount": 483,
+    "avgOrderCount": 1237,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_37e3465da5a7f5bd_p02",
+        "replayId": "rpl_37e3465da5a7f5bd",
+        "playedAt": "2026-08-25T14:22:29Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZPZvTPZT",
+        "result": "win",
+        "apm": 166,
+        "eapm": 141,
+        "eapmRatio": 0.8493975903614458,
+        "totalCommands": 4305,
+        "openingCommandCount": 533,
+        "productionCount": 483,
+        "orderCount": 1237
+      }
+    ]
+  }
+}

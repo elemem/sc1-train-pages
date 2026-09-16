@@ -1,0 +1,204 @@
+{
+  "data": {
+    "playerName": "cainiaokunn",
+    "matchupFilter": "",
+    "profiles": [
+      {
+        "scope": "overall",
+        "scopeValue": null,
+        "sampleCount": 34,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 28,
+            "tier": "F",
+            "sampleCount": 34,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 32,
+            "tier": "F",
+            "sampleCount": 34,
+            "summary": "运营连续性处于可用区间，生产和衔接还可以再压紧。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 49,
+            "tier": "E",
+            "sampleCount": 34,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 36,
+            "tier": "F",
+            "sampleCount": 34,
+            "summary": "当前更依赖框选而不是稳定编队，操作组织还偏散。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 93,
+            "tier": "A",
+            "sampleCount": 34,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 0,
+            "tier": "F",
+            "sampleCount": 34,
+            "summary": "接战窗口里框选占比偏高，说明真打起来时部队组织还容易回退到临时框选。"
+          }
+        ]
+      },
+      {
+        "scope": "race",
+        "scopeValue": "Zerg",
+        "sampleCount": 9,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 23,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 27,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "运营连续性处于可用区间，生产和衔接还可以再压紧。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 68,
+            "tier": "C",
+            "sampleCount": 9,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 36,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "当前更依赖框选而不是稳定编队，操作组织还偏散。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 92,
+            "tier": "A",
+            "sampleCount": 9,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 0,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "接战窗口里框选占比偏高，说明真打起来时部队组织还容易回退到临时框选。"
+          }
+        ]
+      },
+      {
+        "scope": "race",
+        "scopeValue": "Terran",
+        "sampleCount": 9,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 21,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 29,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "运营连续性处于可用区间，生产和衔接还可以再压紧。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 33,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 39,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "当前更依赖框选而不是稳定编队，操作组织还偏散。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 92,
+            "tier": "A",
+            "sampleCount": 9,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 0,
+            "tier": "F",
+            "sampleCount": 9,
+            "summary": "接战窗口里框选占比偏高，说明真打起来时部队组织还容易回退到临时框选。"
+          }
+        ]
+      },
+      {
+        "scope": "race",
+        "scopeValue": "Protoss",
+        "sampleCount": 16,
+        "axes": [
+          {
+            "axisKey": "opening_stability",
+            "score": 38,
+            "tier": "F",
+            "sampleCount": 16,
+            "summary": "开局主线基本能推进，但前几分钟节奏还有继续收紧的空间。"
+          },
+          {
+            "axisKey": "macro_continuity",
+            "score": 45,
+            "tier": "E",
+            "sampleCount": 16,
+            "summary": "运营连续性处于可用区间，生产和衔接还可以再压紧。"
+          },
+          {
+            "axisKey": "scouting_information",
+            "score": 55,
+            "tier": "D",
+            "sampleCount": 16,
+            "summary": "首次探路与后续补信息都比较积极，侦察节奏已经开始形成习惯。"
+          },
+          {
+            "axisKey": "operation_organization",
+            "score": 36,
+            "tier": "F",
+            "sampleCount": 16,
+            "summary": "当前更依赖框选而不是稳定编队，操作组织还偏散。"
+          },
+          {
+            "axisKey": "execution_reaction",
+            "score": 93,
+            "tier": "A",
+            "sampleCount": 16,
+            "summary": "执行与反应较稳，关键时间窗通常能较快落下有效动作。"
+          },
+          {
+            "axisKey": "combat_control",
+            "score": 0,
+            "tier": "F",
+            "sampleCount": 16,
+            "summary": "接战窗口里框选占比偏高，说明真打起来时部队组织还容易回退到临时框选。"
+          }
+        ]
+      }
+    ]
+  }
+}

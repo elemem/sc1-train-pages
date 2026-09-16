@@ -1,0 +1,62 @@
+{
+  "data": {
+    "playerName": "[MC]..Sun",
+    "matchupFilter": "ZPPZT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 118,
+    "avgEapm": 102,
+    "avgEapmRatio": 0.864406779661017,
+    "avgOpeningCommands": 52,
+    "avgProductionCount": 3,
+    "avgOrderCount": 20,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_3abe28d809364934_p00",
+        "replayId": "rpl_3abe28d809364934",
+        "playedAt": "2026-08-20T15:36:41Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPPZT",
+        "result": "unknown",
+        "apm": 118,
+        "eapm": 102,
+        "eapmRatio": 0.864406779661017,
+        "totalCommands": 52,
+        "openingCommandCount": 52,
+        "productionCount": 3,
+        "orderCount": 20
+      }
+    ]
+  }
+}

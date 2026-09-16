@@ -1,0 +1,84 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_a7db77b2a545e632_p03",
+    "replayId": "rpl_a7db77b2a545e632",
+    "playerName": "shucaikao",
+    "playerSlot": 3,
+    "playerID": 6,
+    "teamNo": 1,
+    "race": "Zerg",
+    "result": "win",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "TPZZvZPPT",
+    "playedAt": "2026-08-25T14:50:34Z",
+    "durationSeconds": 1082,
+    "summaryLine": "这局整体节奏较稳，当前更适合在已有优势上继续打磨执行细节。",
+    "styleTags": [
+      "热键驱动",
+      "偏正面操作",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "hotkey_usage",
+        "title": "热键使用积极",
+        "detail": "热键操作 1936 次，已不低于框选/选择类操作，操作组织相对稳定。",
+        "priority": 70
+      },
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 0 秒，且本局记录到 9 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      },
+      {
+        "key": "combat_control_proxy",
+        "title": "接战热键驱动较稳",
+        "detail": "在 115 个接战代理窗口里，热键占控制操作的 73%，接战组织相对稳定。",
+        "priority": 60
+      },
+      {
+        "key": "order_density",
+        "title": "执行指令密度较高",
+        "detail": "移动、攻击、右键等执行类指令占比 31%，说明对局中有较多有效落点和执行动作。",
+        "priority": 60
+      }
+    ],
+    "weaknesses": null,
+    "nextSteps": null,
+    "metrics": {
+      "apm": 239,
+      "eapm": 153,
+      "eapmRatio": 0.6401673640167364,
+      "totalCommands": 4304,
+      "uniqueCommandTypes": 15,
+      "firstActionSec": 0.21,
+      "lastActionSec": 1082.676,
+      "openingCommandCount": 818,
+      "midGameCommandCount": 1826,
+      "lateGameCommandCount": 1660,
+      "selectionCount": 773,
+      "hotkeyCount": 1936,
+      "productionCount": 250,
+      "orderCount": 1332,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 0.294,
+      "scoutProxyOrderCount": 570,
+      "scoutProxyUniqueCells": 39,
+      "scoutRefreshCount": 9,
+      "engagementWindowCount": 115,
+      "engagementOrderCount": 1098,
+      "engagementHotkeyCount": 970,
+      "engagementSelectionCount": 367,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Hotkey\",\"Count\":1936},{\"CommandType\":\"Right Click\",\"Count\":1129},{\"CommandType\":\"Select\",\"Count\":721},{\"CommandType\":\"Targeted Order\",\"Count\":198},{\"CommandType\":\"Unit Morph\",\"Count\":198},{\"CommandType\":\"Select Add\",\"Count\":43}]",
+      "openingActionsJSON": "[{\"TimeSec\":1.008,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":16.884,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":24.276,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":35.406,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":43.638,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":68.46,\"CommandType\":\"Build\",\"Payload\":\"(x=12, y=50), Spawning Pool\"},{\"TimeSec\":74.718,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":74.844,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"}]"
+    }
+  }
+}

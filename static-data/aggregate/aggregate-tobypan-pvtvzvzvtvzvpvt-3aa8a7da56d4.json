@@ -1,0 +1,50 @@
+{
+  "data": {
+    "playerName": "tobypan",
+    "matchupFilter": "PvTvZvZvTvZvPvT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 128,
+    "avgEapm": 113,
+    "avgEapmRatio": 0.8828125,
+    "avgOpeningCommands": 306,
+    "avgProductionCount": 206,
+    "avgOrderCount": 841,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_543c6324f2ef73a1_p05",
+        "replayId": "rpl_543c6324f2ef73a1",
+        "playedAt": "2026-08-23T05:54:45Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PvTvZvZvTvZvPvT",
+        "result": "unknown",
+        "apm": 128,
+        "eapm": 113,
+        "eapmRatio": 0.8828125,
+        "totalCommands": 2366,
+        "openingCommandCount": 306,
+        "productionCount": 206,
+        "orderCount": 841
+      }
+    ]
+  }
+}

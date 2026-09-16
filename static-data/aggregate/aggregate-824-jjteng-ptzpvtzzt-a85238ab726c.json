@@ -1,0 +1,62 @@
+{
+  "data": {
+    "playerName": "824-jjteng!",
+    "matchupFilter": "PTZPvTZZT",
+    "sampleReplayCount": 1,
+    "winCount": 1,
+    "lossCount": 0,
+    "unknownCount": 0,
+    "winRate": 1,
+    "avgApm": 174,
+    "avgEapm": 125,
+    "avgEapmRatio": 0.7183908045977011,
+    "avgOpeningCommands": 515,
+    "avgProductionCount": 136,
+    "avgOrderCount": 363,
+    "topStyleTags": [
+      {
+        "tag": "偏运营衔接",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_55905d12e1a7eb5e_p07",
+        "replayId": "rpl_55905d12e1a7eb5e",
+        "playedAt": "2026-09-12T13:28:09Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PTZPvTZZT",
+        "result": "win",
+        "apm": 174,
+        "eapm": 125,
+        "eapmRatio": 0.7183908045977011,
+        "totalCommands": 1307,
+        "openingCommandCount": 515,
+        "productionCount": 136,
+        "orderCount": 363
+      }
+    ]
+  }
+}

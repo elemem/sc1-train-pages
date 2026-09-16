@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "DLC_YiZh1Hu",
+    "matchupFilter": "TTZZvPPTP",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 0,
+    "winRate": 0,
+    "avgApm": 191,
+    "avgEapm": 148,
+    "avgEapmRatio": 0.774869109947644,
+    "avgOpeningCommands": 561,
+    "avgProductionCount": 166,
+    "avgOrderCount": 815,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_d719cf76a3813bd9_p00",
+        "replayId": "rpl_d719cf76a3813bd9",
+        "playedAt": "2026-08-15T13:54:05Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TTZZvPPTP",
+        "result": "loss",
+        "apm": 191,
+        "eapm": 148,
+        "eapmRatio": 0.774869109947644,
+        "totalCommands": 2431,
+        "openingCommandCount": 561,
+        "productionCount": 166,
+        "orderCount": 815
+      }
+    ]
+  }
+}

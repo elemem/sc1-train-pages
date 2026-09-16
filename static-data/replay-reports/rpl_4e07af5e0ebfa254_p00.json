@@ -1,0 +1,72 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_4e07af5e0ebfa254_p00",
+    "replayId": "rpl_4e07af5e0ebfa254",
+    "playerName": "shucaikao",
+    "playerSlot": 0,
+    "playerID": 6,
+    "teamNo": 1,
+    "race": "Zerg",
+    "result": "win",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "ZZPvPPT",
+    "playedAt": "2026-07-23T14:48:33Z",
+    "durationSeconds": 19,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "热键驱动"
+    ],
+    "strengths": [
+      {
+        "key": "scouting_tempo",
+        "title": "侦察补点节奏较积极",
+        "detail": "首次远距探路出现在 1 秒，且本局记录到 1 次补信息窗口，信息节奏比较在线。",
+        "priority": 65
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "weak_opening_production",
+        "title": "开局持续生产偏弱",
+        "detail": "记录到的开局生产动作只有 2 条，生产衔接还不够稳定。",
+        "priority": 85
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "stabilize_opening_production",
+        "title": "先练前 3 分钟持续生产",
+        "detail": "围绕开局前 3 分钟建立固定流程，优先盯住补农民、补兵和关键科技不断线。",
+        "priority": 85
+      }
+    ],
+    "metrics": {
+      "apm": 233,
+      "eapm": 142,
+      "eapmRatio": 0.6094420600858369,
+      "totalCommands": 77,
+      "uniqueCommandTypes": 7,
+      "firstActionSec": 0.63,
+      "lastActionSec": 19.824,
+      "openingCommandCount": 77,
+      "midGameCommandCount": 0,
+      "lateGameCommandCount": 0,
+      "selectionCount": 15,
+      "hotkeyCount": 35,
+      "productionCount": 2,
+      "orderCount": 21,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 0.756,
+      "scoutProxyOrderCount": 19,
+      "scoutProxyUniqueCells": 6,
+      "scoutRefreshCount": 1,
+      "engagementWindowCount": 0,
+      "engagementOrderCount": 0,
+      "engagementHotkeyCount": 0,
+      "engagementSelectionCount": 0,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Hotkey\",\"Count\":35},{\"CommandType\":\"Right Click\",\"Count\":19},{\"CommandType\":\"Select\",\"Count\":15},{\"CommandType\":\"Alliance\",\"Count\":2},{\"CommandType\":\"Targeted Order\",\"Count\":2},{\"CommandType\":\"Unit Morph\",\"Count\":2}]",
+      "openingActionsJSON": "[{\"TimeSec\":1.386,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"},{\"TimeSec\":17.598,\"CommandType\":\"Unit Morph\",\"Payload\":\"Drone\"}]"
+    }
+  }
+}

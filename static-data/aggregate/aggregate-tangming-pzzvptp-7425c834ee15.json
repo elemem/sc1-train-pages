@@ -1,0 +1,91 @@
+{
+  "data": {
+    "playerName": "tangming",
+    "matchupFilter": "PZZvPTP",
+    "sampleReplayCount": 2,
+    "winCount": 0,
+    "lossCount": 1,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 150,
+    "avgEapm": 132,
+    "avgEapmRatio": 0.8735014468788755,
+    "avgOpeningCommands": 366,
+    "avgProductionCount": 247,
+    "avgOrderCount": 1115,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 2
+      },
+      {
+        "tag": "开局活跃",
+        "count": 2
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 2
+      },
+      {
+        "tag": "框选驱动",
+        "count": 2
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 2
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 2
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 2
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 2
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_fa2e4b27fc0411ce_p05",
+        "replayId": "rpl_fa2e4b27fc0411ce",
+        "playedAt": "2026-08-17T15:23:40Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TPZZvPTPP",
+        "result": "loss",
+        "apm": 123,
+        "eapm": 103,
+        "eapmRatio": 0.8373983739837398,
+        "totalCommands": 659,
+        "openingCommandCount": 291,
+        "productionCount": 87,
+        "orderCount": 385
+      },
+      {
+        "replayPlayerId": "rpl_070fc0efbd205b4c_p00",
+        "replayId": "rpl_070fc0efbd205b4c",
+        "playedAt": "2026-07-29T14:00:26Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PZZvPTP",
+        "result": "unknown",
+        "apm": 177,
+        "eapm": 161,
+        "eapmRatio": 0.9096045197740112,
+        "totalCommands": 3220,
+        "openingCommandCount": 441,
+        "productionCount": 407,
+        "orderCount": 1845
+      }
+    ]
+  }
+}

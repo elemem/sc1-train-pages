@@ -1,0 +1,86 @@
+{
+  "data": {
+    "replayPlayerId": "rpl_5efb592c75a3864c_p02",
+    "replayId": "rpl_5efb592c75a3864c",
+    "playerName": "shucaikao",
+    "playerSlot": 2,
+    "playerID": 3,
+    "teamNo": 1,
+    "race": "Protoss",
+    "result": "win",
+    "mapName": "Big Game Hunters [R]v0.2",
+    "matchup": "PPPZvZPTZ",
+    "playedAt": "2026-08-17T15:54:42Z",
+    "durationSeconds": 232,
+    "summaryLine": "这局既有可保留的稳定动作，也有明显短板，适合边保留优势边针对性修正。",
+    "styleTags": [
+      "热键驱动",
+      "操作冗余偏多",
+      "开局活跃"
+    ],
+    "strengths": [
+      {
+        "key": "opening_production",
+        "title": "开局持续生产较完整",
+        "detail": "前 3 分钟记录到 8 条开局生产动作，开局生产节奏比较连续。",
+        "priority": 80
+      },
+      {
+        "key": "hotkey_usage",
+        "title": "热键使用积极",
+        "detail": "热键操作 578 次，已不低于框选/选择类操作，操作组织相对稳定。",
+        "priority": 70
+      },
+      {
+        "key": "combat_control_proxy",
+        "title": "接战热键驱动较稳",
+        "detail": "在 19 个接战代理窗口里，热键占控制操作的 82%，接战组织相对稳定。",
+        "priority": 60
+      }
+    ],
+    "weaknesses": [
+      {
+        "key": "low_effective_ratio",
+        "title": "无效操作偏多",
+        "detail": "当前 EAPM/APM 比值仅为 0.51，说明重复点点点或无效切屏偏多。",
+        "priority": 100
+      }
+    ],
+    "nextSteps": [
+      {
+        "key": "reduce_redundant_input",
+        "title": "减少重复无效操作",
+        "detail": "先练少而准的操作节奏，尽量让每次编队、选中和移动都有明确目的。",
+        "priority": 100
+      }
+    ],
+    "metrics": {
+      "apm": 258,
+      "eapm": 132,
+      "eapmRatio": 0.5116279069767442,
+      "totalCommands": 998,
+      "uniqueCommandTypes": 10,
+      "firstActionSec": 0.126,
+      "lastActionSec": 232.26,
+      "openingCommandCount": 839,
+      "midGameCommandCount": 159,
+      "lateGameCommandCount": 0,
+      "selectionCount": 117,
+      "hotkeyCount": 578,
+      "productionCount": 62,
+      "orderCount": 233,
+      "chatCount": 0,
+      "leaveGameCount": 0,
+      "firstScoutProxySec": 149.562,
+      "scoutProxyOrderCount": 60,
+      "scoutProxyUniqueCells": 14,
+      "scoutRefreshCount": 2,
+      "engagementWindowCount": 19,
+      "engagementOrderCount": 146,
+      "engagementHotkeyCount": 186,
+      "engagementSelectionCount": 41,
+      "topCommandTypesJSON": "[{\"CommandType\":\"Hotkey\",\"Count\":578},{\"CommandType\":\"Right Click\",\"Count\":132},{\"CommandType\":\"Select\",\"Count\":115},{\"CommandType\":\"Targeted Order\",\"Count\":99},{\"CommandType\":\"Train\",\"Count\":55},{\"CommandType\":\"Build\",\"Count\":7}]",
+      "openingActionsJSON": "[{\"TimeSec\":0.672,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":12.81,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":12.936,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":13.104,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":15.834,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":15.96,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":16.128,\"CommandType\":\"Train\",\"Payload\":\"Probe\"},{\"TimeSec\":16.254,\"CommandType\":\"Train\",\"Payload\":\"Probe\"}]"
+    }
+  }
+}

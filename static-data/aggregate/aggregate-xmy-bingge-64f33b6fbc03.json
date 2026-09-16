@@ -1,0 +1,225 @@
+{
+  "data": {
+    "playerName": "XMY_bingge",
+    "matchupFilter": "",
+    "sampleReplayCount": 13,
+    "winCount": 8,
+    "lossCount": 4,
+    "unknownCount": 1,
+    "winRate": 0.6666666666666666,
+    "avgApm": 140.6153846153846,
+    "avgEapm": 127.76923076923077,
+    "avgEapmRatio": 0.9089908100000303,
+    "avgOpeningCommands": 470.0769230769231,
+    "avgProductionCount": 198.6153846153846,
+    "avgOrderCount": 758.8461538461538,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 13
+      },
+      {
+        "tag": "开局活跃",
+        "count": 13
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 13
+      },
+      {
+        "tag": "热键驱动",
+        "count": 7
+      },
+      {
+        "tag": "框选驱动",
+        "count": 3
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "combat_selection_heavy",
+        "title": "接战阶段框选依赖偏高",
+        "count": 3
+      },
+      {
+        "key": "selection_heavy",
+        "title": "框选依赖偏重",
+        "count": 3
+      },
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 2
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "improve_control_groups",
+        "title": "强化编队与热键习惯",
+        "count": 3
+      },
+      {
+        "key": "stabilize_fight_control_groups",
+        "title": "把接战编队再固定一些",
+        "count": 3
+      },
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 2
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_0b38cd08e1b1f419_p05",
+        "replayId": "rpl_0b38cd08e1b1f419",
+        "playedAt": "2026-08-15T06:08:28Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PTPvZTZ",
+        "result": "win",
+        "apm": 124,
+        "eapm": 113,
+        "eapmRatio": 0.9112903225806451,
+        "totalCommands": 1241,
+        "openingCommandCount": 387,
+        "productionCount": 83,
+        "orderCount": 543
+      },
+      {
+        "replayPlayerId": "rpl_28f7bb879443891d_p04",
+        "replayId": "rpl_28f7bb879443891d",
+        "playedAt": "2026-08-11T14:24:25Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZTTvTPZ",
+        "result": "win",
+        "apm": 149,
+        "eapm": 134,
+        "eapmRatio": 0.8993288590604027,
+        "totalCommands": 1600,
+        "openingCommandCount": 604,
+        "productionCount": 224,
+        "orderCount": 753
+      },
+      {
+        "replayPlayerId": "rpl_5b44e8d53b3e9238_p05",
+        "replayId": "rpl_5b44e8d53b3e9238",
+        "playedAt": "2026-08-10T14:36:42Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TPZZvTZPP",
+        "result": "win",
+        "apm": 151,
+        "eapm": 143,
+        "eapmRatio": 0.9470198675496688,
+        "totalCommands": 1278,
+        "openingCommandCount": 372,
+        "productionCount": 44,
+        "orderCount": 758
+      },
+      {
+        "replayPlayerId": "rpl_a7708f6770c609fe_p05",
+        "replayId": "rpl_a7708f6770c609fe",
+        "playedAt": "2026-08-10T14:29:54Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TPZTvPPZZ",
+        "result": "win",
+        "apm": 152,
+        "eapm": 124,
+        "eapmRatio": 0.8157894736842105,
+        "totalCommands": 866,
+        "openingCommandCount": 458,
+        "productionCount": 155,
+        "orderCount": 420
+      },
+      {
+        "replayPlayerId": "rpl_03fd07ce28224e57_p07",
+        "replayId": "rpl_03fd07ce28224e57",
+        "playedAt": "2026-08-10T14:15:33Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TZTPvZPZP",
+        "result": "win",
+        "apm": 135,
+        "eapm": 119,
+        "eapmRatio": 0.8814814814814815,
+        "totalCommands": 1650,
+        "openingCommandCount": 577,
+        "productionCount": 314,
+        "orderCount": 712
+      },
+      {
+        "replayPlayerId": "rpl_171ce16b75ba4168_p03",
+        "replayId": "rpl_171ce16b75ba4168",
+        "playedAt": "2026-08-10T14:03:58Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPZTvTPTZ",
+        "result": "loss",
+        "apm": 148,
+        "eapm": 134,
+        "eapmRatio": 0.9054054054054054,
+        "totalCommands": 1406,
+        "openingCommandCount": 505,
+        "productionCount": 194,
+        "orderCount": 633
+      },
+      {
+        "replayPlayerId": "rpl_040f3343cb4ea1d7_p01",
+        "replayId": "rpl_040f3343cb4ea1d7",
+        "playedAt": "2026-08-10T13:52:05Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZPPTvTPZZ",
+        "result": "win",
+        "apm": 150,
+        "eapm": 134,
+        "eapmRatio": 0.8933333333333333,
+        "totalCommands": 1474,
+        "openingCommandCount": 588,
+        "productionCount": 319,
+        "orderCount": 590
+      },
+      {
+        "replayPlayerId": "rpl_3e62ef4283703cf5_p02",
+        "replayId": "rpl_3e62ef4283703cf5",
+        "playedAt": "2026-08-10T13:42:00Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PTTZvPZPT",
+        "result": "loss",
+        "apm": 124,
+        "eapm": 112,
+        "eapmRatio": 0.9032258064516129,
+        "totalCommands": 1114,
+        "openingCommandCount": 503,
+        "productionCount": 109,
+        "orderCount": 578
+      },
+      {
+        "replayPlayerId": "rpl_4d54957186c936c2_p00",
+        "replayId": "rpl_4d54957186c936c2",
+        "playedAt": "2026-08-10T13:26:05Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "ZTZTvZPPP",
+        "result": "unknown",
+        "apm": 150,
+        "eapm": 142,
+        "eapmRatio": 0.9466666666666667,
+        "totalCommands": 1741,
+        "openingCommandCount": 348,
+        "productionCount": 52,
+        "orderCount": 1038
+      },
+      {
+        "replayPlayerId": "rpl_e36afd6e7830bbcc_p02",
+        "replayId": "rpl_e36afd6e7830bbcc",
+        "playedAt": "2026-08-10T13:03:24Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PPTPvZZTT",
+        "result": "win",
+        "apm": 134,
+        "eapm": 124,
+        "eapmRatio": 0.9253731343283582,
+        "totalCommands": 2684,
+        "openingCommandCount": 440,
+        "productionCount": 473,
+        "orderCount": 1116
+      }
+    ]
+  }
+}

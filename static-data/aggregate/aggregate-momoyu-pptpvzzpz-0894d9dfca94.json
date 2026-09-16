@@ -1,0 +1,54 @@
+{
+  "data": {
+    "playerName": "momoyu",
+    "matchupFilter": "PPTPvZZPZ",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 142,
+    "avgEapm": 125,
+    "avgEapmRatio": 0.8802816901408451,
+    "avgOpeningCommands": 558,
+    "avgProductionCount": 495,
+    "avgOrderCount": 1382,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "指令转化较稳",
+        "count": 1
+      },
+      {
+        "tag": "热键驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [],
+    "repeatedNextSteps": [],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_ebbc2f4ea8b3a87f_p03",
+        "replayId": "rpl_ebbc2f4ea8b3a87f",
+        "playedAt": "2026-07-23T13:47:07Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "PPTPvZZPZ",
+        "result": "unknown",
+        "apm": 142,
+        "eapm": 125,
+        "eapmRatio": 0.8802816901408451,
+        "totalCommands": 3423,
+        "openingCommandCount": 558,
+        "productionCount": 495,
+        "orderCount": 1382
+      }
+    ]
+  }
+}

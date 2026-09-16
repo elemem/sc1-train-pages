@@ -1,0 +1,62 @@
+{
+  "data": {
+    "playerName": "wy-xiaoks",
+    "matchupFilter": "TTPPvZZPT",
+    "sampleReplayCount": 1,
+    "winCount": 0,
+    "lossCount": 0,
+    "unknownCount": 1,
+    "winRate": 0,
+    "avgApm": 211,
+    "avgEapm": 132,
+    "avgEapmRatio": 0.6255924170616114,
+    "avgOpeningCommands": 53,
+    "avgProductionCount": 15,
+    "avgOrderCount": 18,
+    "topStyleTags": [
+      {
+        "tag": "偏正面操作",
+        "count": 1
+      },
+      {
+        "tag": "开局活跃",
+        "count": 1
+      },
+      {
+        "tag": "框选驱动",
+        "count": 1
+      }
+    ],
+    "repeatedWeaknesses": [
+      {
+        "key": "late_scout_proxy",
+        "title": "侦察补点偏慢",
+        "count": 1
+      }
+    ],
+    "repeatedNextSteps": [
+      {
+        "key": "send_early_scout",
+        "title": "把首轮侦察时间点固定下来",
+        "count": 1
+      }
+    ],
+    "recentTrend": [
+      {
+        "replayPlayerId": "rpl_f7398707172575d7_p06",
+        "replayId": "rpl_f7398707172575d7",
+        "playedAt": "2026-09-08T14:16:14Z",
+        "mapName": "Big Game Hunters [R]v0.2",
+        "matchup": "TTPPvZZPT",
+        "result": "unknown",
+        "apm": 211,
+        "eapm": 132,
+        "eapmRatio": 0.6255924170616114,
+        "totalCommands": 53,
+        "openingCommandCount": 53,
+        "productionCount": 15,
+        "orderCount": 18
+      }
+    ]
+  }
+}
