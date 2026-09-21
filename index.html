@@ -1,14 +1,5139 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/sc1-train-pages/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Replay Workbench</title>
-    <script type="module" crossorigin src="/sc1-train-pages/assets/index-RHAde0y8.js"></script>
-    <link rel="stylesheet" crossorigin href="/sc1-train-pages/assets/index-DcXoZ6gV.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="面向玩家阅读的教程正文，不包含 legacy、治理文档和产品内部契约。">
+  <title>StarCraft 训练教程</title>
+  <style>:root {
+  color-scheme: light;
+  --ink: #171a1f;
+  --muted: #5c6470;
+  --line: #d7dbe0;
+  --paper: #ffffff;
+  --panel: #f4f6f7;
+  --accent: #a72b2f;
+  --accent-dark: #6f171b;
+  --support: #1f6556;
+}
+
+@page {
+  size: A4;
+  margin: 17mm 16mm 19mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #e9ecef;
+}
+
+body {
+  width: min(210mm, 100%);
+  margin: 0 auto;
+  padding: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: "Songti SC", "STSong", "Hiragino Mincho ProN", serif;
+  font-size: 11pt;
+  line-height: 1.72;
+  letter-spacing: 0;
+}
+
+main {
+  padding: 0 16mm 24mm;
+}
+
+.cover {
+  min-height: 250mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24mm 18mm;
+  color: #fff;
+  background: #171a1f;
+  border-top: 8mm solid var(--accent);
+  break-after: page;
+}
+
+.cover-kicker,
+.edition {
+  font-family: "Hiragino Sans GB", "STHeiti", sans-serif;
+  font-size: 10pt;
+  letter-spacing: 0;
+}
+
+.cover-kicker {
+  color: #e5b75b;
+  font-weight: 700;
+}
+
+.cover h1 {
+  max-width: 150mm;
+  margin: 20mm 0 5mm;
+  color: #fff;
+  font-family: "Hiragino Sans GB", "STHeiti", sans-serif;
+  font-size: 34pt;
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.cover .subtitle {
+  max-width: 145mm;
+  margin: 0;
+  color: #dce1e5;
+  font-size: 17pt;
+  line-height: 1.5;
+}
+
+.cover .edition {
+  margin-top: 28mm;
+  color: #afb6bd;
+}
+
+.toc {
+  break-after: page;
+  padding-top: 12mm;
+}
+
+.toc ol {
+  padding-left: 0;
+  list-style: none;
+}
+
+.toc li {
+  display: flex;
+  gap: 4mm;
+  align-items: baseline;
+  margin: 2.2mm 0;
+  border-bottom: 1px dotted var(--line);
+}
+
+.toc .toc-section {
+  margin-top: 6mm;
+  border-bottom: 0;
+  color: var(--accent-dark);
+  font-family: "Hiragino Sans GB", "STHeiti", sans-serif;
+  font-weight: 700;
+}
+
+.toc .toc-subchapter {
+  margin-left: 7mm;
+  color: var(--muted);
+  font-size: 10pt;
+}
+
+.toc a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.section-divider {
+  min-height: 210mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 2mm solid var(--accent);
+  break-before: page;
+  break-after: page;
+}
+
+.section-number {
+  color: var(--accent);
+  font-family: "Hiragino Sans GB", "STHeiti", sans-serif;
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+.section-divider h2 {
+  max-width: 150mm;
+  margin: 7mm 0 0;
+  font-size: 29pt;
+  line-height: 1.25;
+}
+
+.chapter {
+  break-before: page;
+}
+
+.section-divider + .chapter {
+  break-before: auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--ink);
+  font-family: "Hiragino Sans GB", "STHeiti", sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  break-after: avoid;
+}
+
+h2 {
+  margin: 0 0 8mm;
+  padding-bottom: 4mm;
+  border-bottom: 1.5px solid var(--ink);
+  font-size: 23pt;
+}
+
+h3 {
+  margin: 9mm 0 3mm;
+  color: var(--accent-dark);
+  font-size: 15pt;
+}
+
+h4 {
+  margin: 6mm 0 2mm;
+  font-size: 12pt;
+}
+
+p {
+  margin: 0 0 4mm;
+  orphans: 3;
+  widows: 3;
+}
+
+ul,
+ol {
+  margin: 2mm 0 5mm;
+  padding-left: 7mm;
+}
+
+li {
+  margin: 1.3mm 0;
+}
+
+li.depth-1 {
+  margin-left: 6mm;
+}
+
+li.depth-2 {
+  margin-left: 12mm;
+}
+
+blockquote {
+  margin: 5mm 0;
+  padding: 3mm 5mm;
+  color: var(--muted);
+  background: var(--panel);
+  border-left: 1.5mm solid var(--support);
+}
+
+code {
+  padding: 0.2mm 1.1mm;
+  color: #7f1d1d;
+  background: #f1f3f4;
+  border-radius: 2px;
+  font-family: "SFMono-Regular", Menlo, monospace;
+  font-size: 0.88em;
+}
+
+pre {
+  margin: 5mm 0;
+  padding: 4mm;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+  background: #20242a;
+  color: #f5f7f8;
+  border-radius: 4px;
+  break-inside: avoid;
+}
+
+pre code {
+  padding: 0;
+  color: inherit;
+  background: transparent;
+}
+
+table {
+  width: 100%;
+  margin: 5mm 0 7mm;
+  border-collapse: collapse;
+  font-size: 9.5pt;
+}
+
+thead {
+  display: table-header-group;
+}
+
+th,
+td {
+  padding: 2.4mm 2.8mm;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid var(--line);
+}
+
+th {
+  font-family: "Hiragino Sans GB", "STHeiti", sans-serif;
+  background: #eceff1;
+}
+
+tr {
+  break-inside: avoid;
+}
+
+a {
+  color: var(--support);
+  text-decoration-thickness: 0.6px;
+  text-underline-offset: 1.5px;
+}
+
+hr {
+  margin: 9mm 0;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+
+.metadata {
+  margin: -4mm 0 8mm;
+  padding: 4mm 5mm;
+  color: var(--muted);
+  background: var(--panel);
+  border-top: 1mm solid var(--support);
+}
+
+.metadata ul {
+  margin: 0;
+}
+
+.publication-note {
+  margin-top: 12mm;
+  color: var(--muted);
+  font-size: 9pt;
+}
+
+@media screen {
+  body {
+    box-shadow: 0 0 24px rgb(0 0 0 / 12%);
+  }
+
+  main {
+    padding-top: 12mm;
+  }
+}
+
+@media print {
+  html,
+  body {
+    width: auto;
+    background: #fff;
+  }
+
+  main {
+    padding: 0;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+</style>
+</head>
+<body class="profile-reader">
+  <section class="cover">
+    <div class="cover-kicker">STARCRAFT TRAINING MANUAL</div>
+    <h1>StarCraft 训练教程</h1>
+    <p class="subtitle">从基础动作到团队协同的训练手册</p>
+    <p class="edition">MVP 人工 Review 版</p>
+  </section>
+  <main>
+    <nav class="toc">
+      <h2>目录</h2>
+      <ol><li class="toc-section">开始训练</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-overview">教程框架与训练方法</a></li>
+<li class="toc-section">第一部分 开局与节奏建立</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo">本章总览</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1">第一层：固定开局主线</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4">第二层：选择并执行种族模板</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-9">综合决策与训练计划</a></li>
+<li class="toc-section">第二部分 经济与生产转化</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production">本章总览</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1">第一层：持续补充工人</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4">第二层：提前准备人口</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7">第三层：保持主生产运转</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10">第四层：及时转化资源</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13">具体训练：常见经济断点</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14">综合决策与训练计划</a></li>
+<li class="toc-section">第三部分 信息获取与判断</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment">本章总览</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1">第一层：首侦按时完成</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4">第二层：刷新信息并形成行动</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7">第三层：小地图短扫</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10">具体训练：常见信息判断情景</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-11">综合决策与训练计划</a></li>
+<li class="toc-section">第四部分 操作组织与执行效率</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency">本章总览</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1">第一层：稳定编队调用</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5">第二层：有效切屏</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8">第三层：战斗与生产循环</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11">具体训练：常见操作循环</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-12">综合决策与训练计划</a></li>
+<li class="toc-section">第五部分 局势响应、支援与风险控制</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control">本章总览</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1">第一层：判断是否支援</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4">第二层：支援及时到场</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8">第三层：及时收手与撤退</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11">具体训练：常见局势响应</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-12">综合决策与训练计划</a></li>
+<li class="toc-section">第六部分 战斗控制与交换质量</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality">本章总览</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1">第一层：接敌与战前展开</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2">具体对抗训练：常用兵种组合</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5">第二层：第一拍集中火力</a></li>
+<li class="toc-subchapter"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-8">综合决策与训练计划</a></li>
+<li class="toc-section">第七部分 训练计划与复盘</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method">人工训练与复盘方法</a></li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations">新手基础训练路径</a></li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh">回流玩家恢复路径</a></li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations">BGH 固定车队训练路径</a></li>
+<li class="toc-section">附录 BGH 地图与团队参考</li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme">BGH 场景适配索引</a></li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes">BGH 地图、点位与路线</a></li>
+<li><a href="#chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles">BGH 临时团队角色</a></li></ol>
+    </nav>
+    
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>开始训练</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-overview"><h2 id="chapter-knowledge-tutorial-system-tutorial-overview--教程框架与训练方法">教程框架与训练方法</h2>
+<p>本教程把 StarCraft 训练组织成可选择、可执行、可复盘的训练闭环。它不是按章节顺序读完的百科，也不依赖 Replay 或 AI 才能使用。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-overview--五类稳定资产">五类稳定资产</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-overview--训练方向入口">训练方向入口</h4>
+<p>训练方向负责解释能力边界、能力地图和推荐起点。</p>
+<p>训练方向页是导航，不承担完整训练正文，也不创建评分规则。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-overview--训练主题">训练主题</h4>
+<p>训练主题围绕一项主要能力组织：</p>
+<div>
+<ul>
+<li class="depth-0">为什么重要</li>
+<li class="depth-0">如何判断</li>
+<li class="depth-0">常见失败模式</li>
+<li class="depth-0">如何练习</li>
+<li class="depth-0">何时算完成</li>
+</ul>
+</div>
+<p>它是实际学习、练习和完成的核心单元。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-overview--训练卡">训练卡</h4>
+<p>训练卡把一个主题压缩成单局动作：</p>
+<div>
+<ul>
+<li class="depth-0">一个主要行为变化</li>
+<li class="depth-0">一个或少量明确触发器</li>
+<li class="depth-0">可观察的判断规则</li>
+<li class="depth-0">单局和多局完成标准</li>
+</ul>
+</div>
+<p>一局只携带一张训练卡。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-overview--场景包">场景包</h4>
+<p>场景包负责地图、模式、种族或团队语境适配。</p>
+<p>BGH 场景包可以调整触发器、观察对象和协同条件，但不能重新定义训练方向。</p>
+<p>出版时，BGH 适配分别放在对应训练方向末尾；地图、点位和临时角色等共享内容放入参考附录。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-overview--训练路径">训练路径</h4>
+<p>训练路径根据用户目标组织主题顺序：</p>
+<div>
+<ul>
+<li class="depth-0">新手：先建立执行底座，再扩展完整闭环</li>
+<li class="depth-0">回流玩家：通过自测选择最早失败点</li>
+<li class="depth-0">BGH 固定车队：按团队事件和协同约定训练</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-overview--训练方向">训练方向</h3>
+<table><thead><tr>
+<th>训练方向</th>
+<th>主要职责</th>
+<th>推荐起点</th>
+</tr></thead><tbody>
+<tr>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo">开局与节奏建立</a></td>
+<td>开局计划、执行、节奏和恢复</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1">固定开局主线</a></td>
+</tr>
+<tr>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production">经济与生产转化</a></td>
+<td>经济、生产、人口和转化</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1">持续补充工人</a></td>
+</tr>
+<tr>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment">信息获取与判断</a></td>
+<td>侦察、识别和信息决策</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1">首侦按时完成</a></td>
+</tr>
+<tr>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency">操作组织与执行效率</a></td>
+<td>编队、切换和执行组织</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1">稳定编队调用</a></td>
+</tr>
+<tr>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control">局势响应、支援与风险控制</a></td>
+<td>响应、支援和止损</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4">支援及时到场</a></td>
+</tr>
+<tr>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality">战斗控制与交换质量</a></td>
+<td>接敌、集火、阵型和交换</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5">第一拍集中火力</a></td>
+</tr>
+</tbody></table>
+<p>详细边界见<a href="https://github.com/elemem/sc1-train/blob/main/knowledge/tutorial-system/tutorial/factors/README.md">训练方向入口</a>。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-overview--人工训练闭环">人工训练闭环</h3>
+<pre><code class="language-text">选择用户路径
+  -&gt; 进入一个训练主题
+  -&gt; 阅读判断模型
+  -&gt; 选择一张训练卡
+  -&gt; 单局执行
+  -&gt; 连续三局人工复盘
+  -&gt; 继续、降级或切换主题</code></pre>
+<p>统一执行规则见<a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method">人工训练与复盘方法</a>。</p>
+<p>核心约束：</p>
+<div>
+<ol>
+<li class="depth-0">一次只训练一个主题</li>
+<li class="depth-0">一局只携带一张训练卡</li>
+<li class="depth-0">先记录事实，再解释原因</li>
+<li class="depth-0">连续三局后再判断是否切换</li>
+<li class="depth-0">胜负不是单张训练卡的唯一完成标准</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-overview--如何开始">如何开始</h3>
+<p>按当前身份选择：</p>
+<div>
+<ul>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations">新手基础训练路径</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh">回流玩家恢复路径</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations">BGH 固定车队训练路径</a></li>
+</ul>
+</div>
+<p>如果无法判断自己的类型，从新手路径开始；已经能稳定完成基础动作，则使用回流路径的六项自测。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-overview--训练结果怎么判断">训练结果怎么判断</h3>
+<p>训练结果只回答本主题是否改善：</p>
+<div>
+<ul>
+<li class="depth-0">是否识别触发器</li>
+<li class="depth-0">是否执行训练动作</li>
+<li class="depth-0">是否避免主要错误</li>
+<li class="depth-0">是否达到单局和多局标准</li>
+</ul>
+</div>
+<p>不使用单局胜负直接证明能力提升，也不把无法观察的原因写成确定结论。</p></article>
+
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>第一部分 开局与节奏建立</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo"><h2 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--开局与节奏建立">开局与节奏建立</h2>
+<blockquote>稳定开局不是背下完整流程，而是明确主线、按时完成关键节点，并在出现偏差后保住下一步。</blockquote>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--本章要解决的问题">本章要解决的问题</h3>
+<p>开局阶段资源有限、动作密集，任何遗漏都会影响后续生产和第一轮行动。本章回答：</p>
+<p><strong>如何把一套开局从记忆内容变成可以稳定执行和恢复的行动主线？</strong></p>
+<p>答案是按顺序完成四件事：</p>
+<pre><code class="language-text">选择一套主线
+  -&gt; 写下五个关键节点
+  -&gt; 对照种族模板执行目标时间
+  -&gt; 连接第一次有效行动</code></pre>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--开局判断模型">开局判断模型</h3>
+<table><thead><tr>
+<th>顺序</th>
+<th>需要保证的事情</th>
+<th>判断问题</th>
+</tr></thead><tbody>
+<tr>
+<td>第一层</td>
+<td>主线清楚</td>
+<td>能否说出五个关键节点</td>
+</tr>
+<tr>
+<td>第二层</td>
+<td>节点按时</td>
+<td>建筑开工或单位完成是否接近目标时间</td>
+</tr>
+<tr>
+<td>第三层</td>
+<td>生产连续</td>
+<td>工人、补给和主生产是否为赶节点而断开</td>
+</tr>
+<tr>
+<td>第四层</td>
+<td>行动衔接</td>
+<td>第一批单位完成后准备侦察、施压、支援还是扩张</td>
+</tr>
+</tbody></table>
+<p>目标时间代表无干扰下的最佳执行状态。受到骚扰或主动变体后，不再机械追赶旧时间，而是记录最早偏差并保护下一个关键节点。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--训练顺序">训练顺序</h3>
+<div>
+<ol>
+<li class="depth-0">先用固定开局主线写出五个节点</li>
+<li class="depth-0">再选择对应种族和用途的模板</li>
+<li class="depth-0">单局只检查最早出现的节点偏差</li>
+<li class="depth-0">连续执行稳定后，再训练受压恢复和主动变体</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--本章边界">本章边界</h3>
+<p>本章负责前几分钟的计划、节点、生产连续性和第一次行动。整局经济规模由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production">经济与生产转化</a>处理，中后期威胁和止损由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control">局势响应、支援与风险控制</a>处理。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1">第一层：固定开局主线</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1--本层结论">本层结论</h3>
+<p>连续执行一条足够短的开局主线，在被小干扰或临时分心时也能回到下一项关键动作。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1--在链条中的位置">在链条中的位置</h3>
+<p>稳定开局不是背完整 Build Order，而是让前几分钟的资源、补给、生产和首个战略动作彼此衔接。主线频繁改变会同时拖慢经济、兵力、侦察和团队到场时间。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1--如何判断">如何判断</h3>
+<p>把开局压缩成五个关键节点：</p>
+<div>
+<ol>
+<li class="depth-0">第一轮工人和资源分配</li>
+<li class="depth-0">第一个补给节点</li>
+<li class="depth-0">第一组生产设施</li>
+<li class="depth-0">第一次侦察</li>
+<li class="depth-0">第一个战略动作：出门、扩张或科技</li>
+</ol>
+</div>
+<p>每完成一个节点，只确认下一节点，不在局中重新设计整套开局。</p>
+<p>选择具体模板后，每个节点还要记录：</p>
+<div>
+<ul>
+<li class="depth-0">供给与动作顺序</li>
+<li class="depth-0">建筑开始或完成的目标时间</li>
+<li class="depth-0">单位开始生产或完成的目标时间</li>
+<li class="depth-0">第一批单位的行动任务</li>
+</ul>
+</div>
+<p>目标时间表示无干扰时的最佳执行状态。每局记录实际时间和偏差，但不能通过长期停工人、漏补人口或中断主要生产来换取单个节点准时。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">从<a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4">各族开局模板</a>选择一个当前常用开局</li>
+<li class="depth-0">写下五个关键节点和对应目标时间</li>
+<li class="depth-0">连续三局使用同一主线</li>
+<li class="depth-0">每次偏离时记录“在哪个节点断开、延误多久”</li>
+<li class="depth-0">下一局只修最早出现的断点</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">同一套开局连续几局使用不同顺序</li>
+<li class="depth-0">因为侦察或小规模骚扰忘记下一关键节点</li>
+<li class="depth-0">为追求细节记忆，反而漏掉工人、补给或生产</li>
+<li class="depth-0">只看最终建筑时间，没有找到最早延误的节点</li>
+<li class="depth-0">为赶秒表停工人或断生产，表面准时但后续节奏失效</li>
+<li class="depth-0">失败后立刻更换开局，无法判断问题来自方案还是执行</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">五个关键节点没有漏掉两个以上</li>
+<li class="depth-0">主要节点以目标时间为执行方向，并记录实际偏差或主动变体原因</li>
+<li class="depth-0">没有为赶时间长期停工人、卡人口或中断主要生产</li>
+<li class="depth-0">出现干扰后能在下一个节点回到主线</li>
+<li class="depth-0">没有在局中无依据地切换完整开局</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，并能准确说出仍不稳定的一个节点。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2">本局训练卡：五节点开局检查</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">开局经常漏掉关键建筑、补给、生产或侦察</li>
+<li class="depth-0">被轻微干扰后无法回到原计划</li>
+<li class="depth-0">每局都在临时更换开局</li>
+</ul>
+</div>
+<p>局前先从<a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4">各族开局模板</a>选择一套模板。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--本局只改什么">本局只改什么</h4>
+<p>局前写下并记住五个关键节点及其目标时间；本局按顺序执行，并记录第一个时间偏差或顺序断点。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">每完成一个关键节点</li>
+<li class="depth-0">被侦察、骚扰或临时操作打断后</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">当前完成到第几个节点</li>
+<li class="depth-0">下一节点需要的资源和操作</li>
+<li class="depth-0">关键建筑或单位相对目标时间提前或延误多少</li>
+<li class="depth-0">工人、人口和主要生产是否保持连续</li>
+<li class="depth-0">干扰后是否仍知道恢复位置</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">节点正常：继续下一节点</li>
+<li class="depth-0">节点晚于目标但仍可执行：记录延误，优先补回该节点</li>
+<li class="depth-0">局势已经使原节点失效：明确跳过原因，再进入下一有效节点</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">试图记住完整细节而忘记主线</li>
+<li class="depth-0">为赶秒表停止工人或主要生产</li>
+<li class="depth-0">只记录最终建筑晚了，没有寻找最早断点</li>
+<li class="depth-0">一次漏步后彻底放弃计划</li>
+<li class="depth-0">没有新信息却临时更换开局</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">五个节点没有漏掉两个以上</li>
+<li class="depth-0">主要节点以目标时间为执行方向，并记录实际偏差或主动变体原因</li>
+<li class="depth-0">没有为赶时间长期停工人、卡人口或断主要生产</li>
+<li class="depth-0">干扰后至少一次成功回到主线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标，并能说清最常见的一个断点。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-2--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">第一个断点是什么，早了或晚了多久</li>
+<li class="depth-0">延误来自资源、人口、生产、注意力还是主动变体</li>
+<li class="depth-0">当时是否仍在持续生产工人和主要单位</li>
+<li class="depth-0">下一局要保留哪个恢复动作</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-3">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-3--本层变化">本层变化</h4>
+<p>BGH 的第五个开局节点必须连接团队第一次共同动作。个人主线仍保持五个节点，但最后一步要写明抢中、支援、扩张或科技，不能只写个人发展目标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-3--场景动作">场景动作</h4>
+<div>
+<ol>
+<li class="depth-0">开局前确认出生位和临时角色</li>
+<li class="depth-0">写下个人前四个生产节点</li>
+<li class="depth-0">将第五节点写成个人单位与团队行动的连接点</li>
+<li class="depth-0">侦察发现异常时说明谁调整、谁保留原计划</li>
+</ol>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-3--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">只背个人顺序，没有队友到场节点</li>
+<li class="depth-0">为了同步出门跳过补给或主要生产</li>
+<li class="depth-0">团队临时改目标后，个人整套开局全部重做</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-3--场景复盘">场景复盘</h4>
+<div>
+<ul>
+<li class="depth-0">第一批单位完成后是否有团队任务</li>
+<li class="depth-0">第一次共同动作是否与个人目标时间衔接</li>
+<li class="depth-0">主动变体是否由新信息触发</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4">第二层：选择并执行种族模板</h2>
+<p>开局模板把<a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1">固定开局主线</a>落实为具体的建筑、单位和转型节点。模板用于练习稳定执行，不代表任何对局都必须照表完成。</p>
+<p>选择自己的种族：</p>
+<div>
+<ul>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5">Protoss 开局模板</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-6">Terran 开局模板</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7">Zerg 开局模板</a></li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4--使用前提">使用前提</h3>
+<p>每次只选择一套模板，并在局前说清：</p>
+<div>
+<ol>
+<li class="depth-0">这套开局要解决什么问题</li>
+<li class="depth-0">前五个关键节点是什么</li>
+<li class="depth-0">第一批单位完成后准备做什么</li>
+<li class="depth-0">哪些信息出现时需要变体或停止原计划</li>
+</ol>
+</div>
+<p>如果无法回答，不要先背完整秒表，先回到五节点训练。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4--目标时间怎么使用">目标时间怎么使用</h3>
+<p>模板中的时间表示无干扰、工人和主要生产连续时的最佳执行目标。它是一个明确时间点，不是宽泛区间。</p>
+<p>当前目标值由旧版秒表整理而来，作为训练方向使用；是否精确以及不同版本、地图和位置是否需要修正，留待后续受控实战或 Replay 样本校准。在完成校准前，不设置“允许误差几秒”的正式达标线。</p>
+<p>记录节点时应区分：</p>
+<div>
+<ul>
+<li class="depth-0">建筑开始建造</li>
+<li class="depth-0">建筑完成</li>
+<li class="depth-0">单位开始生产</li>
+<li class="depth-0">单位完成</li>
+<li class="depth-0">第一批部队具备行动条件</li>
+</ul>
+</div>
+<p>每局记录：</p>
+<pre><code class="language-text">目标时间 -&gt; 实际时间 -&gt; 提前或延误 -&gt; 最早断点</code></pre>
+<p>目标时间默认假设开局未受明显干扰，并持续生产工人。地图位置、采矿效率、操作延迟和对手干扰都可能造成偏差。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4--达标规则">达标规则</h3>
+<p>一套开局同时满足以下条件才算达标：</p>
+<div>
+<ol>
+<li class="depth-0">关键节点按正确顺序完成</li>
+<li class="depth-0">主要节点以目标时间为最佳执行方向，并记录实际偏差</li>
+<li class="depth-0">没有为了赶时间长期停工人</li>
+<li class="depth-0">没有因为漏补人口打断主要生产</li>
+<li class="depth-0">第一批单位完成后有明确任务</li>
+</ol>
+</div>
+<p>不能通过牺牲后续经济和生产来换取一个节点准时。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4--偏离后怎么判断">偏离后怎么判断</h3>
+<p>出现延误时，先找最早断点：</p>
+<div>
+<ul>
+<li class="depth-0">资源不足：检查工人生产和资源分配</li>
+<li class="depth-0">人口不足：检查补给是否提前开始</li>
+<li class="depth-0">建筑延误：检查前一个节点是否过晚或资源被挪用</li>
+<li class="depth-0">单位延误：检查生产建筑、人口和持续生产</li>
+<li class="depth-0">主动变体：记录触发信息，不算无理由漏步</li>
+</ul>
+</div>
+<p>受到明显骚扰或侦察发现必须变化后，不再要求后续节点严格匹配原目标时间。此时改为检查：</p>
+<div>
+<ol>
+<li class="depth-0">是否能说清改变原因</li>
+<li class="depth-0">是否优先完成生存和团队职责</li>
+<li class="depth-0">是否为新的下一节点给出时间目标</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4--训练方法">训练方法</h3>
+<div>
+<ol>
+<li class="depth-0">从种族页面选择一套适合当前角色的模板</li>
+<li class="depth-0">抄下供给顺序和五个目标时间点</li>
+<li class="depth-0">连续三局使用同一模板</li>
+<li class="depth-0">每局只记录第一个出现时间偏差或顺序错误的节点</li>
+<li class="depth-0">下一局只修这个最早断点</li>
+</ol>
+</div>
+<p>连续三局中至少两局达到模板标准后，再练习对手与位置变体。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5">Protoss 开局模板</h3>
+<p>Protoss 在 BGH 团队局中常承担前排、正面压制或中期火力职责。选择模板时，先确认队伍是否需要你扛住第一波，再决定优先 Zealot 数量还是更早进入 Dragoon。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5--快速选择">快速选择</h4>
+<table><thead><tr>
+<th>模板</th>
+<th>主要职责</th>
+<th>更适合</th>
+</tr></thead><tbody>
+<tr>
+<td>3 Gateway Zealot</td>
+<td>前排抗压和前期施压</td>
+<td>队友需要前排，对手可能有近战压力</td>
+</tr>
+<tr>
+<td>1 Gateway Dragoon</td>
+<td>尽快形成中程火力</td>
+<td>位置安全、对面没有 Zerg、队友已有前排</td>
+</tr>
+<tr>
+<td>2 Gateway Dragoon</td>
+<td>Zealot 过渡后转中程</td>
+<td>对面有 Terran，队伍需要半前排半支援</td>
+</tr>
+<tr>
+<td>3 Gateway Dragoon</td>
+<td>较强站场后转中程</td>
+<td>队伍需要稳定正面火力点</td>
+</tr>
+</tbody></table>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5--3-gateway-zealot">3 Gateway Zealot</h4>
+<p>目标：尽快形成稳定近战前排，为队友争取站位和输出空间。</p>
+<p>供给与动作顺序：</p>
+<p><code>8 Pylon -&gt; 10 Gateway -&gt; 12 Gateway -&gt; 13 Zealot -&gt; 15 Pylon -&gt; 17 双 Zealot -&gt; 21 Pylon -&gt; 22 Gateway -&gt; 23 双 Zealot -&gt; 27 Pylon</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一个 Pylon 开始</td>
+<td>00:20</td>
+</tr>
+<tr>
+<td>第一、第二个 Gateway 开始</td>
+<td>00:40 / 01:05</td>
+</tr>
+<tr>
+<td>第一个 Zealot 开始</td>
+<td>01:22</td>
+</tr>
+<tr>
+<td>第二批双 Zealot 开始</td>
+<td>01:52</td>
+</tr>
+<tr>
+<td>第三个 Gateway 开始</td>
+<td>02:26</td>
+</tr>
+<tr>
+<td>第三批双 Zealot 开始</td>
+<td>02:34</td>
+</tr>
+</tbody></table>
+<p>第一批 Zealot 的任务应在出兵前确定：守队友、抢路口或限制对手出门。队友尚未到场、对面已经形成远程火力或自己连续断 Probe/Pylon 时，不要继续无条件压兵。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5--1-gateway-dragoon">1 Gateway Dragoon</h4>
+<p>目标：在安全窗口内尽快形成 Dragoon 中程火力。</p>
+<p>供给与动作顺序：</p>
+<p><code>8 Pylon -&gt; 10 Gateway -&gt; 11 Assimilator -&gt; 14 Cybernetics Core -&gt; 15 Pylon -&gt; 16 Gateway -&gt; 17 Dragoon -&gt; 20 Range -&gt; 21 双 Dragoon -&gt; 25 Pylon -&gt; 25 Gateway</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一个 Pylon、Gateway 开始</td>
+<td>00:20 / 00:40</td>
+</tr>
+<tr>
+<td>Assimilator 开始</td>
+<td>00:52</td>
+</tr>
+<tr>
+<td>Cybernetics Core 开始</td>
+<td>01:20</td>
+</tr>
+<tr>
+<td>第一个 Dragoon 开始</td>
+<td>01:53</td>
+</tr>
+<tr>
+<td>Range 开始</td>
+<td>02:12</td>
+</tr>
+<tr>
+<td>第二批双 Dragoon 开始</td>
+<td>02:18</td>
+</tr>
+<tr>
+<td>第三个 Gateway 开始</td>
+<td>02:45</td>
+</tr>
+</tbody></table>
+<p>这套模板不承担最早前排。对面有 Zerg、队友无法挡住近战压力或自己处于危险位时，应改用更早具备站场能力的模板。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5--2-gateway-dragoon">2 Gateway Dragoon</h4>
+<p>目标：先用 Zealot 保住前期，再在 3 到 4 分钟进入 Dragoon 火力。</p>
+<p>供给与动作顺序：</p>
+<p><code>8 Pylon -&gt; 10 Gateway -&gt; 12 Gateway -&gt; 13 Zealot -&gt; 15 Pylon -&gt; 17 双 Zealot -&gt; 21 Pylon -&gt; 22 Assimilator -&gt; 23 双 Zealot -&gt; 28 Pylon -&gt; 28 Cybernetics Core -&gt; 29 双 Zealot -&gt; 35 Gateway -&gt; 36 双 Dragoon -&gt; 40 Pylon</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一、第二个 Gateway 开始</td>
+<td>00:40 / 01:05</td>
+</tr>
+<tr>
+<td>第一、第二批 Zealot 开始</td>
+<td>01:22 / 01:52</td>
+</tr>
+<tr>
+<td>Assimilator 开始</td>
+<td>02:24</td>
+</tr>
+<tr>
+<td>第三、第四批双 Zealot 开始</td>
+<td>02:31 / 03:12</td>
+</tr>
+<tr>
+<td>Cybernetics Core 开始</td>
+<td>03:05</td>
+</tr>
+<tr>
+<td>第三个 Gateway 开始</td>
+<td>03:48</td>
+</tr>
+<tr>
+<td>第一批双 Dragoon 开始</td>
+<td>03:55</td>
+</tr>
+</tbody></table>
+<p>前线仍在吃压时先保证 Zealot 数量；队友已经稳住时再加快 Core 和 Dragoon。不要同时追求最强前排和最快 Dragoon。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5--3-gateway-dragoon">3 Gateway Dragoon</h4>
+<p>目标：用较多 Zealot 建立中前期站场，再转为稳定 Dragoon 火力。</p>
+<p>供给与动作顺序：</p>
+<p><code>8 Pylon -&gt; 10 Gateway -&gt; 12 Gateway -&gt; 13 Zealot -&gt; 15 Pylon -&gt; 17 双 Zealot -&gt; 21 Pylon -&gt; 22 Gateway -&gt; 23 双 Zealot -&gt; 27 Pylon -&gt; 28 Assimilator -&gt; 29 三 Zealot -&gt; 37 Pylon -&gt; 38 Cybernetics Core</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一、第二个 Gateway 开始</td>
+<td>00:40 / 01:05</td>
+</tr>
+<tr>
+<td>第一、第二批 Zealot 开始</td>
+<td>01:22 / 01:52</td>
+</tr>
+<tr>
+<td>第三个 Gateway 开始</td>
+<td>02:26</td>
+</tr>
+<tr>
+<td>第三批双 Zealot 开始</td>
+<td>02:34</td>
+</tr>
+<tr>
+<td>Assimilator 开始</td>
+<td>03:05</td>
+</tr>
+<tr>
+<td>第四批三 Zealot 开始</td>
+<td>03:12</td>
+</tr>
+<tr>
+<td>Cybernetics Core 开始</td>
+<td>04:02</td>
+</tr>
+</tbody></table>
+<p>这套模板的关键不是最快 Core，而是先稳定正面空间。Core 开始后必须继续准备 Pylon、气和 Dragoon，避免停在“近战不够、远程也未成型”的阶段。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5--转型判断">转型判断</h4>
+<div>
+<ul>
+<li class="depth-0">3 Gateway Zealot：正面稳定后补 Assimilator 和 Core，不要无限追加低价值 Zealot</li>
+<li class="depth-0">1 Gateway Dragoon：优先保证 Range、持续 Dragoon 和安全站位</li>
+<li class="depth-0">2 Gateway Dragoon：根据前线压力决定继续 Zealot 还是加快 Dragoon</li>
+<li class="depth-0">3 Gateway Dragoon：先完成站场职责，再把生产重心转向中程火力</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-5--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">Pylon 明显落后并连续打断生产</li>
+<li class="depth-0">为命中建筑时间而长期停止 Probe</li>
+<li class="depth-0">第一批单位完成后没有守点、集合或施压任务</li>
+<li class="depth-0">队伍需要前排时仍选择过于贪的 Dragoon 模板</li>
+<li class="depth-0">到转型窗口后仍没有准备气、Core 或后续人口</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-6">Terran 开局模板</h3>
+<p>Terran 在 BGH 团队局中常承担远程支援、机动控图和中期接管职责。开局选择取决于队友是否能提供前排、自己的位置是否安全，以及队伍更需要抱团火力还是机动能力。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-6--快速选择">快速选择</h4>
+<table><thead><tr>
+<th>模板</th>
+<th>主要职责</th>
+<th>更适合</th>
+</tr></thead><tbody>
+<tr>
+<td>Marine &amp; Medic</td>
+<td>与队友前排组成正面火力</td>
+<td>队友有 Protoss 前排，队伍需要较早抱团</td>
+</tr>
+<tr>
+<td>Vulture / Mech</td>
+<td>机动、控图和中期转型</td>
+<td>对面有 Terran，位置安全或队伍需要路线控制</td>
+</tr>
+</tbody></table>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-6--marine-medic">Marine &amp; Medic</h4>
+<p>目标：稳定完成 Marine、Academy 和后续兵营节点，尽早与队友前排形成完整战斗组合。</p>
+<p>供给与动作顺序：</p>
+<p><code>9 Supply Depot -&gt; 11 Barracks -&gt; 13 Barracks -&gt; 14 Supply Depot -&gt; 15 Marine -&gt; 17 Refinery -&gt; 18 Marine -&gt; 19 Marine -&gt; 20 Marine -&gt; 22 Academy -&gt; 23 Supply Depot -&gt; 26 Barracks</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一个 Supply Depot 开始</td>
+<td>00:17</td>
+</tr>
+<tr>
+<td>第一、第二个 Barracks 开始</td>
+<td>00:42 / 01:05</td>
+</tr>
+<tr>
+<td>第一个 Marine 开始</td>
+<td>01:26</td>
+</tr>
+<tr>
+<td>Refinery 开始</td>
+<td>01:42</td>
+</tr>
+<tr>
+<td>Academy 开始</td>
+<td>02:24</td>
+</tr>
+<tr>
+<td>第三个 Barracks 开始</td>
+<td>02:56</td>
+</tr>
+</tbody></table>
+<p>第一个完整战斗节点不是 Marine 数量，而是 Marine、Medic、队友前排和到场时间能够接上。没有前排时不要独自远征，先守住墙口并缩短与队友的距离。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-6--vulture-mech">Vulture / Mech</h4>
+<p>目标：顺利进入双 Factory 和 Vulture 节奏，用机动、布雷或路线控制支持队伍。</p>
+<p>供给与动作顺序：</p>
+<p><code>9 Supply Depot -&gt; 11 Barracks -&gt; 11 Refinery -&gt; 可选 Marine -&gt; Factory -&gt; Supply Depot 或第二 Factory -&gt; 第二 Factory</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一个 Supply Depot 开始</td>
+<td>00:17</td>
+</tr>
+<tr>
+<td>Barracks 和 Refinery 开始</td>
+<td>00:42</td>
+</tr>
+<tr>
+<td>可选 Marine 开始</td>
+<td>01:24</td>
+</tr>
+<tr>
+<td>第一个 Factory 开始</td>
+<td>01:48</td>
+</tr>
+<tr>
+<td>第二个 Supply Depot 或 Factory 开始</td>
+<td>02:08</td>
+</tr>
+<tr>
+<td>第二个 Factory 最晚开始</td>
+<td>02:24</td>
+</tr>
+</tbody></table>
+<p>危险位先补墙、Marine 或防守，不要为双 Factory 时间牺牲生存。第一批 Vulture 的任务应是拿路线、控中、反包或限制对手移动，不是无视队友位置直接冲矿。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-6--转型判断">转型判断</h4>
+<p>Marine &amp; Medic：</p>
+<div>
+<ul>
+<li class="depth-0">先保证 Medic 和人口，再继续增加 Barracks</li>
+<li class="depth-0">正面有优势时与队友抱团推进</li>
+<li class="depth-0">正面吃压时先稳墙、守家并等待队友前排</li>
+</ul>
+</div>
+<p>Vulture / Mech：</p>
+<div>
+<ul>
+<li class="depth-0">对手小单位多、需要追赶时优先速度</li>
+<li class="depth-0">需要控中、卡路和阵地时优先布雷</li>
+<li class="depth-0">拿到机动后再决定增加 Factory 或转重火力</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-6--目标时间复盘">目标时间复盘</h4>
+<p>Terran 优先检查：</p>
+<div>
+<ol>
+<li class="depth-0">第一个 Supply Depot 是否导致 SCV 和产兵同时停顿</li>
+<li class="depth-0">Marine &amp; Medic 的第二 Barracks、Academy 和 Medic 是否连续</li>
+<li class="depth-0">Mech 的第一个 Factory 是否明显延误</li>
+<li class="depth-0">是否因为长时间看前线而连续停止 SCV</li>
+</ol>
+</div>
+<p>记录每个关键建筑相对目标时间提前或延误多少，回看最早的资源、人口或注意力断点，不要只补记最终建筑时间。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-6--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">Supply Depot 连续落后，SCV 和主力单位一起卡住</li>
+<li class="depth-0">Academy 或 Factory 明显晚于目标，但说不出最早断点</li>
+<li class="depth-0">Marine &amp; Medic 没有前排掩护就独自前压</li>
+<li class="depth-0">Mech 没有把机动转化为视野、布雷或路线权</li>
+<li class="depth-0">第一批主力尚未与队友会合就被单独消耗</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7">Zerg 开局模板</h3>
+<p>Zerg 在 BGH 团队局中常承担前期施压、制造主动和机动支援职责。模板选择需要同时考虑敌方 Zerg、自己的安全程度，以及队伍是否需要你立即提供前期压力。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7--快速选择">快速选择</h4>
+<table><thead><tr>
+<th>模板</th>
+<th>主要职责</th>
+<th>更适合</th>
+</tr></thead><tbody>
+<tr>
+<td>9 Pool</td>
+<td>最早施压并争夺主动</td>
+<td>对面有 Zerg、队伍需要立即给压力</td>
+</tr>
+<tr>
+<td>Overpool</td>
+<td>保留前期威慑并增加少量经济</td>
+<td>前线压力中等，希望更平滑转型</td>
+</tr>
+<tr>
+<td>12 Pool</td>
+<td>经济与前期狗之间取平衡</td>
+<td>队伍前期不危险，但不能完全放弃防守</td>
+</tr>
+<tr>
+<td>12 Hatch</td>
+<td>优先经济和多基地生产</td>
+<td>位置安全、无敌方 Zerg 强压且队友能保护</td>
+</tr>
+</tbody></table>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7--9-pool">9 Pool</h4>
+<p>目标：尽早获得第一批 Zergling 和速度，用机动压力为队友争取时间。</p>
+<p>供给与动作顺序：</p>
+<p><code>9 Pool -&gt; 9 Extractor -&gt; 8 Overlord -&gt; Drone -&gt; 9 六狗 -&gt; 100 气升级狗速 -&gt; Drone 下气 -&gt; 300 矿补 Hatchery</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>Spawning Pool 开始</td>
+<td>00:29</td>
+</tr>
+<tr>
+<td>Extractor 开始</td>
+<td>00:32</td>
+</tr>
+<tr>
+<td>Overlord 开始</td>
+<td>01:12</td>
+</tr>
+<tr>
+<td>第一批六狗开始</td>
+<td>01:30</td>
+</tr>
+<tr>
+<td>狗速开始</td>
+<td>01:42</td>
+</tr>
+<tr>
+<td>第二个 Hatchery 或防守建筑开始</td>
+<td>02:25</td>
+</tr>
+</tbody></table>
+<p>第一批狗的目标是寻找空档、逼迫回防或帮助队友形成局部人数优势。对面防守完整时保留狗的机动性，不要为了证明开局有效而全部撞掉。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7--overpool">Overpool</h4>
+<p>目标：比 9 Pool 多保留一点经济，同时仍然较早获得狗速和地图存在感。</p>
+<p>供给与动作顺序：</p>
+<p><code>9 Overlord -&gt; 9 Pool -&gt; Drone -&gt; 9 Extractor -&gt; 补到 10 人口 -&gt; 约 88 气下部分 Drone -&gt; Pool 完成后升级狗速 -&gt; 10 六狗</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一个 Overlord 开始</td>
+<td>00:18</td>
+</tr>
+<tr>
+<td>Spawning Pool 开始</td>
+<td>00:42</td>
+</tr>
+<tr>
+<td>Extractor 开始</td>
+<td>01:05</td>
+</tr>
+<tr>
+<td>气达到准备下工节点</td>
+<td>01:46</td>
+</tr>
+<tr>
+<td>Pool 完成并开始狗速</td>
+<td>01:55</td>
+</tr>
+<tr>
+<td>第一批六狗开始</td>
+<td>02:04</td>
+</tr>
+</tbody></table>
+<p>额外 Drone 必须转化为后续 Hatch、Drone 或更平滑的科技。前线没有产生价值、后续经济也没有接上时，这套模板没有完成目标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7--12-pool">12 Pool</h4>
+<p>目标：保留第一批狗和狗速选择，同时获得更好的经济与第二 Hatch 节奏。</p>
+<p>供给与动作顺序：</p>
+<p><code>9 Overlord -&gt; 补 Drone -&gt; 12 Pool -&gt; 11 Extractor -&gt; 补到 12 人口 -&gt; 12 Hatchery -&gt; 约 88 气下部分 Drone -&gt; 狗速或第一批狗</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一个 Overlord 开始</td>
+<td>00:18</td>
+</tr>
+<tr>
+<td>补到 11 Drone</td>
+<td>01:05</td>
+</tr>
+<tr>
+<td>Spawning Pool 开始</td>
+<td>01:18</td>
+</tr>
+<tr>
+<td>Extractor 开始</td>
+<td>01:24</td>
+</tr>
+<tr>
+<td>第二个 Hatchery 开始</td>
+<td>01:50</td>
+</tr>
+<tr>
+<td>狗速或第一批狗开始</td>
+<td>02:16</td>
+</tr>
+</tbody></table>
+<p>对手前压明显时先补狗和防守，不要死守第二 Hatch 时间。前线稳定时，应尽快明确是继续狗速压力，还是把 Larva 转向 Drone 和后续科技。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7--12-hatch">12 Hatch</h4>
+<p>目标：在明确安全窗口内优先建立经济和多基地生产能力。</p>
+<p>供给与动作顺序：</p>
+<p><code>9 Overlord -&gt; 12 Hatchery -&gt; 11 Pool -&gt; 13 Hatchery</code></p>
+<table><thead><tr>
+<th>关键节点</th>
+<th>目标时间</th>
+</tr></thead><tbody>
+<tr>
+<td>第一个 Overlord 开始</td>
+<td>00:18</td>
+</tr>
+<tr>
+<td>第二个 Hatchery 开始</td>
+<td>01:21</td>
+</tr>
+<tr>
+<td>Spawning Pool 开始</td>
+<td>01:33</td>
+</tr>
+<tr>
+<td>第三个 Hatchery 开始</td>
+<td>02:05</td>
+</tr>
+</tbody></table>
+<p>这不是默认模板。使用前必须确认谁能挡住第一波、自己如何获得侦察信息，以及出现威胁时何时停止贪经济并转狗或防守。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7--转型判断">转型判断</h4>
+<div>
+<ul>
+<li class="depth-0">9 Pool：狗仍能制造回防和局部优势时继续保留压力；价值消失后转 Drone、Hatch、气或科技</li>
+<li class="depth-0">Overpool：利用额外经济接顺第二 Hatch 和 Drone，不能停在“压力和经济都不足”</li>
+<li class="depth-0">12 Pool：尽快决定继续狗速还是进入经济，不要长期摇摆</li>
+<li class="depth-0">12 Hatch：安全时扩大经济，危险时立即停止追加经济并补防守</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7--目标时间复盘">目标时间复盘</h4>
+<p>Zerg 除建筑时间外，还必须检查：</p>
+<div>
+<ol>
+<li class="depth-0">Larva 是否在关键节点被错误占用</li>
+<li class="depth-0">第一批狗是否按时开始并保有实际任务</li>
+<li class="depth-0">狗速是否因气矿调度明显延误</li>
+<li class="depth-0">第二 Hatch 是为了完成转型，还是在无防守条件下继续贪</li>
+</ol>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-7--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">Pool、狗速或第一批狗明显晚于目标</li>
+<li class="depth-0">为赶建筑时间而停止必要 Drone，却没有形成兵力优势</li>
+<li class="depth-0">第一批狗没有侦察、施压或支援任务并被直接送掉</li>
+<li class="depth-0">前期狗已经失去价值，仍持续占用 Larva</li>
+<li class="depth-0">12 Hatch 缺少侦察和队友保护，遇压后仍继续追加经济</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-8">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-8--本层变化">本层变化</h4>
+<p>队伍选择模板时优先补齐前期主动、前排和中期输出，不让三名玩家都选择只在个人条件下最舒服的路线。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-8--模板选择">模板选择</h4>
+<div>
+<ul>
+<li class="depth-0">P + T + Z：Zerg 提供前期主动，Protoss 承担前排，Terran 提供远程火力或中期机动</li>
+<li class="depth-0">P + P + T：一名 Protoss 承担前排，另一名进入远程或科技，Terran 提供稳定支援</li>
+<li class="depth-0">P + P + Z：Zerg 保持前期主动，一名 Protoss 承担前排，另一名负责中期火力或科技</li>
+</ul>
+</div>
+<p>局前确认：</p>
+<div>
+<ol>
+<li class="depth-0">谁负责最早施压</li>
+<li class="depth-0">谁先扛第一波</li>
+<li class="depth-0">谁是中期输出点</li>
+<li class="depth-0">谁的经济或科技最需要保护</li>
+</ol>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-8--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">每个人都选择经济或科技模板</li>
+<li class="depth-0">危险位仍机械追求理论目标时间</li>
+<li class="depth-0">第一批单位没有守点、集合、施压或支援任务</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-9">综合决策与训练计划</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-9--找到最早断点">找到最早断点</h3>
+<p>每局只修复最早出现的问题：</p>
+<pre><code class="language-text">能否说出本局五个关键节点？
+├─ 否：固定一套主线并重写五节点
+└─ 能：节点是否按正确顺序执行？
+   ├─ 否：只练第一个漏步或错序节点
+   └─ 是：目标时间是否出现明显偏差？
+      ├─ 是：检查资源、人口、生产或注意力断点
+      └─ 否：第一批单位是否连接了有效行动？
+         ├─ 否：为第五节点补上侦察、施压、支援或扩张
+         └─ 是：本章训练暂时达标</code></pre>
+<p>受到明显干扰或主动变体后，不再追赶旧秒表。记录改变原因，并为新的下一节点设定目标。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-9--三局训练计划">三局训练计划</h3>
+<div>
+<ol>
+<li class="depth-0">第一局只检查五个节点的顺序，不追求完整细节。</li>
+<li class="depth-0">第二局记录每个节点的目标时间、实际时间和最早偏差。</li>
+<li class="depth-0">第三局保持工人、人口和主生产连续，并让第一批单位完成一个明确任务。</li>
+</ol>
+</div>
+<p>三局使用同一套模板。若第一局已经出现漏步，下一局先修漏步，不同时更换模板。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-9--本章完成标准">本章完成标准</h3>
+<div>
+<ul>
+<li class="depth-0">连续三局中至少两局按顺序完成五个关键节点</li>
+<li class="depth-0">能指出最早时间偏差及其原因</li>
+<li class="depth-0">没有为赶时间长期停工人、卡人口或断主生产</li>
+<li class="depth-0">出现干扰后仍能确定新的下一节点</li>
+<li class="depth-0">第一批单位完成后有明确行动</li>
+</ul>
+</div>
+<p>达标后再进入对手变体、位置差异和更复杂的团队协同。</p></article>
+
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>第二部分 经济与生产转化</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production"><h2 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--经济与生产转化">经济与生产转化</h2>
+<blockquote>稳定经济不是资源越多越好，而是持续采集，并及时转化为人口空间、生产能力和有效兵力。</blockquote>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--本章要解决的问题">本章要解决的问题</h3>
+<p>正常情况下，资源应沿着“采集、容纳、生产、转化”的链条形成战力。但侦察、移动和战斗会不断夺走注意力，使链条在某个位置断开。</p>
+<p>本章只回答一个问题：</p>
+<p><strong>如何在注意力频繁转移时，仍让经济稳定形成下一轮有效兵力？</strong></p>
+<p>答案是按固定顺序检查四层：</p>
+<pre><code class="language-text">持续补工
+  -&gt; 提前准备人口
+  -&gt; 保持主生产运转
+  -&gt; 为剩余资源选择明确出口</code></pre>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--四层判断模型">四层判断模型</h3>
+<table><thead><tr>
+<th>顺序</th>
+<th>需要保证的事情</th>
+<th>先问什么</th>
+<th>本局动作</th>
+</tr></thead><tbody>
+<tr>
+<td>第一层</td>
+<td>持续补充工人</td>
+<td>是否因为注意力遗漏而停工</td>
+<td>基地切回先看工人</td>
+</tr>
+<tr>
+<td>第二层</td>
+<td>提前准备人口</td>
+<td>下一轮生产是否会撞上人口上限</td>
+<td>出门前检查补给</td>
+</tr>
+<tr>
+<td>第三层</td>
+<td>保持主生产运转</td>
+<td>有资源和人口时主生产是否空转</td>
+<td>移动或战后补一轮</td>
+</tr>
+<tr>
+<td>第四层</td>
+<td>及时转化资源</td>
+<td>剩余资源准备形成什么收益</td>
+<td>资源积累先选一个出口</td>
+</tr>
+</tbody></table>
+<p>这四层不是四个并列技巧，而是一条因果链：</p>
+<div>
+<ul>
+<li class="depth-0">工人断档，后续收入不足</li>
+<li class="depth-0">人口不足，收入无法进入生产</li>
+<li class="depth-0">生产空转，资源无法形成单位</li>
+<li class="depth-0">没有明确出口，额外收入只会长期堆积</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--训练顺序">训练顺序</h3>
+<p>从最早断开的层开始训练，不要一局同时修四层。</p>
+<div>
+<ol>
+<li class="depth-0">经常无理由停工：先练持续补工</li>
+<li class="depth-0">工人稳定但经常卡人口：再练补给节奏</li>
+<li class="depth-0">资源和人口都够但设施空转：再练主生产</li>
+<li class="depth-0">主生产稳定后仍长期积累资源：最后练资源转化</li>
+</ol>
+</div>
+<p>前一层没有稳定时，不用靠增加更多产能、扩张或复杂科技掩盖问题。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--本章边界">本章边界</h3>
+<p>本章负责让资源稳定形成可用产出，不负责：</p>
+<div>
+<ul>
+<li class="depth-0">前几分钟的具体 BO 是否按目标时间完成，由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo">开局与节奏建立</a>处理</li>
+<li class="depth-0">战斗中单位是否打出有效交换，由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality">战斗控制与交换质量</a>处理</li>
+</ul>
+</div>
+<p>接下来按四层顺序学习。每一层都包含原理、本局训练卡和对应地图适配。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1">第一层：持续补充工人</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1--本层结论">本层结论</h3>
+<p>没有明确停工理由时，基地应持续补充工人；必须停工时，也要同时确定恢复生产的节点。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1--在链条中的位置">在链条中的位置</h3>
+<p>工人决定后续每一轮生产、科技和扩张的资源基础。无计划停工造成的损失会持续累积，不能靠后期一次补很多工人完全追回。</p>
+<p>训练重点不是无条件贪工人，而是区分两类情况：</p>
+<div>
+<ul>
+<li class="depth-0">主动停工：为了立即补兵、保命或完成关键转型</li>
+<li class="depth-0">注意力遗漏：看前线、侦察或扩张后忘记继续生产</li>
+</ul>
+</div>
+<p>本层只修正第二类。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1--如何判断">如何判断</h3>
+<p>每次切回基地时依次问：</p>
+<div>
+<ol>
+<li class="depth-0">基地是否正在生产工人</li>
+<li class="depth-0">当前是否存在必须立刻停工的具体原因</li>
+<li class="depth-0">如果必须停工，准备在什么事件后恢复</li>
+</ol>
+</div>
+<p>无法说清原因和恢复节点，就视为注意力遗漏。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1--怎么做">怎么做</h3>
+<p>先建立一个触发器：</p>
+<pre><code class="language-text">主力获得长距离移动命令
+  -&gt; 切回基地
+  -&gt; 检查工人生产
+  -&gt; 再处理其他运营</code></pre>
+<p>触发器稳定后，再加入“交战结束”和“新基地完成”。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">一看前线就长时间不再检查基地</li>
+<li class="depth-0">新基地完成后没有纳入补工循环</li>
+<li class="depth-0">为了赶科技或兵力停工，却没有恢复节点</li>
+<li class="depth-0">只看最终工人数，不找第一次无理由停工</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1--达标标准">达标标准</h3>
+<div>
+<ul>
+<li class="depth-0">第一次出门和第一次交战后都检查过工人生产</li>
+<li class="depth-0">没有无法解释的长时间停工</li>
+<li class="depth-0">连续三局中至少两局达标，并能说清一次合理停工的原因</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2">本局训练卡：基地切回先看工人</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">一看前线就容易停止补工</li>
+<li class="depth-0">新基地完成后经常忘记生产工人</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--本局只改什么">本局只改什么</h4>
+<p>每次主力获得新的移动命令后，切回基地检查一次工人生产。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">主力开始长距离移动</li>
+<li class="depth-0">一波交战结束</li>
+<li class="depth-0">新基地完成</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">基地是否正在生产工人</li>
+<li class="depth-0">当前是否有明确停工理由</li>
+<li class="depth-0">下一次恢复生产的节点</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">没有停工理由：立即补工</li>
+<li class="depth-0">必须保命：允许暂时停工，并记录恢复节点</li>
+<li class="depth-0">新基地已运转：把它纳入相同检查</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">为完成训练而在危险时无条件补工</li>
+<li class="depth-0">只看最终工人数，不记录第一次停工</li>
+<li class="depth-0">切回基地后处理过多操作，错过前线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">第一次出门和第一次交战后都执行检查</li>
+<li class="depth-0">没有无法解释的长时间停工</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-2--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">第一次停工发生在什么时候</li>
+<li class="depth-0">是主动决策还是注意力遗漏</li>
+<li class="depth-0">下一局保留哪个触发器</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-3">地图适配：BGH</h3>
+<p>边位受压时可以为了生存暂时停工，安全位和科技位则应避免因为观察队友交战而无计划停工。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-3--场景触发器">场景触发器</h4>
+<div>
+<ul>
+<li class="depth-0">队伍第一次集合或转线后检查工人</li>
+<li class="depth-0">边位压力解除后恢复工人生产</li>
+<li class="depth-0">新基地开始运转后纳入补工循环</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-3--场景判断">场景判断</h4>
+<div>
+<ul>
+<li class="depth-0">为立即补兵保命而停工：合理，但要说明恢复节点</li>
+<li class="depth-0">为观察中路或队友交战而停工：注意力遗漏</li>
+<li class="depth-0">安全位长期停工：优先修正，不用归因于团队战斗</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-3--场景复盘">场景复盘</h4>
+<div>
+<ul>
+<li class="depth-0">第一次团队事件是否造成工人生产中断</li>
+<li class="depth-0">哪次停工属于生存决策</li>
+<li class="depth-0">压力解除后是否及时恢复</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4">第二层：提前准备人口</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4--本层结论">本层结论</h3>
+<p>补给要在注意力离开基地前准备完成，目标是容纳下一轮关键生产，而不是追求整局绝不卡人口。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4--在链条中的位置">在链条中的位置</h3>
+<p>工人持续提供收入后，人口空间决定这些资源能否进入生产。关键时点卡人口会同时延误工人、主战单位、出门和支援。</p>
+<p>过早堆叠补给同样会挤压当前兵力和科技，因此正确目标是“够下一轮使用”，而不是越早越多越好。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4--如何判断">如何判断</h3>
+<p>进入下一轮生产前依次问：</p>
+<div>
+<ol>
+<li class="depth-0">剩余人口能否容纳即将开始的工人与部队</li>
+<li class="depth-0">补给能否在这些单位完成前生效</li>
+<li class="depth-0">接下来是否会因为出门、交战或扩张而暂时忘记基地</li>
+</ol>
+</div>
+<p>第三项风险较高时，应在注意力切走前完成补给动作。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4--怎么做">怎么做</h3>
+<p>先建立主要触发器：</p>
+<pre><code class="language-text">主力准备出门
+  -&gt; 检查剩余人口
+  -&gt; 估算下一轮工人与部队
+  -&gt; 不够则先补给
+  -&gt; 再把注意力转向前线</code></pre>
+<p>稳定后再加入“交战结束”和“新增生产设施”两个触发器。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">已经卡住才开始补给</li>
+<li class="depth-0">主力出门前只看兵力，不看人口</li>
+<li class="depth-0">战后只补兵，没有同步准备人口</li>
+<li class="depth-0">为了绝不卡人口而过早投入多个补给</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4--达标标准">达标标准</h3>
+<div>
+<ul>
+<li class="depth-0">主力第一次出门前完成补给检查</li>
+<li class="depth-0">没有因为卡人口明显打断工人或主战单位生产</li>
+<li class="depth-0">连续三局中至少两局达标，并且没有以过量补给换取达标</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5">本局训练卡：出门前检查补给</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--使用条件">使用条件</h4>
+<p>适合：</p>
+<div>
+<ul>
+<li class="depth-0">经常在主力出门、交战或集中补兵时卡人口</li>
+<li class="depth-0">还没有稳定补给检查触发器</li>
+</ul>
+</div>
+<p>暂不适合：</p>
+<div>
+<ul>
+<li class="depth-0">当前主要问题是资源不足，而不是人口空间不足</li>
+<li class="depth-0">已经稳定控制卡人口，需要进一步训练扩张或生产规模</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--本局只改什么">本局只改什么</h4>
+<p>每次主力准备出门前，执行一次：</p>
+<pre><code class="language-text">看剩余人口
+  -&gt; 估算下一轮工人和部队
+  -&gt; 不够则先补给
+  -&gt; 再把注意力转向前线</code></pre>
+<p>本局不要同时增加其他新训练目标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--触发时机">触发时机</h4>
+<p>主要触发器：</p>
+<div>
+<ul>
+<li class="depth-0">主力准备离开集结区</li>
+</ul>
+</div>
+<p>辅助触发器：</p>
+<div>
+<ul>
+<li class="depth-0">一波交战结束，准备集中补兵</li>
+<li class="depth-0">新增生产建筑后，准备提高产量</li>
+</ul>
+</div>
+<p>基础阶段只强制使用主要触发器。连续三局能够执行后，再加入辅助触发器。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">当前已用人口和人口上限</li>
+<li class="depth-0">下一轮工人与主战单位需要的人口</li>
+<li class="depth-0">补给建筑或单位完成所需时间</li>
+<li class="depth-0">自己是否即将把注意力切到前线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">下一轮生产会撞上人口上限：先补给</li>
+<li class="depth-0">人口空间足够且补给会明显挤压当前关键兵力：暂不补</li>
+<li class="depth-0">无法精确计算：保证下一轮关键生产不被打断，不为追求零卡顿过量补给</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">已经卡住才开始补给</li>
+<li class="depth-0">出门前只检查兵力，不检查人口</li>
+<li class="depth-0">交战结束后连续补兵，但忘记同步补给</li>
+<li class="depth-0">一次造过多补给，导致当前兵力或科技延迟</li>
+<li class="depth-0">复盘只记“又卡人口”，没有记录卡住前的触发场景</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">主力第一次出门前执行过补给检查</li>
+<li class="depth-0">本局没有因为卡人口造成明显断工或断兵</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--多局完成标准">多局完成标准</h4>
+<p>最近连续 <code>3</code> 局中至少 <code>2</code> 局达到单局标准，并且没有明显过早、过量补给。</p>
+<p>未达到时不要换卡。下一轮只保留主要触发器，减少其他训练目标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-5--局后复盘">局后复盘</h4>
+<p>只回答四个问题：</p>
+<div>
+<ol>
+<li class="depth-0">第一次关键卡人口发生在什么时候</li>
+<li class="depth-0">卡住前 <code>20</code> 秒我在做什么</li>
+<li class="depth-0">主力出门前我是否执行了补给检查</li>
+<li class="depth-0">下一局需要保留还是调整触发器</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-6">地图适配：BGH</h3>
+<p>BGH 的抢中、支援和战后补兵会集中夺走注意力。补给检查应绑定团队动作，避免个人卡人口拖慢整队下一轮到场。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-6--场景触发器">场景触发器</h4>
+<div>
+<ul>
+<li class="depth-0">队伍准备第一次集体出门</li>
+<li class="depth-0">中路交战结束，准备集中补兵</li>
+<li class="depth-0">准备增加一轮生产设施</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-6--场景判断">场景判断</h4>
+<div>
+<ul>
+<li class="depth-0">为同步出门跳过补给检查：错误</li>
+<li class="depth-0">接敌已经开始后长时间切回基地补给：时机过晚</li>
+<li class="depth-0">战后资源充足但人口不足：恢复链在补给层断开</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-6--场景复盘">场景复盘</h4>
+<div>
+<ul>
+<li class="depth-0">第一次团队出门前是否检查人口</li>
+<li class="depth-0">战后补兵是否再次卡住</li>
+<li class="depth-0">个人补给延误是否影响团队集合</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7">第三层：保持主生产运转</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7--本层结论">本层结论</h3>
+<p>先让一条主生产线持续运转，再增加科技线、生产规模和复杂兵种。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7--在链条中的位置">在链条中的位置</h3>
+<p>收入和人口空间准备好以后，生产设施才是资源形成单位的通道。设施空转不仅浪费建筑投入，还会损失无法追回的生产时间。</p>
+<p>本层不把所有停产都视为错误。先区分四种原因：</p>
+<div>
+<ol>
+<li class="depth-0">缺资源：收入与生产规模不匹配</li>
+<li class="depth-0">卡人口：上一层没有准备好</li>
+<li class="depth-0">忘记操作：没有稳定生产触发器</li>
+<li class="depth-0">主动停产：正在转型或保存关键资源</li>
+</ol>
+</div>
+<p>本层直接修正第三类，其余问题回到对应层处理。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7--如何判断">如何判断</h3>
+<p>指定本局唯一主生产线，然后检查：</p>
+<div>
+<ul>
+<li class="depth-0">有资源且有人口时，它是否长时间空转</li>
+<li class="depth-0">新增设施后，原有生产循环是否仍能覆盖</li>
+<li class="depth-0">战后恢复时，下一轮主战单位是否及时接上</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7--怎么做">怎么做</h3>
+<p>使用两个触发器：</p>
+<pre><code class="language-text">主力开始长距离移动 -&gt; 补一轮主战单位
+一波交战结束       -&gt; 补一轮主战单位</code></pre>
+<p>每次只处理主生产和必要补给，不在同一次切回中完成全部科技与运营。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">主力一移动就忘记生产</li>
+<li class="depth-0">新增生产设施后仍按旧节奏操作</li>
+<li class="depth-0">同时检查多条科技线，反而让主生产断档</li>
+<li class="depth-0">有资源时一次排满，之后继续长时间空转</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7--达标标准">达标标准</h3>
+<div>
+<ul>
+<li class="depth-0">第一次移动和第一次战后都补过一轮主生产</li>
+<li class="depth-0">没有出现有资源、有人口却无理由长时间空转</li>
+<li class="depth-0">连续三局中至少两局达标，并能判断第一次空转属于哪种原因</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8">本局训练卡：移动或战后补一轮</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">有资源和生产设施，却经常忘记出兵</li>
+<li class="depth-0">战斗结束后兵力恢复明显慢于队友</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--本局只改什么">本局只改什么</h4>
+<p>主力开始移动或一波战斗结束后，补一轮当前主战单位。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">主力获得长距离移动命令</li>
+<li class="depth-0">一波交战结束</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">主生产设施是否空转</li>
+<li class="depth-0">人口和资源是否允许下一轮生产</li>
+<li class="depth-0">当前是否在主动转型</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">资源和人口足够：补一轮主战单位</li>
+<li class="depth-0">卡人口：先执行补给动作</li>
+<li class="depth-0">正在转型：记录停产原因和恢复节点</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">一次切回处理全部科技和运营</li>
+<li class="depth-0">明明缺资源却把问题归因于忘记生产</li>
+<li class="depth-0">交战尚未稳定就长时间离开前线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">两个主要触发器至少各执行一次</li>
+<li class="depth-0">没有无理由长时间空转</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-8--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">第一次空转发生在哪个阶段</li>
+<li class="depth-0">原因是资源、人口、转型还是遗忘</li>
+<li class="depth-0">下一局保留哪个生产触发器</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-9">地图适配：BGH</h3>
+<p>第一集合、抢中结束和等待队友是稳定的生产空窗。支援前补一轮可以减少到场后的兵力断层，但接敌已经开始时不要长时间离开前线。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-9--场景触发器">场景触发器</h4>
+<div>
+<ul>
+<li class="depth-0">前往第一集合点</li>
+<li class="depth-0">等待后排或支援单位到场</li>
+<li class="depth-0">中路交战结束并重新集合</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-9--场景判断">场景判断</h4>
+<div>
+<ul>
+<li class="depth-0">集合路上有资源和人口：补一轮主战单位</li>
+<li class="depth-0">已经进入激烈接敌：优先保持阵型与协同</li>
+<li class="depth-0">战后只有资源没有续兵：检查主生产是否空转</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-9--场景复盘">场景复盘</h4>
+<div>
+<ul>
+<li class="depth-0">哪个集合或战后空窗本可以补一轮</li>
+<li class="depth-0">主力和续兵为何没有同时到场</li>
+<li class="depth-0">是否为了处理完整运营错过团队动作</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10">第四层：及时转化资源</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10--本层结论">本层结论</h3>
+<p>主生产稳定后仍有资源积累，应为剩余资源选择一个主要出口：兵力、生产规模、科技或扩张。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10--在链条中的位置">在链条中的位置</h3>
+<p>高资源不一定是错误。为关键科技或扩张短时存钱属于计划；长期不知道资源要形成什么，才是转化链断开。</p>
+<p>如果主生产仍在空转，先回到第三层。盲目增加建筑只会放大已有问题。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10--如何判断">如何判断</h3>
+<p>资源明显积累时依次问：</p>
+<div>
+<ol>
+<li class="depth-0">主生产是否持续运转</li>
+<li class="depth-0">是否正在为一个明确目标存钱</li>
+<li class="depth-0">现有产能能否消化当前收入</li>
+<li class="depth-0">当前局势是否允许扩张或科技</li>
+</ol>
+</div>
+<p>没有明确计划时，只选择一个主要出口：</p>
+<table><thead><tr>
+<th>当前状态</th>
+<th>优先出口</th>
+</tr></thead><tbody>
+<tr>
+<td>主战单位不足</td>
+<td>继续兵力生产</td>
+</tr>
+<tr>
+<td>收入持续超过现有产能</td>
+<td>增加可持续使用的生产设施</td>
+</tr>
+<tr>
+<td>兵力能够维持当前安全</td>
+<td>推进一个关键科技</td>
+</tr>
+<tr>
+<td>路线可守且资源能够利用</td>
+<td>建立扩张</td>
+</tr>
+</tbody></table>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10--怎么做">怎么做</h3>
+<p>建立一个资源提醒。触发后先说清“这笔资源要形成什么”，再执行一个动作。下一次检查时确认该出口是否真的开始产生收益。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">把所有高资源状态都视为错误</li>
+<li class="depth-0">同时选择扩张、科技和大量产能</li>
+<li class="depth-0">为花钱建立无法持续运转的生产设施</li>
+<li class="depth-0">扩张后没有同步计划如何使用新增收入</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10--达标标准">达标标准</h3>
+<div>
+<ul>
+<li class="depth-0">至少一次资源提醒后说清并执行一个主要出口</li>
+<li class="depth-0">没有长时间无计划堆积</li>
+<li class="depth-0">没有为了花钱建立无法运转的产能</li>
+<li class="depth-0">连续三局中至少两局达标，并能区分合理存钱与无计划积累</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11">本局训练卡：资源积累先选一个出口</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">经常资源很多但兵力、科技和扩张都没有推进</li>
+<li class="depth-0">会一次补很多建筑，却无法持续生产</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--本局只改什么">本局只改什么</h4>
+<p>资源明显积累时，立即选择兵力、生产规模、科技或扩张中的一个主要出口。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">资源连续增加但主生产已经排满</li>
+<li class="depth-0">一波交战结束并进入运营空窗</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">是否正在为明确目标存钱</li>
+<li class="depth-0">主生产能否消化当前收入</li>
+<li class="depth-0">当前最缺的是兵力、产能、科技还是基地</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">有明确存钱目标：继续，并保留必要兵力</li>
+<li class="depth-0">主生产空转：先恢复生产</li>
+<li class="depth-0">收入超过产能：增加可持续使用的生产</li>
+<li class="depth-0">局势安全且收益明确：考虑扩张或科技</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">资源一多就无条件扩张</li>
+<li class="depth-0">同时选择多个出口</li>
+<li class="depth-0">只建产能但后续没有资源使用</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">至少一次触发后说清并执行一个主要出口</li>
+<li class="depth-0">没有长时间无计划堆积</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-11--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">第一次资源积累时是否有计划</li>
+<li class="depth-0">最终选择了哪个出口</li>
+<li class="depth-0">这个选择是否真正转成有效收益</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-12">地图适配：BGH</h3>
+<p>中路和安全空间只有转成可持续生产、关键科技、扩张或下一轮团队兵力才形成经济收益。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-12--中路收益">中路收益</h4>
+<p>控制中路后至少选择一个出口：</p>
+<div>
+<ul>
+<li class="depth-0">建立可防守的中矿或扩张</li>
+<li class="depth-0">增加能够持续运转的生产规模</li>
+<li class="depth-0">完成能改变下一轮交战的关键科技</li>
+<li class="depth-0">加快战后兵力恢复</li>
+</ul>
+</div>
+<p>只停留在中路而没有资源、视野或行动收益，不算完成转化。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-12--扩张判断">扩张判断</h4>
+<p>准备占用资源点时检查：</p>
+<div>
+<ol>
+<li class="depth-0">队伍是否仍有足够自保兵力</li>
+<li class="depth-0">新基地是否位于可支援路线内</li>
+<li class="depth-0">新增收入准备形成什么产能或科技</li>
+<li class="depth-0">对手反击时由谁先守、谁负责补位</li>
+</ol>
+</div>
+<p>扩张不能同时依赖“对手不会来”和“队友一定能救”两个未经确认的假设。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-12--场景复盘">场景复盘</h4>
+<div>
+<ul>
+<li class="depth-0">中路或扩张资源最终转化成了什么</li>
+<li class="depth-0">是否同时选择过多出口</li>
+<li class="depth-0">新资源点是否处于可支援范围</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13">具体训练：常见经济断点</h2>
+<p>经济训练不是追求资源数字越高越好，而是在注意力受干扰时保持“工人、人口、生产、资源出口”这条转化链。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13--怎么组织对练">怎么组织对练</h3>
+<p>使用同一套熟悉开局，连续三轮只制造一种干扰：</p>
+<div>
+<ol>
+<li class="depth-0">第一轮无敌人压力，确认正常基线</li>
+<li class="depth-0">第二轮在固定时间加入移动、侦察或短交战</li>
+<li class="depth-0">第三轮重复同一干扰，检查最早断点是否后移或消失</li>
+</ol>
+</div>
+<p>每轮只修最早断点。后面的资源积累如果由前面的停工或卡人口造成，不同时增加第二张训练卡。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13--侦察操作导致工人停产">侦察操作导致工人停产</h3>
+<div>
+<ul>
+<li class="depth-0">在侦察单位出发前补上当前工人</li>
+<li class="depth-0">侦察操作结束后第一次切回基地先检查工人队列</li>
+<li class="depth-0">不为控制侦察单位长时间停留在敌方基地</li>
+<li class="depth-0">记录第一次空队列发生在出发、观察还是撤离</li>
+<li class="depth-0">工人恢复连续后，再增加更复杂的侦察路线</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13--出门时发生人口阻塞">出门时发生人口阻塞</h3>
+<div>
+<ul>
+<li class="depth-0">在主力集合前检查当前人口和下一轮生产需求</li>
+<li class="depth-0">提前开始补给，不等生产建筑全部亮红</li>
+<li class="depth-0">出门命令完成后再次确认补给是否已经在建</li>
+<li class="depth-0">卡人口时先记录最早漏检节点，不用连续补多个补给掩盖问题</li>
+<li class="depth-0">连续三轮不因第一次出门卡住主生产后，再增加多线移动</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13--控兵期间主生产空转">控兵期间主生产空转</h3>
+<div>
+<ul>
+<li class="depth-0">给主力下达安全移动命令后补一轮主战单位</li>
+<li class="depth-0">激烈交战期间保留前线操作，不强行完成整套运营</li>
+<li class="depth-0">交战结束后先恢复人口和主生产，再处理次要科技</li>
+<li class="depth-0">记录空转开始时间以及当时占用注意力的动作</li>
+<li class="depth-0">生产恢复稳定后，再增加第二条生产线或科技线</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13--战后资源快速积累">战后资源快速积累</h3>
+<div>
+<ul>
+<li class="depth-0">战斗结束后先判断人口、主生产和工人是否连续</li>
+<li class="depth-0">为剩余资源只选择一个出口：扩产、科技、扩张或补充关键单位</li>
+<li class="depth-0">出口必须服务于下一阶段计划，不因看到高资源同时增加所有项目</li>
+<li class="depth-0">下一次接敌前检查新增投入是否已经形成产能或兵力</li>
+<li class="depth-0">无法说明资源用途时，回到最早未完成的生产环节</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13--防守压力下被迫暂停经济">防守压力下被迫暂停经济</h3>
+<div>
+<ul>
+<li class="depth-0">区分主动停工与注意力遗漏，并记录停止原因</li>
+<li class="depth-0">先完成生存所需的最低投入，不机械维持和平状态下的目标时间</li>
+<li class="depth-0">压力解除后按工人、人口、主生产、资源出口顺序恢复</li>
+<li class="depth-0">不在危险仍存在时一次补回全部经济缺口</li>
+<li class="depth-0">能说明何时停止、何时恢复，才算完成这一轮训练</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-13--单局检查">单局检查</h3>
+<pre><code class="language-text">训练干扰：
+最早断点：
+发生时间：
+触发动作：
+本轮修正：
+后续现象是否由它引起：
+下一轮保持或增加的变量：</code></pre>
+<p>同一种干扰连续三轮中至少两轮不再破坏目标环节后，再换下一类断点。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14">综合决策与训练计划</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14--找到最早断点">找到最早断点</h3>
+<p>复盘时不要同时统计所有经济失误。沿着生产链找到最早发生、并影响后续动作的断点：</p>
+<pre><code class="language-text">工人是否无理由停产？
+├─ 是：训练持续补工
+└─ 否：下一轮生产是否被人口卡住？
+   ├─ 是：训练提前准备人口
+   └─ 否：主生产是否在资源充足时空转？
+      ├─ 是：训练保持主生产运转
+      └─ 否：剩余资源是否没有明确出口？
+         ├─ 是：训练及时转化资源
+         └─ 否：本章训练暂时达标</code></pre>
+<p>如果后面的现象由前面的断点引起，只记录最早断点。例如，卡人口导致生产空转时，本局先训练补给，不同时训练生产循环。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14--三局训练计划">三局训练计划</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14--第一局只确认断点">第一局：只确认断点</h4>
+<div>
+<ul>
+<li class="depth-0">按四层顺序观察</li>
+<li class="depth-0">记录最早失败发生的时间和场景</li>
+<li class="depth-0">不要求在当局同时修正全部问题</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14--第二局只携带一张训练卡">第二局：只携带一张训练卡</h4>
+<div>
+<ul>
+<li class="depth-0">选择最早断点对应的训练卡</li>
+<li class="depth-0">全局只强制执行一个主要触发器</li>
+<li class="depth-0">局后记录是否执行，而不是只看输赢</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14--第三局重复同一张卡">第三局：重复同一张卡</h4>
+<div>
+<ul>
+<li class="depth-0">不因上一局失败立即换题</li>
+<li class="depth-0">检查同一触发器能否再次执行</li>
+<li class="depth-0">连续三局中至少两局达标后，再进入下一层</li>
+</ul>
+</div>
+<p>进行具体断点训练时，三局保持同一开局和干扰类型；最早断点稳定后，每轮只增加一个新的注意力压力。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14--本章完成标准">本章完成标准</h3>
+<p>完成本章不要求经济操作完美，而要求玩家能够：</p>
+<div>
+<ol>
+<li class="depth-0">按工人、人口、生产、资源出口的顺序定位问题</li>
+<li class="depth-0">区分主动停产、合理存钱和注意力遗漏</li>
+<li class="depth-0">为最早断点选择一张对应训练卡</li>
+<li class="depth-0">连续三局中至少两局执行主要触发器</li>
+<li class="depth-0">说明地图或团队条件如何改变触发时机，而不是改变经济原则</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-14--下一步">下一步</h3>
+<p>四层都能稳定执行后，再训练扩张时机、基地饱和度、科技推进和兵种结构。这些内容建立在经济链已经能够持续运转的基础上。</p></article>
+
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>第三部分 信息获取与判断</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment"><h2 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--信息获取与判断">信息获取与判断</h2>
+<blockquote>有效侦察不是看见更多，而是在需要决策前获得足够信息，并把观察转成下一步行动。</blockquote>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--本章要解决的问题">本章要解决的问题</h3>
+<p>对手信息会不断过期。首侦只能建立初始判断，后续生产、移动和战斗又会持续占用注意力。本章回答：</p>
+<p><strong>如何持续发现关键变化，并避免用过期信息做决定？</strong></p>
+<p>答案是建立三层信息循环：</p>
+<pre><code class="language-text">按时完成首侦
+  -&gt; 在决策前刷新信息
+  -&gt; 用小地图维持持续感知</code></pre>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--三层判断模型">三层判断模型</h3>
+<table><thead><tr>
+<th>顺序</th>
+<th>需要保证的事情</th>
+<th>判断问题</th>
+<th>本局动作</th>
+</tr></thead><tbody>
+<tr>
+<td>第一层</td>
+<td>建立初始事实</td>
+<td>首侦是否在仍可调整时到达</td>
+<td>首侦三步闭环</td>
+</tr>
+<tr>
+<td>第二层</td>
+<td>更新旧判断</td>
+<td>下一次关键决策前信息是否仍有效</td>
+<td>补侦察后说一句结论</td>
+</tr>
+<tr>
+<td>第三层</td>
+<td>发现即时变化</td>
+<td>动作空窗是否扫描地图异常</td>
+<td>动作完成后短扫一次</td>
+</tr>
+</tbody></table>
+<p>每次信息都应形成“看见什么、意味着什么、下一步做什么”。无法确认时保留不确定性和验证动作，不把猜测包装成事实。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--训练顺序">训练顺序</h3>
+<div>
+<ol>
+<li class="depth-0">经常忘记侦察：先建立首侦触发器</li>
+<li class="depth-0">首侦后仍机械执行：训练信息刷新</li>
+<li class="depth-0">多线和绕后总是发现过晚：训练小地图短扫</li>
+</ol>
+</div>
+<p>一次只训练一层，优先处理最早丢失信息的位置。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--本章边界">本章边界</h3>
+<p>本章负责获取和解释信息。方向明确后能否及时行动，由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control">局势响应、支援与风险控制</a>处理；接敌后的具体控制由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality">战斗控制与交换质量</a>处理。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1">第一层：首侦按时完成</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1--本层结论">本层结论</h3>
+<p>在对手第一轮关键选择产生威胁前完成首侦，并把看到的信息转成一句明确结论。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1--在链条中的位置">在链条中的位置</h3>
+<p>首侦的价值不是“去过对面家”，而是在自己仍有调整空间时拿到信息。过晚的侦察即使看见了科技、兵力或扩张，也可能已经来不及改变生产和站位。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1--如何判断">如何判断</h3>
+<p>首侦完成必须包含三个动作：</p>
+<div>
+<ol>
+<li class="depth-0">按预定时机派出侦察单位</li>
+<li class="depth-0">看见能够区分对手主线的关键信息</li>
+<li class="depth-0">用一句话说明下一步保持什么或改变什么</li>
+</ol>
+</div>
+<p>只完成移动、不形成结论，不算有效首侦。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">局前确定首侦触发器</li>
+<li class="depth-0">确定首侦必须回答的一个问题</li>
+<li class="depth-0">侦察后立即形成一句结论</li>
+<li class="depth-0">执行一个保持或调整动作</li>
+<li class="depth-0">局后检查信息是否在决策前到达</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">想把经济做顺以后再侦察，导致信息到得太晚</li>
+<li class="depth-0">侦察单位进入错误路线，没有覆盖关键区域</li>
+<li class="depth-0">看见建筑或兵量，但没有改变自己的计划</li>
+<li class="depth-0">团队局里重复侦察同一区域，却没人覆盖其他方向</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">首侦没有因忘记或犹豫明显延后</li>
+<li class="depth-0">至少获得一条可用于判断的信息</li>
+<li class="depth-0">能说清“看到了什么，因此做了什么”</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1--多局完成">多局完成</h4>
+<p>连续三局中至少两局完成有效首侦，且没有因为侦察操作造成明显的开局主线断档。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2">本局训练卡：首侦三步闭环</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">经常忘记首侦</li>
+<li class="depth-0">首侦到达时已经无法调整</li>
+<li class="depth-0">看见信息后仍按原计划机械执行</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--本局只改什么">本局只改什么</h4>
+<p>完成一次“按时出发、得到信息、执行动作”的首侦闭环。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">局前预定的首侦节点到达</li>
+</ul>
+</div>
+<p>BGH 团队局中，应在出发前确认自己负责的侦察方向，避免和队友重复。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">对手关键建筑、兵量、扩张或缺失信息</li>
+<li class="depth-0">自己是否仍有调整生产和站位的时间</li>
+<li class="depth-0">队友是否需要同步这条信息</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">看见明确主线：说出结论并决定保持或调整</li>
+<li class="depth-0">信息不足：明确缺什么，不假装已经确认</li>
+<li class="depth-0">侦察单位失去价值：及时退出，不持续占用注意力</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">出发过晚</li>
+<li class="depth-0">只完成移动，没有观察目标</li>
+<li class="depth-0">看到异常但没有动作</li>
+<li class="depth-0">团队内重复侦察同一路线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">首侦按预定触发器出发</li>
+<li class="depth-0">获得至少一条有效信息</li>
+<li class="depth-0">信息后产生一个明确的保持或调整动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标，且首侦没有明显破坏自己的开局主线。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-2--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">首侦什么时候出发</li>
+<li class="depth-0">看到了什么有效信息</li>
+<li class="depth-0">信息改变了哪个动作</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-3">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-3--本层变化">本层变化</h4>
+<p>首侦前先分配方向，避免多人重复确认同一区域。个人仍完成“出发、观察、行动”闭环，但关键结论需要同步给队友。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-3--场景动作">场景动作</h4>
+<div>
+<ol>
+<li class="depth-0">开局前确认自己负责的方向</li>
+<li class="depth-0">优先确认会改变团队第一轮行动的信息</li>
+<li class="depth-0">用“哪一侧、什么变化、谁需调整”同步结论</li>
+</ol>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-3--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">多人重复侦察同一区域</li>
+<li class="depth-0">看见异常兵量、科技或空缺位置却没有同步</li>
+<li class="depth-0">只报告事实，没有说明对团队行动的影响</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4">第二层：刷新信息并形成行动</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4--本层结论">本层结论</h3>
+<p>在旧信息失效前主动补侦察，并把新发现压缩成一个可执行结论。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4--在链条中的位置">在链条中的位置</h3>
+<p>首侦只能解释早期局面。对手的扩张、科技、兵种和路线会变化，只看一次就容易在中期继续按过期假设行动。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4--如何判断">如何判断</h3>
+<p>每次补侦察前先提出两个问题：</p>
+<div>
+<ol>
+<li class="depth-0">哪条旧信息已经可能失效</li>
+<li class="depth-0">哪个新答案会改变我的下一步</li>
+</ol>
+</div>
+<p>侦察后用一句话完成：</p>
+<p><code>看到的事实 -&gt; 对局势的含义 -&gt; 下一步动作</code></p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">局前写下一个必须更新的信息</li>
+<li class="depth-0">为它设置中期刷新节点</li>
+<li class="depth-0">侦察时最多回答两个问题</li>
+<li class="depth-0">立即给出一句行动结论</li>
+<li class="depth-0">局后检查结论是否实际改变动作</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">早期看过一次后不再更新</li>
+<li class="depth-0">漫无目的进入敌方区域，没有预设问题</li>
+<li class="depth-0">看见关键变化但没有调整计划</li>
+<li class="depth-0">团队局中看到信息却没有同步</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">首侦后至少完成一次有效信息刷新</li>
+<li class="depth-0">刷新后形成一条事实、含义和动作完整的结论</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，且没有把早期信息当作整局事实。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5">本局训练卡：补侦察后说一句结论</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">首侦完成后长期不再获取信息</li>
+<li class="depth-0">看见对手变化却没有调整动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--本局只改什么">本局只改什么</h4>
+<p>中期完成一次补侦察，并说出“事实、含义、动作”一句结论。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">首轮信息已经过去一个阶段</li>
+<li class="depth-0">对手兵种、扩张或科技可能变化</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">一个会影响当前决策的问题</li>
+<li class="depth-0">对手的新建筑、兵种、扩张或移动</li>
+<li class="depth-0">自己和队友需要改变的动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">得到新事实：立即形成行动结论</li>
+<li class="depth-0">没有确认事实：保留不确定性，不下绝对结论</li>
+<li class="depth-0">侦察失败：选择替代方式或安全线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">侦察前没有问题</li>
+<li class="depth-0">一次试图确认所有信息</li>
+<li class="depth-0">只报告事实，不说明下一步</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">至少完成一次有效信息刷新</li>
+<li class="depth-0">形成一条可执行结论</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-5--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">本局更新了哪条旧信息</li>
+<li class="depth-0">新事实改变了什么动作</li>
+<li class="depth-0">是否把不确定判断说成了事实</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-6">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-6--本层变化">本层变化</h4>
+<p>BGH 的信息刷新优先覆盖会改变中路、边路支援和团队兵种安排的变化。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-6--场景动作">场景动作</h4>
+<p>补侦察前，从以下问题中选择一个：</p>
+<div>
+<ul>
+<li class="depth-0">中路是否可以进入</li>
+<li class="depth-0">哪一侧可能前压、绕后或空投</li>
+<li class="depth-0">对手是否扩张、转型或收缩防守</li>
+<li class="depth-0">哪名队友需要提前调整兵种或路线</li>
+</ul>
+</div>
+<p>信息不完整时说明不确定性，并指定由谁、在何时再次确认。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-6--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">早期看过一次后整局沿用旧信息</li>
+<li class="depth-0">只有一人看到变化，其他人仍按旧计划行动</li>
+<li class="depth-0">用未经确认的猜测要求全队立即转型</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7">第三层：小地图短扫</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7--本层结论">本层结论</h3>
+<p>把短扫小地图绑定到稳定操作节点，尽早发现异常移动、队友受压和主力脱节。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7--在链条中的位置">在链条中的位置</h3>
+<p>小地图是持续更新战场状态的低成本入口。训练目标不是长时间盯图，而是在注意力切换之间及时发现是否有新事件需要处理。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7--如何判断">如何判断</h3>
+<p>短扫时只回答两个问题：</p>
+<div>
+<ol>
+<li class="depth-0">是否出现新的异常</li>
+<li class="depth-0">这个异常是否需要立即切屏确认</li>
+</ol>
+</div>
+<p>确认异常后再分类为主攻、骚扰、绕后、队友受压或无关事件。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">选择“生产后、主力移动后、战后”中的一个触发器</li>
+<li class="depth-0">每次触发只做一次短扫</li>
+<li class="depth-0">发现异常才切到现场确认</li>
+<li class="depth-0">局后记录一次最早可发现但错过的信号</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">只有听到告警后才看小地图</li>
+<li class="depth-0">每次看得过久，反而漏掉当前操作</li>
+<li class="depth-0">看见红点后立即全军回防，没有确认威胁</li>
+<li class="depth-0">多线时试图平均处理所有位置</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">主要触发器出现时能稳定短扫</li>
+<li class="depth-0">至少一次异常经过确认后形成合适动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，且没有因长时间盯图中断当前操作。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8">本局训练卡：动作完成后短扫一次</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">经常等告警响起才发现威胁</li>
+<li class="depth-0">切屏和生产时完全忽略小地图</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--本局只改什么">本局只改什么</h4>
+<p>每次主力获得新移动命令后，短扫一次小地图。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">主力获得新的移动命令</li>
+<li class="depth-0">基础动作稳定后可增加生产完成和战后触发器</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">新出现的敌方移动</li>
+<li class="depth-0">队友是否受压</li>
+<li class="depth-0">自己的主力是否脱节</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">没有异常：继续当前动作</li>
+<li class="depth-0">有异常但不明确：切屏确认</li>
+<li class="depth-0">明确威胁：进入对应响应主题</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">看小地图时间过长</li>
+<li class="depth-0">看到红点就无条件回防</li>
+<li class="depth-0">一次增加过多扫描触发器</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">主要触发器出现时完成短扫</li>
+<li class="depth-0">至少一次异常经过确认后形成动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-8--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">第一次漏掉的异常是什么</li>
+<li class="depth-0">哪个触发器本可更早发现</li>
+<li class="depth-0">看见异常后是否先确认事实</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-9">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-9--本层变化">本层变化</h4>
+<p>小地图短扫优先发现边位告警、中路主力移动、绕后空投和队友脱节。看到异常后由最近或职责最合适的队员确认，不要求全队同时切屏。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-9--中路视野">中路视野</h4>
+<p>准备控制中路时确认：</p>
+<div>
+<ol>
+<li class="depth-0">是否看见主要入口</li>
+<li class="depth-0">是否覆盖可能的侧翼</li>
+<li class="depth-0">失去视野后由谁补充</li>
+<li class="depth-0">新信息会让队伍继续、等待还是撤退</li>
+</ol>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-9--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">看到多个红点后直接平均分兵</li>
+<li class="depth-0">抢中前只有兵力，没有入口和侧翼视野</li>
+<li class="depth-0">全队同时切屏确认同一个异常</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10">具体训练：常见信息判断情景</h2>
+<p>信息训练不是记住所有开局，而是在有限观察下区分事实、推断和未知，并为下一步安排一个可执行动作。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10--怎么组织对练">怎么组织对练</h3>
+<p>由陪练方预先选择一种情景，训练方不知道答案：</p>
+<div>
+<ol>
+<li class="depth-0">每轮只需要确认一个核心问题</li>
+<li class="depth-0">观察后用“事实、含义、动作”给出结论</li>
+<li class="depth-0">无法确认时必须说出未知项和下一次验证方式</li>
+<li class="depth-0">双方交换角色，每种情景至少重复三轮</li>
+</ol>
+</div>
+<p>第一轮允许完整观察，后续再限制侦察单位、时间或视野范围。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10--预期建筑没有出现">预期建筑没有出现</h3>
+<div>
+<ul>
+<li class="depth-0">先确认侦察位置和时间是否足以支持“没有出现”</li>
+<li class="depth-0">将结论表述为“这里暂时没看到”，不直接断言具体隐藏路线</li>
+<li class="depth-0">检查其他可能位置、气矿和兵量，寻找第二条证据</li>
+<li class="depth-0">在确认前选择兼顾主要风险的生产或站位</li>
+<li class="depth-0">找到缺失建筑的原因后，再决定保持计划还是转入防守</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10--对手提前扩张">对手提前扩张</h3>
+<div>
+<ul>
+<li class="depth-0">同时确认扩张时间、入口兵力和主基地生产，不只看到一个新基地</li>
+<li class="depth-0">判断自己应立即施压、扩大经济还是取得地图位置</li>
+<li class="depth-0">为行动设置时间窗口，避免“知道对方扩张”却继续原计划</li>
+<li class="depth-0">下一次刷新重点检查扩张是否转化为工人、生产或科技</li>
+<li class="depth-0">无法形成有效压力时，不持续投入零散单位证明侦察有价值</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10--气矿或科技明显提前">气矿或科技明显提前</h3>
+<div>
+<ul>
+<li class="depth-0">记录看见的建筑、时间和已知兵量</li>
+<li class="depth-0">列出最可能改变的威胁类型，但保留尚未确认的部分</li>
+<li class="depth-0">安排反隐、防空、侦察或单位结构中的一个最低成本动作</li>
+<li class="depth-0">在关键单位可能完成前设置一次信息刷新</li>
+<li class="depth-0">新信息否定威胁后，及时停止过度防守</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10--对手主力从视野中消失">对手主力从视野中消失</h3>
+<div>
+<ul>
+<li class="depth-0">先标记最后出现的位置、时间和移动方向</li>
+<li class="depth-0">检查最短进攻路线、侧翼、空投路径和可能的回家路线</li>
+<li class="depth-0">用小地图确认自己、队友和关键入口，而不是盲目追进战争迷雾</li>
+<li class="depth-0">为最危险路线安排视野或最小防守</li>
+<li class="depth-0">主力重新出现后，立即更新旧判断</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10--兵量与已知生产不一致">兵量与已知生产不一致</h3>
+<div>
+<ul>
+<li class="depth-0">先检查自己是否漏看生产建筑、基地或单位移动</li>
+<li class="depth-0">将异常分为隐藏生产、资源转科技、扩张或单位在其他路线</li>
+<li class="depth-0">选择一项能够区分这些可能性的补侦察</li>
+<li class="depth-0">在答案出现前，不用单一猜测要求全队完全转型</li>
+<li class="depth-0">找到原因后说明哪个旧判断失效</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10--多线同时出现红点">多线同时出现红点</h3>
+<div>
+<ul>
+<li class="depth-0">先区分主力、骚扰、绕后和无关单位</li>
+<li class="depth-0">只切屏确认会改变当前行动的异常</li>
+<li class="depth-0">标记主威胁、次威胁和可延后事件</li>
+<li class="depth-0">将确认结果交给响应章节处理，不在信息阶段直接平均分兵</li>
+<li class="depth-0">复盘第一次能够发现主威胁的信号</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-10--单局检查">单局检查</h3>
+<pre><code class="language-text">训练情景：
+预设问题：
+观察到的事实：
+仍然未知：
+当前含义：
+立即动作：
+下一次验证：</code></pre>
+<p>连续三轮都能把事实和推断分开，并让结论实际改变一个动作后，再减少可用视野或缩短判断时间。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-11">综合决策与训练计划</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-11--找到最早断点">找到最早断点</h3>
+<pre><code class="language-text">首侦是否在仍可调整时完成？
+├─ 否：训练首侦触发器和三步闭环
+└─ 是：关键决策前的信息是否仍然有效？
+   ├─ 否：训练带着问题刷新信息
+   └─ 是：移动与多线异常是否能及时发现？
+      ├─ 否：绑定一个小地图短扫触发器
+      └─ 是：本章训练暂时达标</code></pre>
+<p>每次观察都要落到“事实、含义、动作”。无法确认时，保留不确定性并安排验证动作。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-11--三局训练计划">三局训练计划</h3>
+<div>
+<ol>
+<li class="depth-0">第一局只练首侦按时出发，并形成一句行动结论。</li>
+<li class="depth-0">第二局在首侦之外增加一次带问题的信息刷新。</li>
+<li class="depth-0">第三局把一次小地图短扫绑定到主力移动或生产完成。</li>
+</ol>
+</div>
+<p>若上一层没有稳定，不增加新的观察频率。</p>
+<p>进行具体情景训练时，三局保持同一个待确认问题；能够稳定区分事实、推断和未知后，再减少视野或缩短判断时间。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-11--本章完成标准">本章完成标准</h3>
+<div>
+<ul>
+<li class="depth-0">连续三局中至少两局完成有效首侦</li>
+<li class="depth-0">至少一次在关键决策前刷新旧信息</li>
+<li class="depth-0">小地图异常先经过确认，再进入响应</li>
+<li class="depth-0">能说清一条信息如何改变了生产、站位或行动</li>
+<li class="depth-0">团队局中明确侦察方向，并同步关键变化</li>
+</ul>
+</div></article>
+
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>第四部分 操作组织与执行效率</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency"><h2 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--操作组织与执行效率">操作组织与执行效率</h2>
+<blockquote>有效操作不是按键越多越好，而是能快速调用需要的单位、带着目的切换画面，并在战斗与生产之间保持必要循环。</blockquote>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--本章要解决的问题">本章要解决的问题</h3>
+<p>玩家的注意力和操作次数有限。寻找单位、无目的切屏和一次处理过多事情，会挤占真正需要执行的动作。本章回答：</p>
+<p><strong>如何让有限操作稳定服务于当前任务？</strong></p>
+<p>答案是建立三层执行结构：</p>
+<pre><code class="language-text">用固定编队快速调用
+  -&gt; 每次切屏只完成一个目的
+  -&gt; 在移动与战后恢复生产循环</code></pre>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--三层判断模型">三层判断模型</h3>
+<table><thead><tr>
+<th>顺序</th>
+<th>需要保证的事情</th>
+<th>判断问题</th>
+<th>本局动作</th>
+</tr></thead><tbody>
+<tr>
+<td>第一层</td>
+<td>调用稳定</td>
+<td>是否能立即选中主力、生产和功能单位</td>
+<td>三组固定职责</td>
+</tr>
+<tr>
+<td>第二层</td>
+<td>切换有效</td>
+<td>每次切屏前是否知道要完成什么</td>
+<td>切过去先做一件事</td>
+</tr>
+<tr>
+<td>第三层</td>
+<td>循环不断</td>
+<td>战斗与移动是否让生产长期中断</td>
+<td>移动补一轮，战后接一轮</td>
+</tr>
+</tbody></table>
+<p>前一层不稳定时，增加操作速度只会制造更多误选和无效切换。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--训练顺序">训练顺序</h3>
+<div>
+<ol>
+<li class="depth-0">经常找不到主力或续兵：先固定编队职责</li>
+<li class="depth-0">切屏很多但有效动作少：训练目的驱动的切屏</li>
+<li class="depth-0">一打架就断工断兵：训练战斗与生产循环</li>
+</ol>
+</div>
+<p>每局只改变一个操作习惯，并记录第一次失败的触发场景。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--本章边界">本章边界</h3>
+<p>本章负责动作如何稳定执行，不负责判断采用哪种战略，也不使用操作速度代替执行质量。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1">第一层：稳定编队调用</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1--本层结论">本层结论</h3>
+<p>固定主力、生产和关键功能单位的编队职责，在需要行动时直接调用，而不是临时找单位。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1--在链条中的位置">在链条中的位置</h3>
+<p>编队本身不直接赢得比赛，但它决定玩家能否稳定执行生产、侦察、支援和战斗决策。编队频繁变化会把注意力浪费在重新框选和确认单位上。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1--如何判断">如何判断</h3>
+<p>基础阶段只固定三类职责：</p>
+<div>
+<ol>
+<li class="depth-0">主力编队：承担移动、集合和主要接敌</li>
+<li class="depth-0">生产编队：承担持续生产</li>
+<li class="depth-0">功能编队：承担侦察、运输或关键施法</li>
+</ol>
+</div>
+<p>每个编号只承担一个稳定职责。新增单位时补入已有职责，不临时整体换号。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">局前写下三个固定职责</li>
+<li class="depth-0">开局建立主力和生产编队</li>
+<li class="depth-0">每轮新兵完成后补入主力</li>
+<li class="depth-0">每次出门前用热键调用并确认主力</li>
+<li class="depth-0">局后只记录找兵、错组和漏编次数</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">同一个编号在不同时间代表不同职责</li>
+<li class="depth-0">主力出门后仍依赖鼠标回地图寻找</li>
+<li class="depth-0">新生产单位长期没有加入主力</li>
+<li class="depth-0">为覆盖所有单位一次建立过多编队</li>
+<li class="depth-0">误编后立即重做整套编号，进一步打乱节奏</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">没有因为找兵或错组错过关键出门、支援或接敌</li>
+<li class="depth-0">三个核心编队职责从建立后保持稳定</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1--多局完成">多局完成</h4>
+<p>连续三局均能保持核心职责，且至少两局没有出现明显找兵或整体重编。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-2">三族基础编队示例</h3>
+<p>编队编号没有唯一正确答案。示例只提供稳定职责骨架，玩家可以调整具体号码，但同一局内不要反复改变职责。</p>
+<p>先完成<a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1">稳定编队调用</a>，再使用本页增加种族细节。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-2--通用起步骨架">通用起步骨架</h4>
+<table><thead><tr>
+<th>职责</th>
+<th>建议用途</th>
+</tr></thead><tbody>
+<tr>
+<td>主力组</td>
+<td>当前主要作战单位和移动主体</td>
+</tr>
+<tr>
+<td>第二作战组</td>
+<td>远程、侧翼或需要单独移动的单位</td>
+</tr>
+<tr>
+<td>功能组</td>
+<td>侦察、运输、法术或关键支援单位</td>
+</tr>
+<tr>
+<td>基地组</td>
+<td>工人生产和基地状态</td>
+</tr>
+<tr>
+<td>主生产组</td>
+<td>当前主要生产设施</td>
+</tr>
+</tbody></table>
+<p>新手先固定前三类职责。只有在找兵和漏编明显减少后，再增加更多作战或建筑组。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-2--protoss-示例">Protoss 示例</h4>
+<div>
+<ul>
+<li class="depth-0">主力组：Zealot 或当前前排</li>
+<li class="depth-0">第二作战组：Dragoon 或远程主力</li>
+<li class="depth-0">功能组：Shuttle、Observer、Corsair 或 High Templar</li>
+<li class="depth-0">基地组：Nexus</li>
+<li class="depth-0">主生产组：Gateway</li>
+</ul>
+</div>
+<p>重点是把前排、远程和功能单位分开，避免为了施法或运输拖动整个主力。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-2--terran-示例">Terran 示例</h4>
+<div>
+<ul>
+<li class="depth-0">主力组：Marine、Vulture 或当前机动主体</li>
+<li class="depth-0">第二作战组：Tank 或重火力</li>
+<li class="depth-0">功能组：Science Vessel、Dropship 或侦察单位</li>
+<li class="depth-0">基地组：Command Center</li>
+<li class="depth-0">主生产组：Barracks 或 Factory</li>
+</ul>
+</div>
+<p>中后期单位职责增多时，优先增加作战组，不要让同一个编号同时承担 Tank、Vulture 和功能单位。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-2--zerg-示例">Zerg 示例</h4>
+<div>
+<ul>
+<li class="depth-0">主力组：第一支 Ling、Hydra 或地面主力</li>
+<li class="depth-0">第二作战组：第二方向部队</li>
+<li class="depth-0">功能组：Mutalisk、Lurker、Defiler 或 Scourge</li>
+<li class="depth-0">基地与生产组：Hatchery、Lair 和 Hive</li>
+</ul>
+</div>
+<p>Zerg 的基地同时承担生产职责，可以为 Hatchery 保留更多稳定编号，但不要求所有玩家采用相同数量。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-2--什么时候调整">什么时候调整</h4>
+<p>可以调整：</p>
+<div>
+<ul>
+<li class="depth-0">某组只剩少量残兵</li>
+<li class="depth-0">兵种结构发生明显变化</li>
+<li class="depth-0">前期骨架无法承载中期职责</li>
+</ul>
+</div>
+<p>不要调整：</p>
+<div>
+<ul>
+<li class="depth-0">正在激烈交战</li>
+<li class="depth-0">只是一次误编就想重做全部编号</li>
+<li class="depth-0">真正问题是漏生产或漏看图</li>
+</ul>
+</div>
+<p>调整时只修正受影响的职责，并把新兵补入已有主力，不在高压时整体换号。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3">本局训练卡：三组固定职责</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">经常找不到主力或新生产单位</li>
+<li class="depth-0">编队编号在一局中反复改变</li>
+<li class="depth-0">需要支援或接敌时仍依赖鼠标重新框选</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--本局只改什么">本局只改什么</h4>
+<p>固定三个职责：主力、生产、功能单位。具体编号自定，但本局不更换职责。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">新单位生产完成</li>
+<li class="depth-0">主力准备出门</li>
+<li class="depth-0">一波交战结束</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">主力编队是否包含当前主要作战单位</li>
+<li class="depth-0">生产编队是否仍能直接调用</li>
+<li class="depth-0">功能单位是否有明确归属</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">新兵属于主力：补入主力编队</li>
+<li class="depth-0">单位承担独立功能：放入功能编队</li>
+<li class="depth-0">误编发生：只修正受影响编队，不重做全部编号</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">一个编号承担多个不断变化的职责</li>
+<li class="depth-0">为追求完整一次建立过多编队</li>
+<li class="depth-0">战后忘记把续兵补入主力</li>
+<li class="depth-0">误编后反复重置所有编队</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">三个核心职责保持稳定</li>
+<li class="depth-0">没有因找兵或错组错过关键行动</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--多局完成标准">多局完成标准</h4>
+<p>连续三局均保持核心职责，且至少两局没有明显找兵或整体重编。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-3--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">哪个职责第一次失效</li>
+<li class="depth-0">新兵是否及时补入主力</li>
+<li class="depth-0">下一局是否需要减少而不是增加编队</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-4">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-4--本层变化">本层变化</h4>
+<p>功能编队优先承载侦察、运输或支援单位。团队口令出现时，应能直接调用对应单位，不临时回地图寻找。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-4--场景动作">场景动作</h4>
+<div>
+<ul>
+<li class="depth-0">集合前把新兵补入主力</li>
+<li class="depth-0">队友请求侦察、运输或支援时直接调用功能编队</li>
+<li class="depth-0">主力与续兵从不同路线会合时分别控制，不混成一个临时职责</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-4--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">主力和功能单位无法分别移动</li>
+<li class="depth-0">收到队友口令后临时寻找单位</li>
+<li class="depth-0">续兵没有补入主力，接战时分批到场</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5">第二层：有效切屏</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5--本层结论">本层结论</h3>
+<p>每次切到主力、基地、生产区或侦察点时立即完成一个明确动作，减少无目的来回切换。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5--在链条中的位置">在链条中的位置</h3>
+<p>切屏本身不会推进局面。有效切屏应快速到达目标位置、完成动作并离开，否则只会占用注意力并增加忘记原任务的风险。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5--如何判断">如何判断</h3>
+<p>切屏前先说出目的：</p>
+<div>
+<ul>
+<li class="depth-0">主力：移动、接敌、后撤或集合</li>
+<li class="depth-0">基地：补工或检查补给</li>
+<li class="depth-0">生产：补兵或关键建筑</li>
+<li class="depth-0">侦察：回答一个会改变决策的问题</li>
+</ul>
+</div>
+<p>切到目标后先完成这个动作，再决定是否停留。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">固定主力、基地和生产入口</li>
+<li class="depth-0">每次切屏前说出一个目的</li>
+<li class="depth-0">完成一个动作后立即离开</li>
+<li class="depth-0">局后记录第一次无效切屏</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">紧张时频繁切屏但没有下指令</li>
+<li class="depth-0">切到基地后一次处理太多事务</li>
+<li class="depth-0">侦察画面停留过久，漏掉前线和生产</li>
+<li class="depth-0">回到前线后忘记准备执行的动作</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">主力、基地和生产区至少各完成两次有效切换</li>
+<li class="depth-0">没有因无目的切屏错过关键接敌或生产</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，并能指出最常见的无效切屏类型。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6">本局训练卡：切过去先做一件事</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">切屏很多但有效动作很少</li>
+<li class="depth-0">经常切到基地或前线后忘记目的</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--本局只改什么">本局只改什么</h4>
+<p>每次切屏前确定一个目的，切到目标后先完成对应动作。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">准备切换到主力、基地、生产区或侦察点</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">本次切屏的唯一目的</li>
+<li class="depth-0">切换后是否立即执行</li>
+<li class="depth-0">是否在目标画面无意义停留</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">目的明确：切换并执行</li>
+<li class="depth-0">目的不明确：保持当前画面</li>
+<li class="depth-0">动作完成：立即回到下一优先位置</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">一次切屏试图处理所有运营</li>
+<li class="depth-0">切到侦察点后漫无目的观察</li>
+<li class="depth-0">只统计切屏次数，不看是否产生动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">三类主要区域各完成至少两次有效切换</li>
+<li class="depth-0">没有明显“切过去但什么都没做”</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-6--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">第一次无效切屏发生在哪里</li>
+<li class="depth-0">当时缺少什么明确目的</li>
+<li class="depth-0">下一局减少哪一种无效切换</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-7">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-7--本层变化">本层变化</h4>
+<p>队友报点后切到现场只确认威胁、路线或到场条件。确认后立即回到自己的行动位置，不在多名队友画面间连续跳转。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-7--场景动作">场景动作</h4>
+<div>
+<ul>
+<li class="depth-0">看现场：确认兵力和路线</li>
+<li class="depth-0">回基地：补工或补给</li>
+<li class="depth-0">到生产区：补一轮主战单位</li>
+<li class="depth-0">回主力：执行集合、接敌或撤退</li>
+</ul>
+</div>
+<p>每次切屏只保留一个主要目的。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-7--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">查看每名队友画面，却没有形成自己的动作</li>
+<li class="depth-0">报点后长时间停留在现场</li>
+<li class="depth-0">一次回基地试图处理完整运营</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8">第三层：战斗与生产循环</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8--本层结论">本层结论</h3>
+<p>在主力移动和战后空窗插入最小生产动作，同时避免在激烈交战中长时间离开前线。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8--在链条中的位置">在链条中的位置</h3>
+<p>生产和战斗不是两条互不相干的任务。只盯前线会造成工人、补给和兵力断档；一次回家处理所有运营又可能让主力白白损失。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8--如何判断">如何判断</h3>
+<p>按战斗状态选择动作：</p>
+<div>
+<ol>
+<li class="depth-0">主力移动：补一次工人或主生产</li>
+<li class="depth-0">即将接敌：先完成第一轮战斗指令</li>
+<li class="depth-0">激烈交战：保持前线，只做必要保命操作</li>
+<li class="depth-0">战斗结束：先检查补给，再补兵和工人</li>
+</ol>
+</div>
+<p>每次离开前线只做一到两个最关键动作。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">先只使用“主力移动”触发器</li>
+<li class="depth-0">稳定后增加“战斗结束”触发器</li>
+<li class="depth-0">每次只完成最小生产动作</li>
+<li class="depth-0">局后记录第一次战斗导致的运营断线</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">主力一接敌就长时间忘记运营</li>
+<li class="depth-0">前线尚未稳定就回家处理完整科技树</li>
+<li class="depth-0">战斗结束后只追击，不接生产</li>
+<li class="depth-0">资源增加但主生产持续空转</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">主力第一次移动和第一次战后都完成最小生产动作</li>
+<li class="depth-0">没有因长时间切回运营导致主力明显白给</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，并能说清最容易断线的战斗状态。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9">本局训练卡：移动补一轮，战后接一轮</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">一打架就断工、断兵或卡人口</li>
+<li class="depth-0">回家运营时经常让前线失控</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--本局只改什么">本局只改什么</h4>
+<p>主力移动时补一次最小生产，战斗结束后再补一次。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">主力开始长距离移动</li>
+<li class="depth-0">一波主要交战结束</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">当前战斗是否需要持续操作</li>
+<li class="depth-0">工人、补给和主生产中最急的一项</li>
+<li class="depth-0">回到前线前是否已完成最小动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">主力安全移动：补一项最急生产</li>
+<li class="depth-0">激烈交战：留在前线</li>
+<li class="depth-0">战斗结束：补给优先，再接主生产</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">一次切回处理所有运营</li>
+<li class="depth-0">交战未稳定就离开前线</li>
+<li class="depth-0">战后继续追击而完全不恢复生产</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">两个主要触发器都完成最小生产动作</li>
+<li class="depth-0">没有因长时间运营切换让主力明显白给</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-9--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">哪个战斗状态最容易断生产</li>
+<li class="depth-0">回家时是否处理了过多动作</li>
+<li class="depth-0">下一局保留哪个最小生产动作</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-10">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-10--本层变化">本层变化</h4>
+<p>集合路上和等待队友时是最稳定的生产空窗。激烈团战中优先维持阵型，交战结束后再恢复人口和主生产。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-10--场景动作">场景动作</h4>
+<p>适合插入最小生产的团队空窗：</p>
+<div>
+<ul>
+<li class="depth-0">前往第一集合点</li>
+<li class="depth-0">等待后排或支援单位到场</li>
+<li class="depth-0">一波交战结束并重新集合</li>
+<li class="depth-0">队伍统一撤退后回收主力</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-10--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">集合等待时没有补生产</li>
+<li class="depth-0">开战后才发现兵力或人口断层</li>
+<li class="depth-0">激烈交战中长时间切回基地</li>
+<li class="depth-0">战后继续追击，完全不恢复生产</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11">具体训练：常见操作循环</h2>
+<p>操作训练不以按键数量为目标，而是让同一触发器稳定产生同一组必要动作。每轮只增加一个职责或切换点。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11--怎么组织对练">怎么组织对练</h3>
+<div>
+<ol>
+<li class="depth-0">选择一个固定开局或无压力自定义局</li>
+<li class="depth-0">每轮只训练一个操作循环</li>
+<li class="depth-0">记录第一次漏组、无效切屏或生产中断</li>
+<li class="depth-0">连续三轮稳定后，再加入侦察、骚扰或战斗压力</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11--新兵加入主力">新兵加入主力</h3>
+<div>
+<ul>
+<li class="depth-0">固定主力、生产和功能单位的编队职责</li>
+<li class="depth-0">新单位完成后立即补入对应编队</li>
+<li class="depth-0">调用主力时检查新兵是否仍停在生产区</li>
+<li class="depth-0">误编时只修受影响的组，不重做全部编号</li>
+<li class="depth-0">连续三批新兵都能加入主力后，再增加第二作战组</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11--基地与前线往返">基地与前线往返</h3>
+<div>
+<ul>
+<li class="depth-0">每次切回基地前先确定唯一目的：补工、补给或生产</li>
+<li class="depth-0">完成该动作后立即返回主力</li>
+<li class="depth-0">前线没有新任务时不反复空切</li>
+<li class="depth-0">激烈接敌时取消完整运营，只保留必要动作</li>
+<li class="depth-0">出现“切过去却没做事”时记录当时缺少的目的</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11--主力移动时补生产">主力移动时补生产</h3>
+<div>
+<ul>
+<li class="depth-0">给主力下达长距离移动命令后，立即补一次最小生产</li>
+<li class="depth-0">只处理工人、补给和主战单位中最急的一项</li>
+<li class="depth-0">在主力接近危险区域前返回前线</li>
+<li class="depth-0">移动距离过短或路线不安全时放弃切回</li>
+<li class="depth-0">连续三次移动都能完成最小动作后，再增加第二项生产</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11--交战结束后重置">交战结束后重置</h3>
+<div>
+<ul>
+<li class="depth-0">确认战斗结束，不在追击仍需操作时提前离开</li>
+<li class="depth-0">补人口和一轮主生产</li>
+<li class="depth-0">回收残兵并把续兵加入主力</li>
+<li class="depth-0">重新确认侦察、功能单位和下一集合点</li>
+<li class="depth-0">完成重置后再决定追击、扩张或撤退</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11--主力与功能单位同时行动">主力与功能单位同时行动</h3>
+<div>
+<ul>
+<li class="depth-0">主力保持原有移动或阵型，功能单位使用独立编队</li>
+<li class="depth-0">每次只给功能单位一个明确任务</li>
+<li class="depth-0">完成任务后立即回到主力视角</li>
+<li class="depth-0">功能单位失去价值时回收，不持续占用注意力</li>
+<li class="depth-0">主力因功能单位操作停在危险位置时，本轮判定失败</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11--压力升级顺序">压力升级顺序</h3>
+<p>按以下顺序增加变量，不一次全部加入：</p>
+<div>
+<ol>
+<li class="depth-0">无敌人压力</li>
+<li class="depth-0">固定时间侦察</li>
+<li class="depth-0">固定时间移动</li>
+<li class="depth-0">一次短交战</li>
+<li class="depth-0">交战后立即转线</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-11--单局检查">单局检查</h3>
+<pre><code class="language-text">训练循环：
+固定触发器：
+预定动作：
+第一次中断：
+是否影响主力安全：
+下一轮增加的变量：</code></pre>
+<p>连续三轮在同一触发器下完成预定动作，且没有因切换导致主力明显损失后，再提高操作密度。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-12">综合决策与训练计划</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-12--找到最早断点">找到最早断点</h3>
+<pre><code class="language-text">能否立即调用主力、生产和功能单位？
+├─ 否：训练固定编队职责
+└─ 能：每次切屏是否有明确目的？
+   ├─ 否：训练切过去先做一件事
+   └─ 是：移动和战后是否恢复最小生产？
+      ├─ 否：训练战斗与生产循环
+      └─ 是：本章训练暂时达标</code></pre>
+<p>操作速度不是独立目标。先减少找兵、误选和无效切换，再增加操作密度。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-12--三局训练计划">三局训练计划</h3>
+<div>
+<ol>
+<li class="depth-0">第一局固定三组职责，误编时只修受影响编队。</li>
+<li class="depth-0">第二局每次切屏前说清唯一目的，动作完成后立即离开。</li>
+<li class="depth-0">第三局在主力移动时补一项生产，主要交战结束后再补一轮。</li>
+</ol>
+</div>
+<p>每局只增加一个习惯，避免为了同时维护全部循环而让前线失控。</p>
+<p>进行具体循环训练时，三局保持同一触发器和动作顺序；稳定后再加入侦察、移动或短交战中的一个压力。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-12--本章完成标准">本章完成标准</h3>
+<div>
+<ul>
+<li class="depth-0">连续三局保持核心编队职责</li>
+<li class="depth-0">主要切屏都能产生预定动作</li>
+<li class="depth-0">主力移动和战后至少各完成一次最小生产</li>
+<li class="depth-0">没有因长时间回家运营让主力明显损失</li>
+<li class="depth-0">能指出第一次执行中断发生在调用、切屏还是循环</li>
+</ul>
+</div></article>
+
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>第五部分 局势响应、支援与风险控制</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control"><h2 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--局势响应支援与风险控制">局势响应、支援与风险控制</h2>
+<blockquote>正确响应不是看见告警就拉兵，而是先判断是否值得支援，再明确到场方式，并在收益消失时及时止损。</blockquote>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--本章要解决的问题">本章要解决的问题</h3>
+<p>威胁出现后，可行动时间通常很短。盲目支援会放弃自己的位置，犹豫不决又会错过窗口。本章回答：</p>
+<p><strong>如何在有限信息和时间下，完成可执行、可停止的响应？</strong></p>
+<p>答案是按顺序处理三层：</p>
+<pre><code class="language-text">判断是否支援
+  -&gt; 明确结论并及时到场
+  -&gt; 条件恶化时收手撤退</code></pre>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--三层判断模型">三层判断模型</h3>
+<table><thead><tr>
+<th>顺序</th>
+<th>需要保证的事情</th>
+<th>判断问题</th>
+<th>本局动作</th>
+</tr></thead><tbody>
+<tr>
+<td>第一层</td>
+<td>选择响应</td>
+<td>赶得到、救得下、离得开、值得吗</td>
+<td>支援前问四个问题</td>
+</tr>
+<tr>
+<td>第二层</td>
+<td>启动行动</td>
+<td>路线和到场结论是否明确</td>
+<td>告警后看算说动</td>
+</tr>
+<tr>
+<td>第三层</td>
+<td>控制损失</td>
+<td>原目标是否仍值得投入</td>
+<td>阵型拉长就停一下</td>
+</tr>
+</tbody></table>
+<p>错误方向执行得再快仍然是错误；方向正确但没有明确启动和退出条件，同样不能形成有效响应。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--训练顺序">训练顺序</h3>
+<div>
+<ol>
+<li class="depth-0">告警后经常盲目拉兵：先训练支援判断</li>
+<li class="depth-0">判断正确但总是到场过晚：训练行动启动</li>
+<li class="depth-0">到场后持续追深或分批投入：训练止损撤退</li>
+</ol>
+</div>
+<p>多线出现时先确定主战场、次战场和可交换点，不平均分配兵力。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--本章边界">本章边界</h3>
+<p>本章负责决策后的行动、支援与止损。对手意图识别由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment">信息获取与判断</a>处理；接敌后的阵型和集火由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality">战斗控制与交换质量</a>处理。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1">第一层：判断是否支援</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1--本层结论">本层结论</h3>
+<p>队友受压时根据距离、到场时间、兵力和代价判断立即支援、稍后支援还是明确放弃。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1--在链条中的位置">在链条中的位置</h3>
+<p>该救不救会让队伍长期少一人，不该硬救却连续投入会把局部损失扩大成全队崩盘。支援首先是优先级判断，其次才是移动速度。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1--如何判断">如何判断</h3>
+<p>收到告警后依次判断：</p>
+<div>
+<ol>
+<li class="depth-0">到得了吗：路线和预计到场时间</li>
+<li class="depth-0">到了能打吗：兵种、人数和阵型</li>
+<li class="depth-0">去了会丢什么：自己的基地、主力或关键位置</li>
+<li class="depth-0">不去怎么止损：撤退、换点、防守或反击</li>
+</ol>
+</div>
+<p>结论只保留三种：立即到、稍后到、无法到并执行止损。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">约定一个告警词</li>
+<li class="depth-0">第一次告警后完成四项判断</li>
+<li class="depth-0">给出三种结论之一</li>
+<li class="depth-0">按结论执行，不在路上反复摇摆</li>
+<li class="depth-0">局后复盘结论是否减少总损失</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">只凭情绪决定救不救</li>
+<li class="depth-0">明知到场太晚仍分批投入</li>
+<li class="depth-0">为救次要位置放弃更重要的基地或主力</li>
+<li class="depth-0">决定不救但没有告诉队友如何止损</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">至少一次告警后给出明确支援优先级</li>
+<li class="depth-0">没有在已无救援价值时继续分批投入</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，并能区分迟到和不该支援。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2">本局训练卡：支援前问四个问题</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">队友告警后经常盲目拉兵</li>
+<li class="depth-0">明知赶不到仍持续分批投入</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--本局只改什么">本局只改什么</h4>
+<p>第一次队友告警后，回答“到得了吗、到了能打吗、去了会丢什么、不去怎么止损”。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">队友报点或请求支援</li>
+<li class="depth-0">小地图显示队友遭遇明显压力</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">路线和到场时间</li>
+<li class="depth-0">双方可用兵力与阵型</li>
+<li class="depth-0">自己离开后的风险</li>
+<li class="depth-0">可执行的止损动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">到场及时且能形成有效协同：立即到</li>
+<li class="depth-0">需要集合或补齐兵力：稍后到并说明条件</li>
+<li class="depth-0">已无救援价值：明确无法到并执行止损</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">不看现场直接出发</li>
+<li class="depth-0">在路上反复改变结论</li>
+<li class="depth-0">说不能到，却没有任何替代动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">至少一次形成明确支援结论</li>
+<li class="depth-0">没有在结论无效后继续分批送入</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-2--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">这次支援结论是什么</li>
+<li class="depth-0">到场后是否真的能打</li>
+<li class="depth-0">不支援时采取了什么止损动作</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-3">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-3--本层变化">本层变化</h4>
+<p>判断支援价值时加入出生位距离、中路是否可通行，以及自己离开后的基地风险。多线出现时先划分主战场、次战场和可交换点。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-3--场景动作">场景动作</h4>
+<div>
+<ol>
+<li class="depth-0">先处理会立即影响主力或关键基地的主战场</li>
+<li class="depth-0">为次战场分配最小必要反应</li>
+<li class="depth-0">明确暂时放弃可交换点</li>
+<li class="depth-0">无法救援时选择撤退、换点、防守或反击</li>
+</ol>
+</div>
+<p>只有能说明破坏目标和退出条件时，才考虑换家。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-3--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">同时响应每条线并平均分兵</li>
+<li class="depth-0">明知无法到场仍持续分批支援</li>
+<li class="depth-0">决定换家但没有收益目标和退出条件</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4">第二层：支援及时到场</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4--本层结论">本层结论</h3>
+<p>队友受压后立即确认威胁、路线和到场时间，避免犹豫过久或分批送入战场。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4--在链条中的位置">在链条中的位置</h3>
+<p>团队局中的支援价值取决于到场时点。方向正确但晚到，仍可能让队友先损失兵力、建筑或位置；没有确认路线就直接冲，也可能把一次救援变成连续送兵。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4--如何判断">如何判断</h3>
+<p>出现队友告警或异常交战时，按顺序完成：</p>
+<div>
+<ol>
+<li class="depth-0">看：切到相关位置确认真实威胁</li>
+<li class="depth-0">算：判断自己的路线和预计到场时间</li>
+<li class="depth-0">说：明确“立即到、稍后到或无法到”</li>
+<li class="depth-0">动：按结论统一移动，不让部队分批进入</li>
+</ol>
+</div>
+<p>本主题先训练快速形成可执行结论，不追求每次都做出完美战略判断。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">约定一个清晰告警词</li>
+<li class="depth-0">告警出现后先切现场</li>
+<li class="depth-0">在短时间内给出到场判断</li>
+<li class="depth-0">用一个集合点组织主力和续兵</li>
+<li class="depth-0">局后记录第一次支援是否改变局面</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">听到告警后继续完成自己的生产或骚扰动作</li>
+<li class="depth-0">没看现场就直接拉兵，路线和兵力都不合适</li>
+<li class="depth-0">主力、续兵和队友分批到场</li>
+<li class="depth-0">明知无法及时到场，却没有明确告知队友止损</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">至少一次告警后完成“看、算、说、动”闭环</li>
+<li class="depth-0">没有因犹豫或路线错误造成明显迟到</li>
+<li class="depth-0">无法到场时给出明确反馈并避免继续扩大损失</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4--多局完成">多局完成</h4>
+<p>连续三局中至少两局完成一次有效支援闭环，并能区分“到场慢”和“本来就不该支援”。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5">本局训练卡：告警后看算说动</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">队友受压时经常反应过晚</li>
+<li class="depth-0">支援方向正确但到场时局面已经结束</li>
+<li class="depth-0">主力和续兵容易分批进入战场</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--本局只改什么">本局只改什么</h4>
+<p>第一次队友告警后完成“看现场、算到场、说结论、统一行动”。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">队友明确报点</li>
+<li class="depth-0">边线出现异常交战</li>
+<li class="depth-0">团队约定位置失去视野或控制</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">威胁位置和兵力</li>
+<li class="depth-0">自己主力当前位置</li>
+<li class="depth-0">可用路线和预计到场时间</li>
+<li class="depth-0">队友是否能坚持到自己到场</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">能及时到场：明确回复并统一移动</li>
+<li class="depth-0">需要短暂准备：说明延迟和集合点</li>
+<li class="depth-0">无法有效到场：明确告知队友止损，不分批送入</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">没看现场就移动</li>
+<li class="depth-0">犹豫到局面结束才出发</li>
+<li class="depth-0">不沟通自己的到场判断</li>
+<li class="depth-0">主力、续兵和队友分批接敌</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">至少一次告警后完成四步闭环</li>
+<li class="depth-0">没有因犹豫、路线错误或分批移动造成明显迟到</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局完成有效支援闭环，并能指出一次不应支援的局面。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-5--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">第一次告警后多久看现场</li>
+<li class="depth-0">到场判断是否准确</li>
+<li class="depth-0">队友是否知道自己的结论</li>
+<li class="depth-0">本局问题是判断错还是执行慢</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-6">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-6--本层变化">本层变化</h4>
+<p>固定车队应约定一个告警词和一个集合口径。结论形成后，主力、续兵和队友按同一到场方案行动。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-6--场景动作">场景动作</h4>
+<div>
+<ul>
+<li class="depth-0">边位受压：确认现场、路线和可坚持时间</li>
+<li class="depth-0">中路失控：说明立即到、稍后到或无法到</li>
+<li class="depth-0">绕后或空投：由最近且职责合适的队员先确认</li>
+<li class="depth-0">准备抢中：检查兵力、视野、队友和退路</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-6--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">有人抢中、有人发育，但没有明确结论</li>
+<li class="depth-0">主力和续兵从不同路线分批到场</li>
+<li class="depth-0">抢中缺少两项条件时仍让一人先进入</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7">BGH 本局训练卡：抢中前查兵视友</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">队伍经常有人先到中路并单独接敌</li>
+<li class="depth-0">抢中时缺少视野、兵力或撤退路线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--本局只改什么">本局只改什么</h4>
+<p>第一次准备抢中前，确认兵力、视野和队友是否同时到位。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">队伍第一次向中路集合</li>
+<li class="depth-0">丢失中路后准备重新进入</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">主要作战单位是否到位</li>
+<li class="depth-0">关键入口是否有视野</li>
+<li class="depth-0">前排、后排与支援是否能同时接敌</li>
+<li class="depth-0">无法站稳时的回收路线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">三项齐备：统一进入</li>
+<li class="depth-0">只缺一项且能快速补齐：等待并说明条件</li>
+<li class="depth-0">缺少两项以上：放弃本轮硬抢，改为视野、补位或资源动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">只看自己兵数，不看队友距离</li>
+<li class="depth-0">没有视野就先进入狭口</li>
+<li class="depth-0">决定不抢却没有说明替代动作</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">至少一次抢中前完成三项确认</li>
+<li class="depth-0">没有因单人先到造成第一波无效损失</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标，并能说清一次放弃抢中的理由。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-7--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">抢中前缺少哪一项</li>
+<li class="depth-0">等待或放弃是否减少了损失</li>
+<li class="depth-0">中路控制最终转成了什么收益</li>
+</ol>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8">第三层：及时收手与撤退</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8--本层结论">本层结论</h3>
+<p>优势追击开始拉长阵型或劣势交换继续扩大时，及时停止投入并沿安全路线撤退。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8--在链条中的位置">在链条中的位置</h3>
+<p>撤退是主动控制损失，不是部队已经崩溃后的被动逃跑。及时收手能保留主力、续兵和下一轮地图行动能力。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8--如何判断">如何判断</h3>
+<p>准备继续追击或交战时检查：</p>
+<div>
+<ol>
+<li class="depth-0">队友和续兵是否还能接上</li>
+<li class="depth-0">阵型是否开始拉长</li>
+<li class="depth-0">对手是否接近增援、阵地或有利地形</li>
+<li class="depth-0">当前收益是否值得新增风险</li>
+</ol>
+</div>
+<p>任意两项明显不利时，停止追击，选择撤退路线并重新集合。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">局前约定一个收手信号</li>
+<li class="depth-0">对手后撤时执行四项检查</li>
+<li class="depth-0">决定继续、停下或撤退</li>
+<li class="depth-0">撤退后先重组阵型，再决定下一步</li>
+<li class="depth-0">局后复盘一次最晚收手点</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">小优后持续追深，把优势变成反亏</li>
+<li class="depth-0">已经打亏仍不断补入新单位</li>
+<li class="depth-0">撤退时各组走不同方向</li>
+<li class="depth-0">只下后撤命令，没有选择安全路线</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">至少一次在阵型恶化前停止追击</li>
+<li class="depth-0">撤退后没有让续兵继续分批送入</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，并能说清一次继续追击或及时撤退的依据。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9">本局训练卡：阵型拉长就停一下</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">优势时经常追得过深</li>
+<li class="depth-0">劣势时持续把续兵送进已经失败的战斗</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--本局只改什么">本局只改什么</h4>
+<p>对手后撤且己方阵型开始拉长时，先停止追击并检查队友和续兵。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">对手主力后撤</li>
+<li class="depth-0">己方前后排或队友距离明显扩大</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">队友和续兵距离</li>
+<li class="depth-0">对手增援与有利地形</li>
+<li class="depth-0">当前已获得的收益</li>
+<li class="depth-0">可用撤退路线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">阵型完整且收益明确：有限继续</li>
+<li class="depth-0">阵型拉长或对手接近增援：停止追击</li>
+<li class="depth-0">已经打亏：统一撤退并拦住续兵</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">把任何后撤都当成必须逃跑</li>
+<li class="depth-0">停止主力但忘记续兵</li>
+<li class="depth-0">撤退时仍频繁回头攻击</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">至少一次触发时先停下检查</li>
+<li class="depth-0">没有因追深或续兵分批造成明显反亏</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-9--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">阵型从什么时候开始拉长</li>
+<li class="depth-0">最晚可以安全收手的节点是什么</li>
+<li class="depth-0">撤退时续兵是否同步停止</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-10">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-10--本层变化">本层变化</h4>
+<p>追出中路或深入对手半场前检查队友和续兵。决定撤退时统一回收路线，避免主力撤走而后续兵继续从原路线进入。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-10--场景动作">场景动作</h4>
+<div>
+<ol>
+<li class="depth-0">约定统一收手口令</li>
+<li class="depth-0">指定主力回收路线和重新集合点</li>
+<li class="depth-0">拦住生产点到前线之间的续兵</li>
+<li class="depth-0">回收后重新判断防守、换点或再次进入</li>
+</ol>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-10--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">主力撤退后续兵继续送入</li>
+<li class="depth-0">队员沿不同方向回收并被逐个截断</li>
+<li class="depth-0">已失去收益仍持续追深</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11">具体训练：常见局势响应</h2>
+<p>响应训练不是要求每次都支援，而是让玩家在固定情景中形成明确结论、统一行动和停止条件。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11--怎么组织对练">怎么组织对练</h3>
+<p>由陪练方或队友在约定时间触发一种局势：</p>
+<div>
+<ol>
+<li class="depth-0">训练方先完成支援四问</li>
+<li class="depth-0">结论只使用“立即到、稍后到、无法到”</li>
+<li class="depth-0">行动前说明集合点、路线或止损方式</li>
+<li class="depth-0">条件变化后再次判断继续、换点或撤退</li>
+</ol>
+</div>
+<p>每种情景重复三轮，第一轮固定路线，后续再改变距离、视野或兵力。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11--邻近队友遭遇早期压力">邻近队友遭遇早期压力</h3>
+<div>
+<ul>
+<li class="depth-0">先看现场兵力和队友可坚持时间</li>
+<li class="depth-0">计算自己主力与续兵能否同时到场</li>
+<li class="depth-0">能救时给出集合点和到场结论</li>
+<li class="depth-0">赶不到时要求队友撤退，并选择防守下一位置或反击</li>
+<li class="depth-0">不让少量单位先后进入已经失败的战场</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11--中路即将接敌">中路即将接敌</h3>
+<div>
+<ul>
+<li class="depth-0">检查兵力、视野、队友和退路</li>
+<li class="depth-0">缺少一项且能快速补齐时明确等待条件</li>
+<li class="depth-0">缺少两项以上时放弃本轮硬抢</li>
+<li class="depth-0">决定进入后统一前排、后排和支援的到场方向</li>
+<li class="depth-0">占住中路后说明要转化的视野、路线或资源收益</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11--主战场与骚扰同时发生">主战场与骚扰同时发生</h3>
+<div>
+<ul>
+<li class="depth-0">判断哪一处会立即影响主力或关键基地</li>
+<li class="depth-0">主战场保留形成有效交换所需的兵力</li>
+<li class="depth-0">为骚扰分配最小必要反应，不平均分兵</li>
+<li class="depth-0">暂时放弃的位置必须说明可接受损失</li>
+<li class="depth-0">主威胁消失后再重新分配兵力</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11--已经无法及时救援">已经无法及时救援</h3>
+<div>
+<ul>
+<li class="depth-0">明确说出“无法到”，停止继续派出零散援军</li>
+<li class="depth-0">要求受压方选择撤退路线和可保留资产</li>
+<li class="depth-0">自己选择换点、防守、反击或扩大经济中的一个动作</li>
+<li class="depth-0">重新判断对手主力下一步可能到达的位置</li>
+<li class="depth-0">复盘最晚仍有救援价值的时间点</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11--优势追击开始拉长">优势追击开始拉长</h3>
+<div>
+<ul>
+<li class="depth-0">检查队友、续兵、对手增援和当前收益</li>
+<li class="depth-0">阵型开始断开时先停止最前方单位</li>
+<li class="depth-0">收益明确且退路安全时有限继续</li>
+<li class="depth-0">对手接近阵地或己方后排脱节时统一撤退</li>
+<li class="depth-0">拦住仍沿原路线进入的续兵</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11--换家与对攻">换家与对攻</h3>
+<div>
+<ul>
+<li class="depth-0">确认当前已经难以及时回防</li>
+<li class="depth-0">说明准备破坏的关键资源、生产或科技目标</li>
+<li class="depth-0">保留后续生产、撤退或重新集合条件</li>
+<li class="depth-0">队友必须知道共同目标和停止条件</li>
+<li class="depth-0">无法形成有效破坏时，不把继续前进包装成换家决策</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-11--单局检查">单局检查</h3>
+<pre><code class="language-text">训练情景：
+支援四问：
+行动结论：
+集合点或止损动作：
+条件何时失效：
+最终继续、换点或撤退：</code></pre>
+<p>连续三轮都能在移动前形成明确结论，并在条件失效后停止原行动，才增加多线或信息不完整的变量。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-12">综合决策与训练计划</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-12--找到最早断点">找到最早断点</h3>
+<pre><code class="language-text">告警后是否判断了支援价值？
+├─ 否：训练四问支援判断
+└─ 是：结论是否及时转成统一行动？
+   ├─ 否：训练看、算、说、动
+   └─ 是：收益消失后是否停止投入？
+      ├─ 否：训练收手与撤退
+      └─ 是：本章训练暂时达标</code></pre>
+<p>“无法到”也是有效结论，但必须同时给出撤退、换点、防守或反击中的一个止损动作。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-12--三局训练计划">三局训练计划</h3>
+<div>
+<ol>
+<li class="depth-0">第一局每次告警先回答“到得了、打得过、会丢什么、不去怎么办”。</li>
+<li class="depth-0">第二局把结论压缩为“立即到、稍后到、无法到”，并统一主力和续兵路线。</li>
+<li class="depth-0">第三局为追击和撤退设置停止条件，拦住继续分批进入的续兵。</li>
+</ol>
+</div>
+<p>多线出现时先标记主战场、次战场和可交换点，不平均分兵。</p>
+<p>进行具体情景训练时，三局保持同一事件和基础路线；结论稳定后再改变距离、视野或双方兵力中的一个条件。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-12--本章完成标准">本章完成标准</h3>
+<div>
+<ul>
+<li class="depth-0">连续三局中至少两局给出明确支援结论</li>
+<li class="depth-0">能区分判断错误、启动过慢和到场过晚</li>
+<li class="depth-0">无法支援时执行了明确止损</li>
+<li class="depth-0">至少一次在阵型恶化前停止追击</li>
+<li class="depth-0">撤退时主力、队友和续兵使用一致的回收方向</li>
+</ul>
+</div></article>
+
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>第六部分 战斗控制与交换质量</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality"><h2 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--战斗控制与交换质量">战斗控制与交换质量</h2>
+<blockquote>好的战斗不是更快地冲上去，而是先建立可打的阵型，再把第一轮火力集中到可触达的关键目标。</blockquote>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--本章要解决的问题">本章要解决的问题</h3>
+<p>双方兵力接触后，几秒内的站位和目标选择会决定交换结果。兵力优势也可能被拥堵、脱节和分散火力浪费。本章回答：</p>
+<p><strong>如何在接敌前形成有效展开，并让第一轮攻击产生确定收益？</strong></p>
+<p>答案是先后完成两层：</p>
+<pre><code class="language-text">确认接敌条件与阵型
+  -&gt; 第一轮集中攻击一个可触达目标</code></pre>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--两层判断模型">两层判断模型</h3>
+<table><thead><tr>
+<th>顺序</th>
+<th>需要保证的事情</th>
+<th>判断问题</th>
+<th>本局动作</th>
+</tr></thead><tbody>
+<tr>
+<td>第一层</td>
+<td>接敌条件成立</td>
+<td>人数、地形和阵型是否允许开打</td>
+<td>开打前看人地阵</td>
+</tr>
+<tr>
+<td>第二层</td>
+<td>第一轮火力有效</td>
+<td>首要目标是否值得且可触达</td>
+<td>第一轮只选一个目标</td>
+</tr>
+</tbody></table>
+<p>阵型没有展开时，不为点杀高价值单位强行追深；目标不可触达时，应重新选择，而不是让全军拥堵。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--训练顺序">训练顺序</h3>
+<div>
+<ol>
+<li class="depth-0">经常队友未到或阵型混乱就开战：先练接敌与展开</li>
+<li class="depth-0">阵型稳定但火力自然分散：再练第一拍集中火力</li>
+<li class="depth-0">两层稳定后，再增加技能、拉扯、包夹和多目标控制</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--本章边界">本章边界</h3>
+<p>本章负责兵力投入战斗后的接敌和火力组织。开战前是否获得足够信息由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment">信息获取与判断</a>处理；是否支援和何时止损由<a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control">局势响应、支援与风险控制</a>处理。</p>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1">第一层：接敌与战前展开</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1--本层结论">本层结论</h3>
+<p>开战前确认人数、地形和阵型，选择主动接敌、等待队友或后撤重组。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1--在链条中的位置">在链条中的位置</h3>
+<p>许多交换在第一轮输出前已经由接敌条件决定。人数未齐、地形拥挤或后排暴露时强行开战，会让后续集火和操作失去基础。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1--如何判断">如何判断</h3>
+<p>接敌前只检查三项：</p>
+<div>
+<ol>
+<li class="depth-0">人齐了吗：队友、主力和续兵是否接上</li>
+<li class="depth-0">地形好吗：是否被狭口、坡口或包夹限制</li>
+<li class="depth-0">阵型开了吗：前排能承伤，后排能输出</li>
+</ol>
+</div>
+<p>三项中有两项不满足时，优先等待、换位或后撤重组。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">每次主要接敌前说出三项检查</li>
+<li class="depth-0">选择打、等或退</li>
+<li class="depth-0">需要开打时先展开前后排</li>
+<li class="depth-0">从<a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2">常用兵种对抗训练</a>选择一组固定条件对练</li>
+<li class="depth-0">局后只复盘接敌前一刻</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">自己先看到敌人就立即开打</li>
+<li class="depth-0">狭口里前后排挤成一团</li>
+<li class="depth-0">后排先暴露，前排还未就位</li>
+<li class="depth-0">队友未到却按完整兵力判断胜负</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">至少两次主要接敌前完成三项检查</li>
+<li class="depth-0">没有在明显人数不足或阵型未开时主动硬打</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，并能说清一次选择等待或后撤的原因。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2">具体对抗训练：常用兵种组合</h3>
+<p>兵种对抗训练不是背谁克制谁，而是在固定条件下反复练习展开、输出、拉扯和脱离。升级、地形、视野、支援单位和操作空间都会改变结果。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--怎么组织对练">怎么组织对练</h4>
+<div>
+<ol>
+<li class="depth-0">使用自定义地图或约定对练固定双方兵力。</li>
+<li class="depth-0">第一轮使用开阔地形、相同攻防升级且不加入援军。</li>
+<li class="depth-0">双方交换阵营，各重复三次。</li>
+<li class="depth-0">每次只记录阵型是否展开、第一轮输出是否有效、何时应该脱离。</li>
+</ol>
+</div>
+<div>
+<ul>
+<li class="depth-0">基础对抗稳定后，每轮只增加一个变量：狭口、坡口、升级或支援单位。</li>
+<li class="depth-0">固定数量只用于建立可重复起点，不代表实战中的绝对胜负。</li>
+<li class="depth-0">复盘优先看保留兵力和位置收益，不只看最后哪一方全灭。</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--六龙骑对十二枪兵">六龙骑对十二枪兵</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">第一轮不加入兴奋剂和医疗兵；加入后视为新的训练条件。</li>
+<li class="depth-0">使用开阔地形和相同攻防升级。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>展开</strong>：让龙骑形成浅弧或横线，保证多数单位能同时开火。</li>
+<li class="depth-0"><strong>射程与拉扯</strong>：利用射程完成第一轮输出，在攻击间隔中后拉，不站在原地换血。</li>
+<li class="depth-0"><strong>可触达集火</strong>：优先攻击前排可触达枪兵，击杀后重新选目标，避免炮火过量落在同一残血单位上。</li>
+<li class="depth-0"><strong>避免拥堵</strong>：避免在狭口中互相拥堵，也不让枪兵贴近侧面或包住后撤路线。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">枪兵完成贴身。</li>
+<li class="depth-0">龙骑阵型被压缩。</li>
+<li class="depth-0">兴奋剂与医疗兵加入且当前条件未重新评估。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">狭口</li>
+<li class="depth-0">兴奋剂</li>
+<li class="depth-0">医疗兵</li>
+<li class="depth-0">攻防升级</li>
+<li class="depth-0">侧翼接近</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--狂热者对秃鹫">狂热者对秃鹫</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">第一轮不放置蜘蛛雷。</li>
+<li class="depth-0">使用有转角但不存在封闭死角的路线。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>缩短距离</strong>：利用转角、狭窄路线或双向包夹缩短秃鹫的拉扯空间。</li>
+<li class="depth-0"><strong>分路接近</strong>：多名狂热者分开接近，不沿同一条直线追赶。</li>
+<li class="depth-0"><strong>蜘蛛雷检查</strong>：接近前确认蜘蛛雷位置，不让第一名狂热者把地雷引向整队。</li>
+<li class="depth-0"><strong>贴身集火</strong>：形成贴身后集中处理同一侧目标，避免每名狂热者追不同秃鹫。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">无法缩短距离。</li>
+<li class="depth-0">包夹路线消失。</li>
+<li class="depth-0">蜘蛛雷区域不明。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">蜘蛛雷</li>
+<li class="depth-0">开阔地形</li>
+<li class="depth-0">狭窄路线</li>
+<li class="depth-0">速度升级</li>
+<li class="depth-0">双向包夹</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--龙骑对攻城坦克">龙骑对攻城坦克</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">明确坦克是否处于攻城模式。</li>
+<li class="depth-0">第一轮不加入雷车、雷区或其他前排掩护。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>射程确认</strong>：先确认坦克是否架起以及射程边界，不让龙骑单列进入阵地。</li>
+<li class="depth-0"><strong>横向展开</strong>：在空间允许时横向展开，从两个方向压缩坦克的安全位置。</li>
+<li class="depth-0"><strong>处理前排</strong>：第一轮优先处理暴露且可触达的前排坦克，不为后排目标穿过火力区。</li>
+<li class="depth-0"><strong>范围伤害间距</strong>：攻击后重新拉开间距，避免龙骑重叠承受范围伤害。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">坦克拥有完整前排掩护。</li>
+<li class="depth-0">己方只能穿过狭口。</li>
+<li class="depth-0">缺少确认阵地所需的视野。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">攻城模式</li>
+<li class="depth-0">高地视野</li>
+<li class="depth-0">狭口</li>
+<li class="depth-0">前排雷车</li>
+<li class="depth-0">双向包夹</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--枪兵与医疗兵对狂热者">枪兵与医疗兵对狂热者</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">枪兵与医疗兵已经编入可独立调用的队伍。</li>
+<li class="depth-0">第一轮使用开阔地形。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>火力线</strong>：接敌前展开枪兵火力线，将医疗兵放在后方而不是最前排。</li>
+<li class="depth-0"><strong>前排集火</strong>：狂热者即将接触时集中攻击最前方可触达目标，不跨过前排点深处单位。</li>
+<li class="depth-0"><strong>短距离后拉</strong>：短距离后拉以保持输出空间，但不要连续后撤到火力线自行断开。</li>
+<li class="depth-0"><strong>兴奋剂时机</strong>：兴奋剂用于明确的接敌窗口，不在没有目标时提前消耗生命。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">狂热者完成多方向包夹。</li>
+<li class="depth-0">医疗兵与枪兵脱节。</li>
+<li class="depth-0">枪兵被压进角落。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">兴奋剂</li>
+<li class="depth-0">医疗兵数量</li>
+<li class="depth-0">狭口</li>
+<li class="depth-0">多方向包夹</li>
+<li class="depth-0">攻防升级</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--秃鹫对小狗">秃鹫对小狗</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">第一轮不放置蜘蛛雷。</li>
+<li class="depth-0">预先标记一条可持续后拉的安全路线。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>移动射击</strong>：保持移动空间，在每轮射击后继续拉开距离。</li>
+<li class="depth-0"><strong>预设退路</strong>：提前选择撤退方向，不在小狗接近后才转向。</li>
+<li class="depth-0"><strong>路线控制</strong>：使用狭口和蜘蛛雷限制追击路线，但避免把自己堵在死角。</li>
+<li class="depth-0"><strong>威胁侧集火</strong>：优先攻击已经接近或可能形成包围的一侧，不平均分散火力。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">小狗从两侧接触。</li>
+<li class="depth-0">撤退路线被切断。</li>
+<li class="depth-0">秃鹫速度优势消失。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">蜘蛛雷</li>
+<li class="depth-0">速度升级</li>
+<li class="depth-0">两侧包围</li>
+<li class="depth-0">狭口</li>
+<li class="depth-0">地图边缘</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--枪兵与医疗兵对潜伏者">枪兵与医疗兵对潜伏者</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">训练方拥有稳定反隐手段。</li>
+<li class="depth-0">第一轮使用平地且不加入其他兵种。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>反隐确认</strong>：没有稳定反隐手段时不主动进入潜伏者控制区。</li>
+<li class="depth-0"><strong>横向展开</strong>：接敌前横向展开，避免多个单位站在同一直线上承受穿刺伤害。</li>
+<li class="depth-0"><strong>少量探位</strong>：用少量前排确认攻击位置，不让整队同时进入未知区域。</li>
+<li class="depth-0"><strong>逐段推进</strong>：集中处理最靠前且可触达的潜伏者，击杀后再推进下一段。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">反隐中断。</li>
+<li class="depth-0">地形无法展开。</li>
+<li class="depth-0">潜伏者获得高地或狭口保护。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">反隐覆盖</li>
+<li class="depth-0">高地</li>
+<li class="depth-0">狭口</li>
+<li class="depth-0">潜伏者数量</li>
+<li class="depth-0">增援</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--小狗对龙骑">小狗对龙骑</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">使用能够形成两侧接近的开阔地形。</li>
+<li class="depth-0">第一轮不加入狂热者掩护。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>选择空间</strong>：等待开阔地形、侧翼路线或队友吸引正面火力，不从狭口正面排队进入。</li>
+<li class="depth-0"><strong>两侧包围</strong>：从两个方向接近，先形成包围，再让全部小狗持续输出。</li>
+<li class="depth-0"><strong>限制拉扯</strong>：优先缠住外侧和后撤中的龙骑，限制整体拉扯空间。</li>
+<li class="depth-0"><strong>避免分批接触</strong>：不让少量小狗提前接触，避免被龙骑逐批消耗。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">龙骑背靠墙口。</li>
+<li class="depth-0">龙骑前方有狂热者掩护。</li>
+<li class="depth-0">两侧包围无法形成。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">速度升级</li>
+<li class="depth-0">狭口</li>
+<li class="depth-0">狂热者前排</li>
+<li class="depth-0">高地</li>
+<li class="depth-0">队友吸引火力</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--刺蛇对狂热者">刺蛇对狂热者</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">使用具有横向展开和后撤空间的平地。</li>
+<li class="depth-0">第一轮不加入速度或射程差异。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>火力展开</strong>：在狂热者接触前形成足够宽的火力线，避免后排被前排挡住。</li>
+<li class="depth-0"><strong>最近目标集火</strong>：集中攻击最先接近的狂热者，击杀后再转向下一目标。</li>
+<li class="depth-0"><strong>分层后拉</strong>：前排刺蛇短距离后拉，后排继续输出，分层交换而不是整队同时逃跑。</li>
+<li class="depth-0"><strong>保留侧向空间</strong>：保留侧向空间，不把刺蛇退入角落或矿区死角。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">狂热者从两侧接触。</li>
+<li class="depth-0">刺蛇阵型被压缩。</li>
+<li class="depth-0">后撤空间耗尽。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">速度升级</li>
+<li class="depth-0">射程升级</li>
+<li class="depth-0">两侧包夹</li>
+<li class="depth-0">矿区地形</li>
+<li class="depth-0">攻防升级</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--飞龙对枪兵">飞龙对枪兵</h4>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--基础条件">基础条件</h5>
+<div>
+<ul>
+<li class="depth-0">第一轮不加入防空塔和额外增援。</li>
+<li class="depth-0">枪兵没有医疗兵与兴奋剂。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--训练重点">训练重点</h5>
+<div>
+<ul>
+<li class="depth-0"><strong>选择小股目标</strong>：优先寻找落单、移动脱节或缺少医疗兵保护的小股枪兵。</li>
+<li class="depth-0"><strong>齐射后拉</strong>：叠飞龙接近后完成一次集中齐射，攻击间隔中立即拉出射程。</li>
+<li class="depth-0"><strong>边缘目标</strong>：选择边缘目标，不为攻击队形中央的单位长时间停留。</li>
+<li class="depth-0"><strong>保留退路</strong>：时刻保留撤退方向，避免飞入防空塔、兴奋剂枪兵和增援之间。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--脱离条件">脱离条件</h5>
+<div>
+<ul>
+<li class="depth-0">枪兵完成展开。</li>
+<li class="depth-0">医疗兵已经到位。</li>
+<li class="depth-0">一次齐射无法形成有效击杀。</li>
+<li class="depth-0">撤退路线进入防空火力。</li>
+</ul>
+</div>
+<h5 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--下一轮变量">下一轮变量</h5>
+<div>
+<ul>
+<li class="depth-0">兴奋剂</li>
+<li class="depth-0">医疗兵</li>
+<li class="depth-0">防空塔</li>
+<li class="depth-0">攻防升级</li>
+<li class="depth-0">增援路线</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-2--单局检查">单局检查</h4>
+<p>每次只选一组对抗，并记录：</p>
+<pre><code class="language-text">训练组合：
+初始地形与升级：
+是否完成展开：
+第一轮目标：
+第一次阵型破坏：
+继续交换或脱离的依据：
+下一轮只改变的变量：</code></pre>
+<p>同一组合在基础条件下连续三轮都能说清接敌和脱离依据后，再增加一个变量。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3">本局训练卡：开打前看人地阵</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">经常队友未到就先接敌</li>
+<li class="depth-0">前后排拥挤或后排先暴露</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--本局只改什么">本局只改什么</h4>
+<p>每次主要接敌前检查人数、地形和阵型，再决定打、等或退。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">主力即将进入对手攻击范围</li>
+<li class="depth-0">双方在路口或中心区域准备接触</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">队友、主力和续兵位置</li>
+<li class="depth-0">狭口、坡口和包夹路线</li>
+<li class="depth-0">前排与后排是否展开</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">三项基本满足：准备接敌</li>
+<li class="depth-0">两项不满足：等待、换位或后撤</li>
+<li class="depth-0">对手暴露明显机会：说明理由后主动先手</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">检查完仍按原惯性开打</li>
+<li class="depth-0">只看己方人数，不看地形</li>
+<li class="depth-0">为展开阵型拖得过久，错失明确机会</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">至少两次主要接敌前完成三项检查</li>
+<li class="depth-0">没有明显脱节或拥挤时强行开战</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-3--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">最关键一波开战前哪项未满足</li>
+<li class="depth-0">应该打、等还是退</li>
+<li class="depth-0">阵型问题发生在前排还是后排</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-4">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-4--本层变化">本层变化</h4>
+<p>中路、路口和多方向到场会放大阵型问题。接敌前除人数、地形和阵型外，还要确认前排、后排与支援能否同时到场。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-4--抢中前检查">抢中前检查</h4>
+<div>
+<ol>
+<li class="depth-0">兵力：主要作战单位是否到位</li>
+<li class="depth-0">视野：是否看见主要入口和可能的侧翼</li>
+<li class="depth-0">队友：前排、后排和支援是否能同时接敌</li>
+<li class="depth-0">退路：无法站稳时从哪里回收</li>
+</ol>
+</div>
+<p>前三项明显不足时，不让单人先进入试探性硬打。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-4--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">一名玩家先到中路并独自接敌</li>
+<li class="depth-0">前排、后排从不同方向分批进入</li>
+<li class="depth-0">只占住中路，却没有获得资源、视野或路线收益</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5">第二层：第一拍集中火力</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5--本层结论">本层结论</h3>
+<p>接敌后的第一轮输出集中到同一个高价值且可触达的目标，避免火力自然分散。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5--在链条中的位置">在链条中的位置</h3>
+<p>第一拍输出会改变后续兵力数量和阵型。尽快击杀一个有效目标，通常比同时打伤多个目标更容易形成局部优势；但为了集火不可让大量单位停火、拥堵或深入危险位置。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5--如何判断">如何判断</h3>
+<p>接敌前只判断三件事：</p>
+<div>
+<ol>
+<li class="depth-0">哪个目标价值高</li>
+<li class="depth-0">哪个目标当前能够被大部分火力触达</li>
+<li class="depth-0">为了攻击它是否会破坏阵型</li>
+</ol>
+</div>
+<p>优先选择“高价值且可触达”的目标。无法安全集火时，保持输出比强行点杀更重要。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5--怎么做">怎么做</h3>
+<div>
+<ol>
+<li class="depth-0">接敌前选定一个首要目标类型</li>
+<li class="depth-0">第一轮只下达一次明确集火命令</li>
+<li class="depth-0">观察多数单位是否能持续输出</li>
+<li class="depth-0">目标脱离射程或阵型恶化时停止追深</li>
+<li class="depth-0">局后只复盘第一轮目标和火力分布</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5--常见失败">常见失败</h3>
+<div>
+<ul>
+<li class="depth-0">看到高价值单位就让全军深入追击</li>
+<li class="depth-0">频繁切换目标，第一轮没有击杀任何单位</li>
+<li class="depth-0">只操作少量前排，后排单位没有输出</li>
+<li class="depth-0">为了集火让近战单位堵在同一路口</li>
+<li class="depth-0">不看队友攻击方向，各自选择不同目标</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5--达标标准">达标标准</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5--单局达标">单局达标</h4>
+<div>
+<ul>
+<li class="depth-0">至少两次主要接敌前明确首要目标</li>
+<li class="depth-0">第一轮没有出现明显火力分散</li>
+<li class="depth-0">没有为完成集火造成明显阵型崩坏</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5--多局完成">多局完成</h4>
+<p>连续三局中至少两局达到单局标准，并能说清一次放弃集火、改为保持阵型的原因。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6">本局训练卡：第一轮只选一个目标</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--使用条件">使用条件</h4>
+<div>
+<ul>
+<li class="depth-0">接敌后火力自然分散</li>
+<li class="depth-0">频繁切换目标，没有形成击杀</li>
+<li class="depth-0">为了点杀高价值单位经常破坏阵型</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--本局只改什么">本局只改什么</h4>
+<p>每次主要接敌前选一个高价值且可触达的首要目标，第一轮只下达一次明确集火命令。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--触发时机">触发时机</h4>
+<div>
+<ul>
+<li class="depth-0">双方主力即将进入射程</li>
+<li class="depth-0">队友明确发出集火目标</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--观察对象">观察对象</h4>
+<div>
+<ul>
+<li class="depth-0">目标价值</li>
+<li class="depth-0">多数单位是否能触达</li>
+<li class="depth-0">集火动作是否会破坏阵型</li>
+<li class="depth-0">目标脱离后是否仍值得追击</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--判断规则">判断规则</h4>
+<div>
+<ul>
+<li class="depth-0">高价值且可触达：执行集火</li>
+<li class="depth-0">高价值但不可触达：保持有效输出，不强行深入</li>
+<li class="depth-0">目标脱离且阵型拉长：停止追击，重新组织</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--常见错误">常见错误</h4>
+<div>
+<ul>
+<li class="depth-0">只看价值，不看可触达性</li>
+<li class="depth-0">第一轮频繁换目标</li>
+<li class="depth-0">大量单位为追一个目标停止输出</li>
+<li class="depth-0">把集火训练成无条件追击</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--单局达标标准">单局达标标准</h4>
+<div>
+<ul>
+<li class="depth-0">至少两次主要接敌前明确首要目标</li>
+<li class="depth-0">第一轮没有明显火力分散</li>
+<li class="depth-0">没有因集火造成明显阵型崩坏</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--多局完成标准">多局完成标准</h4>
+<p>连续三局中至少两局达标，并能说清一次放弃集火的原因。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-6--局后复盘">局后复盘</h4>
+<div>
+<ol>
+<li class="depth-0">第一轮选择了什么目标</li>
+<li class="depth-0">多数单位是否能够输出</li>
+<li class="depth-0">是否因为集火破坏阵型</li>
+<li class="depth-0">下一局要改目标选择还是收手时机</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-7">地图适配：BGH</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-7--本层变化">本层变化</h4>
+<p>团队接敌前由最先获得视野或最适合判断的人说明首要目标类型。每名玩家仍需确认目标是否可触达，不能为了服从口令破坏阵型。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-7--场景动作">场景动作</h4>
+<div>
+<ul>
+<li class="depth-0">主力即将接触时统一第一目标</li>
+<li class="depth-0">包夹或侧翼到位后再确认可触达性</li>
+<li class="depth-0">目标退出射程时停止追深并重新组织</li>
+<li class="depth-0">面对完整阵地时先控制资源、视野和路线，再等待破阵窗口</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-7--失败信号">失败信号</h4>
+<div>
+<ul>
+<li class="depth-0">队员分别攻击不同目标</li>
+<li class="depth-0">目标不可触达时仍全军追深</li>
+<li class="depth-0">在完整防守阵地前持续投入</li>
+<li class="depth-0">第一目标消失后没有重新组织火力</li>
+</ul>
+</div>
+<h2 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-8">综合决策与训练计划</h2>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-8--找到最早断点">找到最早断点</h3>
+<pre><code class="language-text">接敌前的人数、地形和阵型是否允许开打？
+├─ 否：训练接敌检查与战前展开
+└─ 是：第一轮火力是否集中到可触达目标？
+   ├─ 否：训练第一拍集中火力
+   └─ 是：本章训练暂时达标</code></pre>
+<p>阵型未建立时先等待、换位或后撤。高价值目标不可触达时，保持有效输出比强行点杀更重要。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-8--三局训练计划">三局训练计划</h3>
+<div>
+<ol>
+<li class="depth-0">第一局每次主要接敌前检查人数、地形和阵型。</li>
+<li class="depth-0">第二局在条件成立后，为第一轮选择一个高价值且可触达的目标。</li>
+<li class="depth-0">第三局同时执行两层，并记录一次主动放弃接敌或集火的正确决定。</li>
+</ol>
+</div>
+<p>进行具体兵种对抗时，三局保持相同兵种、数量、升级和基础地形；完成后每轮只改变一个条件。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-8--本章完成标准">本章完成标准</h3>
+<div>
+<ul>
+<li class="depth-0">连续三局中至少两局在主要接敌前完成检查</li>
+<li class="depth-0">没有在队友未到或阵型拥堵时强行开战</li>
+<li class="depth-0">第一轮火力集中，没有频繁更换目标</li>
+<li class="depth-0">目标不可触达时没有破坏阵型追深</li>
+<li class="depth-0">能说清一次选择打、等、退或换目标的依据</li>
+</ul>
+</div></article>
+
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>第七部分 训练计划与复盘</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method"><h2 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--人工训练与复盘方法">人工训练与复盘方法</h2>
+<p>本文是所有训练路径共用的人工执行方法。当前阶段不依赖 Replay 分析或 AI 推荐。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--一次只练一个主题">一次只练一个主题</h3>
+<p>一局只携带一张训练卡。即使同时发现多个问题，也只记录它们，不在下一局同时修改。</p>
+<p>选择顺序：</p>
+<div>
+<ol>
+<li class="depth-0">先处理路径中更靠前的基础问题</li>
+<li class="depth-0">同层问题优先处理更早出现的失败点</li>
+<li class="depth-0">连续三局后再决定是否切换主题</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--局前">局前</h3>
+<p>只写四项：</p>
+<pre><code class="language-text">本局主题：
+本局训练卡：
+主要触发器：
+单局达标标准：</code></pre>
+<p>如果局前不能在一分钟内说清这四项，说明训练卡仍然太复杂，应减少动作。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--局中">局中</h3>
+<p>不记录长笔记，只保留：</p>
+<div>
+<ul>
+<li class="depth-0">是否识别到触发器</li>
+<li class="depth-0">是否执行训练动作</li>
+<li class="depth-0">是否出现训练卡列出的代偿问题</li>
+</ul>
+</div>
+<p>失败后继续完成对局，不要在局中切换成另一张训练卡。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--局后">局后</h3>
+<p>先写事实，再解释原因：</p>
+<pre><code class="language-text">触发器是否出现：
+是否执行：
+单局是否达标：
+最早失败点：
+下一局唯一调整：</code></pre>
+<p>禁止只写“意识不够”“操作不好”“配合不好”等无法指导下一局的结论。</p>
+<p>事实记录使用“事实 + 直接影响”：</p>
+<pre><code class="language-text">事实：第一次补侦察后一直没有更新信息
+直接影响：没有发现对手转空军，防空准备过晚</code></pre>
+<p>不要在证据不足时继续推断性格、水平或最终输赢原因。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--三局训练轮次">三局训练轮次</h3>
+<p>每个训练轮次固定三局：</p>
+<div>
+<ul>
+<li class="depth-0">至少两局达标：可进入下一主题或提高难度</li>
+<li class="depth-0">仅一局达标：保持同一张卡，再练一个轮次</li>
+<li class="depth-0">三局均未达标：减少动作或回到前置主题</li>
+</ul>
+</div>
+<p>三局不是能力已经稳定的证明，只是决定下一步的最小观察窗口。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--高频错误清单">高频错误清单</h3>
+<p>同一问题完成一个三局轮次后，记录：</p>
+<pre><code class="language-text">问题：
+三局出现次数：
+主要触发场景：
+是否出现新的代偿问题：
+下一轮：继续 / 降级 / 切换主题</code></pre>
+<p>重复问题优先于单局偶发失误。每完成两个训练轮次，再检查一次旧问题是否真正减少；不要因为一局没有出现就宣称已经掌握。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--从问题到下一局动作">从问题到下一局动作</h3>
+<p>不要只写“下局注意”。把问题改写为：</p>
+<pre><code class="language-text">问题：
+触发条件：
+最小修正动作：
+本局只练什么：
+复盘看什么：</code></pre>
+<p>修正动作必须能在触发条件出现时立刻执行，并且一局只增加一个主要行为变化。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method--人工-review-原则">人工 Review 原则</h3>
+<div>
+<ul>
+<li class="depth-0">只依据本局可观察事实</li>
+<li class="depth-0">不用胜负直接替代训练结果</li>
+<li class="depth-0">不因单局偶发成功宣称能力已经掌握</li>
+<li class="depth-0">不把无法观察的原因包装成确定结论</li>
+<li class="depth-0">主题或卡片无法执行时，先修改教程，不要求玩家猜测</li>
+</ul>
+</div></article>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations"><h2 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations--新手基础训练路径">新手基础训练路径</h2>
+<div class="metadata">
+<ul>
+<li class="depth-0">目标用户：尚未形成稳定操作、经济、信息和战斗习惯的玩家</li>
+<li class="depth-0">验证方式：人工观察与复盘</li>
+</ul>
+</div>
+<p>统一执行方法：<a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method">人工训练与复盘方法</a></p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations--进入条件">进入条件</h3>
+<p>满足任意两项：</p>
+<div>
+<ul>
+<li class="depth-0">经常找不到主力或生产设施</li>
+<li class="depth-0">经常卡人口</li>
+<li class="depth-0">首侦没有固定时机</li>
+<li class="depth-0">前几分钟频繁漏步骤</li>
+<li class="depth-0">团队告警后不知道如何支援</li>
+<li class="depth-0">接敌后火力明显分散</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations--训练顺序">训练顺序</h3>
+<p>第一阶段，建立操作与生产底座：</p>
+<div>
+<ol>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1">稳定编队调用</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5">有效切屏</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8">战斗与生产循环</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1">持续补充工人</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4">补给节奏</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7">保持主生产线运转</a></li>
+</ol>
+</div>
+<p>第二阶段，建立信息与开局闭环：</p>
+<div>
+<ol>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1">首侦按时完成</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4">刷新信息并形成行动</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7">小地图短扫</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1">固定开局主线</a></li>
+</ol>
+</div>
+<p>第三阶段，进入团队响应与战斗：</p>
+<div>
+<ol>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4">支援及时到场</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1">判断是否支援</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1">接敌与战前展开</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5">第一拍集中火力</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8">及时收手与撤退</a></li>
+</ol>
+</div>
+<p>进入“固定开局主线”时，从<a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4">各族开局模板</a>选择一套模板。第一轮只记录五个关键节点、目标时间和实际偏差，不要求一次背下全部供给顺序。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations--单主题推进规则">单主题推进规则</h3>
+<div>
+<ol>
+<li class="depth-0">阅读主题正文</li>
+<li class="depth-0">只带对应基础训练卡进入单局</li>
+<li class="depth-0">连续执行三局</li>
+<li class="depth-0">至少两局达到单局标准后进入下一主题</li>
+<li class="depth-0">未达标则保留同一张卡，不增加新目标</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations--降级规则">降级规则</h3>
+<div>
+<ul>
+<li class="depth-0">同一主题连续两轮未改善：只保留训练卡中的主要触发器</li>
+<li class="depth-0">同时暴露多个问题：回到路径中更靠前的主题</li>
+<li class="depth-0">因种族或地图无法执行：调整具体动作，不改变主题目标</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations--完成条件">完成条件</h3>
+<div>
+<ul>
+<li class="depth-0">三个阶段的主题均达到各自多局完成标准</li>
+<li class="depth-0">能独立选择一张训练卡进入下一局</li>
+<li class="depth-0">局后能用事实说明本局是否达标</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-beginner-foundations--人工验收记录">人工验收记录</h3>
+<p>每个主题只记录：</p>
+<pre><code class="language-text">主题：
+三局结果：达标 / 未达标 / 达标
+最早失败点：
+下一步：继续 / 降级 / 进入下一主题</code></pre></article>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh"><h2 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh--回流玩家恢复路径">回流玩家恢复路径</h2>
+<div class="metadata">
+<ul>
+<li class="depth-0">目标用户：曾经熟悉游戏，但当前节奏、信息和团队反应明显生疏的玩家</li>
+<li class="depth-0">验证方式：人工自测与复盘</li>
+</ul>
+</div>
+<p>统一执行方法：<a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method">人工训练与复盘方法</a></p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh--进入条件">进入条件</h3>
+<div>
+<ul>
+<li class="depth-0">能完成基本操作，不需要从所有基础主题顺序开始</li>
+<li class="depth-0">最近对局中能感觉到问题，但无法确定先恢复哪一项</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh--首轮自测">首轮自测</h3>
+<p>先打一局，不带训练目标，只记录六个事实：</p>
+<div>
+<ol>
+<li class="depth-0">是否知道自己的开局五节点，主要节点相对目标时间偏差多少</li>
+<li class="depth-0">是否出现明显卡人口</li>
+<li class="depth-0">首侦是否按计划完成并形成结论</li>
+<li class="depth-0">是否因找兵或错组错过行动</li>
+<li class="depth-0">第一次队友告警后是否形成到场判断</li>
+<li class="depth-0">主要接敌的第一轮是否明确目标</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh--选择规则">选择规则</h3>
+<p>从最早出现的失败点进入对应主题：</p>
+<table><thead><tr>
+<th>失败点</th>
+<th>训练主题</th>
+</tr></thead><tbody>
+<tr>
+<td>开局节点断开</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1">固定开局主线</a></td>
+</tr>
+<tr>
+<td>看前线后停止补工</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1">持续补充工人</a></td>
+</tr>
+<tr>
+<td>卡人口影响生产</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4">补给节奏</a></td>
+</tr>
+<tr>
+<td>有资源和产能但主生产空转</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7">保持主生产线运转</a></td>
+</tr>
+<tr>
+<td>资源长期积累但没有计划</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10">及时转化资源</a></td>
+</tr>
+<tr>
+<td>首侦过晚或无结论</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1">首侦按时完成</a></td>
+</tr>
+<tr>
+<td>首侦后没有更新信息</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4">刷新信息并形成行动</a></td>
+</tr>
+<tr>
+<td>经常漏掉小地图异常</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7">小地图短扫</a></td>
+</tr>
+<tr>
+<td>找兵、错组</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1">稳定编队调用</a></td>
+</tr>
+<tr>
+<td>切屏很多但没有有效动作</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5">有效切屏</a></td>
+</tr>
+<tr>
+<td>战斗时生产完全断线</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8">战斗与生产循环</a></td>
+</tr>
+<tr>
+<td>支援迟到</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4">支援及时到场</a></td>
+</tr>
+<tr>
+<td>不该救时连续投入</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1">判断是否支援</a></td>
+</tr>
+<tr>
+<td>人数、地形或阵型不利时开战</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1">接敌与战前展开</a></td>
+</tr>
+<tr>
+<td>第一轮火力分散</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5">第一拍集中火力</a></td>
+</tr>
+<tr>
+<td>优势追深或劣势不撤</td>
+<td><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8">及时收手与撤退</a></td>
+</tr>
+</tbody></table>
+<p>一次只选一个主题。不要因为一局暴露多个问题就同时携带多张训练卡。</p>
+<p>开局节点断开时，从<a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4">各族开局模板</a>选择当前实际使用的模板，优先修复最早偏离目标时间的节点。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh--推进规则">推进规则</h3>
+<div>
+<ol>
+<li class="depth-0">选定主题并连续练三局</li>
+<li class="depth-0">至少两局达到单局标准后重新做一次六项自测</li>
+<li class="depth-0">原问题仍最早出现：继续同一主题</li>
+<li class="depth-0">原问题稳定消失：选择新的最早失败点</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh--完成条件">完成条件</h3>
+<div>
+<ul>
+<li class="depth-0">基础自测没有连续两局出现同一个失败点</li>
+<li class="depth-0">能说清当前最需要继续维护的一个主题</li>
+<li class="depth-0">不需要按固定顺序读完所有教程</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-returning-player-refresh--人工验收记录">人工验收记录</h3>
+<pre><code class="language-text">首个失败点：
+选择主题：
+三局结果：
+是否重新自测：
+下一主题：</code></pre></article>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations"><h2 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations--bgh-固定车队训练路径">BGH 固定车队训练路径</h2>
+<div class="metadata">
+<ul>
+<li class="depth-0">目标用户：长期参与 <code>Big Game Hunters 3v3 / 4v4</code> 的固定车队</li>
+<li class="depth-0">验证方式：队内人工复盘</li>
+</ul>
+</div>
+<p>相关入口：</p>
+<div>
+<ul>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme">BGH 场景包</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-4">各族开局模板</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-learning-paths-review-method">人工训练与复盘方法</a></li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations--进入条件">进入条件</h3>
+<div>
+<ul>
+<li class="depth-0">队伍成员已有基础操作能力</li>
+<li class="depth-0">常出现开局不同步、重复侦察、支援迟到或团战目标不一致</li>
+<li class="depth-0">愿意在局前约定一个团队训练目标</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations--训练顺序">训练顺序</h3>
+<p>第一阶段，建立共同开局：</p>
+<div>
+<ol>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo--part-1">固定开局主线</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-1">首侦按时完成</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-4">刷新信息并形成行动</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment--part-7">小地图短扫</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-1">持续补充工人</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-4">补给节奏</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-7">保持主生产线运转</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production--part-10">及时转化资源</a></li>
+</ol>
+</div>
+<p>第二阶段，稳定团队行动：</p>
+<div>
+<ol>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-1">稳定编队调用</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-5">有效切屏</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency--part-8">战斗与生产循环</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-4">支援及时到场</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-1">判断是否支援</a></li>
+</ol>
+</div>
+<p>第三阶段，训练接敌与止损：</p>
+<div>
+<ol>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-1">接敌与战前展开</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality--part-5">第一拍集中火力</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control--part-8">及时收手与撤退</a></li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations--队内执行规则">队内执行规则</h3>
+<div>
+<ol>
+<li class="depth-0">每轮只选择一个团队主题</li>
+<li class="depth-0">每名玩家仍只携带一张个人训练卡</li>
+<li class="depth-0">训练开局时，每名玩家局前选择一套模板并说明自己的第一批单位任务</li>
+<li class="depth-0">局前明确触发口令、侦察方向或集火规则</li>
+<li class="depth-0">局后先记录事实，再评价团队决策</li>
+<li class="depth-0">连续三局后统一决定继续或切换主题</li>
+</ol>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations--角色差异">角色差异</h3>
+<div>
+<ul>
+<li class="depth-0">抗压位：优先稳定开局、补给和求援信号</li>
+<li class="depth-0">支援位：优先首侦覆盖、到场判断和集合路线</li>
+<li class="depth-0">主战位：优先第一拍目标与阵型保持</li>
+</ul>
+</div>
+<p>角色只改变场景动作，不改变正式训练主题。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations--完成条件">完成条件</h3>
+<div>
+<ul>
+<li class="depth-0">三个阶段的主题都完成一次三局训练轮次</li>
+<li class="depth-0">队伍能在开局前说清本轮唯一训练目标</li>
+<li class="depth-0">队员能区分个人执行问题和团队约定问题</li>
+<li class="depth-0">不再用“配合不好”替代具体事实</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-learning-paths-bgh-team-foundations--队内验收记录">队内验收记录</h3>
+<pre><code class="language-text">本轮主题：
+局前约定：
+三局共同事实：
+个人训练卡结果：
+下一轮：继续 / 调整约定 / 切换主题</code></pre></article>
+
+        <section class="section-divider">
+          <div class="section-number">SECTION</div>
+          <h2>附录 BGH 地图与团队参考</h2>
+        </section>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme"><h2 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme--bgh-场景适配">BGH 场景适配索引</h2>
+<div class="metadata">
+<ul>
+<li class="depth-0">适用模式：<code>Big Game Hunters 3v3 / 4v4</code></li>
+</ul>
+</div>
+<p>BGH 内容不作为独立训练部分，而是分别进入六个训练方向。本目录只保存地图、位置和团队条件对通用主题的调整，不创建另一套训练体系。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme--六个方向">六个方向</h3>
+<div>
+<ul>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-01-opening-and-tempo">开局与节奏建立</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-02-economy-and-production">经济与生产转化</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-03-information-and-judgment">信息获取与判断</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-04-operation-and-execution-efficiency">操作组织与执行效率</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-05-response-support-and-risk-control">局势响应、支援与风险控制</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-factors-06-combat-control-and-trade-quality">战斗控制与交换质量</a></li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme--共享参考">共享参考</h3>
+<div>
+<ul>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes">地图、点位与路线</a></li>
+<li class="depth-0"><a href="#chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles">临时团队角色</a></li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme--共享场景约定">共享场景约定</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme--位置">位置</h4>
+<div>
+<ul>
+<li class="depth-0">边位：更早承担外侧压力，需要更早报告威胁和到场需求</li>
+<li class="depth-0">内位：更适合承担补位、转线和集合职责</li>
+<li class="depth-0">中路：是首轮共同动作的重要区域，但不是所有对局都必须争夺的固定目标</li>
+</ul>
+</div>
+<p>位置只改变训练动作的优先级，不建立新的训练方向。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme--角色">角色</h4>
+<div>
+<ul>
+<li class="depth-0">抗压位：优先保持开局、补给和求援信息清晰</li>
+<li class="depth-0">支援位：优先覆盖侦察方向、路线和到场判断</li>
+<li class="depth-0">主战位：优先组织第一轮接敌目标和阵型</li>
+</ul>
+</div>
+<p>角色可以随出生位、种族和战术变化，不作为永久玩家标签。</p>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme--局前团队约定">局前团队约定</h4>
+<p>每局最多约定四项：</p>
+<div>
+<ol>
+<li class="depth-0">首侦方向</li>
+<li class="depth-0">告警词</li>
+<li class="depth-0">第一集合点</li>
+<li class="depth-0">首轮目标或放弃条件</li>
+</ol>
+</div>
+<p>如果无法在开局前快速说清，应减少约定，不增加更多口令。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-readme--使用方法">使用方法</h3>
+<p>阅读一个通用训练主题后，直接进入同一训练方向的 BGH 适配页。每局仍只携带一张训练卡，场景内容只调整触发器、观察对象和团队协同条件。</p></article>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes"><h2 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--bgh-地图点位与路线">BGH 地图、点位与路线</h2>
+<p>本页用于局前识别位置风险和团队路线。它不替代具体训练主题，也不把出生位固定成永久角色。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--局前位置检查">局前位置检查</h3>
+<p>每名玩家开局前回答：</p>
+<div>
+<ol>
+<li class="depth-0">我离哪一侧对手最近</li>
+<li class="depth-0">哪名队友最可能先承受压力</li>
+<li class="depth-0">我的最快支援路线是什么</li>
+<li class="depth-0">默认集合点和失守后的回收点在哪里</li>
+</ol>
+</div>
+<p>无法快速回答时，队伍应减少复杂战术，优先保证首侦和支援路线清楚。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--位置类型">位置类型</h3>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--边位或近敌位">边位或近敌位</h4>
+<div>
+<ul>
+<li class="depth-0">更早承担外侧和近点压力</li>
+<li class="depth-0">优先确认防守入口、求援信号和撤退路线</li>
+<li class="depth-0">开局模板应保留更早自保和支援能力</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--内位或相对安全位">内位或相对安全位</h4>
+<div>
+<ul>
+<li class="depth-0">更适合承担补位、转线或中期输出</li>
+<li class="depth-0">不能因为安全就放弃首侦和团队到场</li>
+<li class="depth-0">贪经济或科技前必须确认谁覆盖第一波</li>
+</ul>
+</div>
+<h4 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--中路连接位">中路连接位</h4>
+<div>
+<ul>
+<li class="depth-0">更容易参与第一轮集合和路线控制</li>
+<li class="depth-0">需要持续关注两侧队友是否脱节</li>
+<li class="depth-0">中路价值来自视野和转移效率，不等于必须无条件抢占</li>
+</ul>
+</div>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--资源点检查">资源点检查</h3>
+<p>准备扩张或控制中矿前检查：</p>
+<div>
+<ol>
+<li class="depth-0">新资源点是否处于可支援范围</li>
+<li class="depth-0">是否存在高地、架点、空投或绕后风险</li>
+<li class="depth-0">队伍能否维持通往该点的路线</li>
+<li class="depth-0">占领后准备转成工人、兵力、科技还是下一处地图控制</li>
+</ol>
+</div>
+<p>只占住资源点但无法防守、采集或转化，不算完成扩张目标。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--默认路线">默认路线</h3>
+<p>固定车队至少约定三条路线：</p>
+<div>
+<ul>
+<li class="depth-0">默认集合线：没有特殊情况时的第一集合方向</li>
+<li class="depth-0">默认补位线：边位或队友受压时的最快支援方向</li>
+<li class="depth-0">失守回收线：中路或前线无法维持时的撤退和重组方向</li>
+</ul>
+</div>
+<p>路线不是固定命令。侦察发现埋伏、封锁或空投威胁后，应切换到更安全的路径并同步队友。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-map-and-routes--复盘问题">复盘问题</h3>
+<div>
+<ul>
+<li class="depth-0">这局位置判断是否改变了开局选择</li>
+<li class="depth-0">第一次支援是否走了正确路线</li>
+<li class="depth-0">哪个资源点的风险在扩张前被忽略</li>
+<li class="depth-0">丢失前线后是否有统一回收位置</li>
+</ul>
+</div>
+<p>涉及具体悬崖、矿线和架点的位置，需要结合实际地图画面验证，不凭文字记忆下绝对结论。</p></article>
+<article class="chapter" id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles"><h2 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles--bgh-临时团队角色">BGH 临时团队角色</h2>
+<p>角色用于说明本局谁先承担哪项职责，不是对玩家或种族的永久标签。出生位、队友组合、侦察信息和战局变化都可以改变角色。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles--先手施压">先手施压</h3>
+<p>主要职责：</p>
+<div>
+<ul>
+<li class="depth-0">前期制造压力并争取主动</li>
+<li class="depth-0">迫使对手留兵或暴露防守</li>
+<li class="depth-0">为队友争取经济和科技时间</li>
+</ul>
+</div>
+<p>完成标准不是必须击杀对手，而是让压力产生可观察收益。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles--前排抗压">前排抗压</h3>
+<p>主要职责：</p>
+<div>
+<ul>
+<li class="depth-0">稳住边线和第一轮正面</li>
+<li class="depth-0">为远程与科技单位提供输出空间</li>
+<li class="depth-0">受压时尽早报清位置、兵种和需要</li>
+</ul>
+</div>
+<p>抗压不是被动挨打。无法继续维持时，应及时后撤并请求明确支援。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles--远程支援">远程支援</h3>
+<p>主要职责：</p>
+<div>
+<ul>
+<li class="depth-0">补充后排火力和功能单位</li>
+<li class="depth-0">根据队友位置选择集合与到场路线</li>
+<li class="depth-0">避免脱离前排独自接敌</li>
+</ul>
+</div>
+<p>判断重点是到场、站位和目标，而不只是兵力数量。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles--科技与中期接管">科技与中期接管</h3>
+<p>主要职责：</p>
+<div>
+<ul>
+<li class="depth-0">把队友争取的时间转成关键科技或中期兵力</li>
+<li class="depth-0">明确成型窗口和第一项团队用途</li>
+<li class="depth-0">前线危险时停止贪科技并补充必要防守</li>
+</ul>
+</div>
+<p>科技位必须说清谁在前期保护自己，以及何时开始为队伍提供价值。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles--局前分工">局前分工</h3>
+<p>固定车队在一分钟内回答：</p>
+<div>
+<ol>
+<li class="depth-0">谁负责最早施压</li>
+<li class="depth-0">谁先扛第一波</li>
+<li class="depth-0">谁提供远程或机动支援</li>
+<li class="depth-0">谁准备中期接管</li>
+<li class="depth-0">哪个信号出现时需要交换角色</li>
+</ol>
+</div>
+<p>同一玩家可以承担多个相邻职责，但不能让关键职责无人承担。</p>
+<h3 id="chapter-knowledge-tutorial-system-tutorial-scenario-packs-bgh-team-roles--角色切换">角色切换</h3>
+<p>出现以下情况时重新确认：</p>
+<div>
+<ul>
+<li class="depth-0">出生位与预期不符</li>
+<li class="depth-0">侦察发现对手开局改变</li>
+<li class="depth-0">前排损失过大</li>
+<li class="depth-0">科技或经济路线被迫中断</li>
+<li class="depth-0">某名队友已经提前形成关键兵力</li>
+</ul>
+</div>
+<p>切换后只需要说明新的主要职责和第一项动作，不重新设计整套团队计划。</p></article>
+    <p class="publication-note">本出版物由仓库中的 Markdown 与结构化知识资产生成。</p>
+  </main>
+</body>
 </html>
